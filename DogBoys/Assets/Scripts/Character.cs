@@ -4,11 +4,19 @@ using UnityEngine;
 
 public class Character : MonoBehaviour {
     #region Variables
-    public int health;
-	public string status;
-	public string weapon; //TODO: weapon class
-	private bool moved;
+    [SerializeField]
+    private int health;
+    [SerializeField]
+	private string status;
+    [SerializeField]
+	private string weapon; //TODO: weapon class
+    private bool canMove = false;
+    private bool isMoving = false;
 	private int xPos, yPos;
+
+    #region Getters and Setters
+    public 
+    #endregion
     #endregion
 
     #region Character Functions
@@ -21,13 +29,14 @@ public class Character : MonoBehaviour {
     {
         xPos = x;
         yPos = y;
+        canMove = false;
     }
     #endregion
 
     #region Unity Overrides
     // Use this for initialization
     void Start () {
-		moved = false;
+		canMove = true;
 		health = 100;
 		status = "";
 		weapon = "";
