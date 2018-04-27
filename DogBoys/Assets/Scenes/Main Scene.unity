@@ -922,6 +922,7 @@ MonoBehaviour:
   status: 
   weapon: 
   characterHUD: {fileID: 1238915086}
+  gc: {fileID: 442479211}
 --- !u!23 &136034259
 MeshRenderer:
   m_ObjectHideFlags: 0

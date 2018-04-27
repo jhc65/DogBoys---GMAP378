@@ -6,7 +6,7 @@ public class GameController : MonoBehaviour {
     #region Variables and Declarations
     private static GameController instance;
     [SerializeField]
-    private GameObject currentlySelectedCharacter = null;
+    public GameObject currentlySelectedCharacter = null;
 
     #region Getters and Setters
     public static GameController Instance {

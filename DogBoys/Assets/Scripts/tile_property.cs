@@ -21,7 +21,7 @@ public class tile_property : MonoBehaviour {
 
 	void OnMouseOver(){
 		if (effect_status == false) {
-			Debug.Log ("Mouse is over" + this.name);
+			//Debug.Log ("Mouse is over" + this.name);
 			my_effect = Instantiate (mouseover_effect, my_position, transform.rotation);
 			effect_status = true;
 		}
@@ -33,7 +33,7 @@ public class tile_property : MonoBehaviour {
     //}
 
     void OnMouseExit(){
-		Debug.Log("Mouse has left" + this.name);
+		//Debug.Log("Mouse has left" + this.name);
 		effect_status = false;
 		Destroy (my_effect.gameObject);
 	}

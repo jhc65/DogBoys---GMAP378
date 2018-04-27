@@ -19,7 +19,7 @@ public class Character : MonoBehaviour {
 	private int xPos, yPos;
     private Vector3 newPos;
 
-    private GameController gc;
+    public GameController gc;
 
     #region Getters and Setters
     #endregion
@@ -35,6 +35,7 @@ public class Character : MonoBehaviour {
     {
         //newPos = new Vector3(position.x, gameObject.transform.position.y, position.z);
         //gameObject.transform.position = newPos;
+		Debug.Log("move");
         if (canMove) {
             newPos = new Vector3(position.x, gameObject.transform.position.y, position.z);
             isMoving = true;
@@ -81,7 +82,7 @@ public class Character : MonoBehaviour {
     #region Unity Overrides
     // Use this for initialization
     void Start () {
-        gc = GameController.Instance;
+        //gc = GameController.Instance;
 		canMove = true;
 		health = 100;
 		status = "";
