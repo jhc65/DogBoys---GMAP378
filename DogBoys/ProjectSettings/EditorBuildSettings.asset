@@ -8,3 +8,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Main Scene.unity
     guid: 12af427587842b44eb6d26fd8ad309a8
+  - enabled: 1
+    path: Assets/Scenes/Hub menu.unity
+    guid: 55c62a01a4e4e4348af33a4a8915959c
+  - enabled: 1
+    path: Assets/Scenes/TechDemo-Tom.unity
+    guid: efc327477c2ee0f41b7667365c25610a
