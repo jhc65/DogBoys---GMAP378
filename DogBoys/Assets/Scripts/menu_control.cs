@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 public class menu_control : MonoBehaviour {
 
 	public void loadMission() {
-		SceneManager.LoadScene ("TechDemo-Tom");
+		SceneManager.LoadScene ("Main Scene");
 	}
 
 	public void exit() {

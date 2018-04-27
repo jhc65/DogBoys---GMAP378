@@ -27,10 +27,10 @@ public class tile_property : MonoBehaviour {
 		}
 	}
 
-    private void OnMouseDown()
-    {
-        GameController.Instance.MoveSelectedCharacter(gameObject.transform.position);
-    }
+    //private void OnMouseDown()
+    //{
+    //    GameController.Instance.MoveSelectedCharacter(gameObject.transform.position);
+    //}
 
     void OnMouseExit(){
 		Debug.Log("Mouse has left" + this.name);
