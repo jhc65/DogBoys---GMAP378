@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class GameController : MonoBehaviour {
     #region Variables and Declarations
-    private static GameController instance;
+    private static GameController instance = null;
     [SerializeField]
     public GameObject currentlySelectedCharacter = null;
 
@@ -44,13 +44,19 @@ public class GameController : MonoBehaviour {
     #region Unity Overrides
     // Use this for initialization
     void Start() {
-        instance = this;
+
+    }
+
+    private void Awake() {
+        if (!instance) {
+            instance = this;
+        }
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetMouseButtonDown(1)) {
+        if (currentlySelectedCharacter && Input.GetMouseButtonDown(1)) {
             UnselectCharacter();
         }
     }

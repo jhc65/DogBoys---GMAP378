@@ -8,8 +8,10 @@ public class tile_property : MonoBehaviour {
 	private Vector3 my_position;
 	private bool effect_status;
 	private GameObject my_effect;
+    private GameController gc;
 	// Use this for initialization
 	void Start () {
+        gc = GameController.Instance;
 		my_position = this.gameObject.transform.position;
 		effect_status = false;
 	}
@@ -25,6 +27,9 @@ public class tile_property : MonoBehaviour {
 			my_effect = Instantiate (mouseover_effect, my_position, transform.rotation);
 			effect_status = true;
 		}
+        if (Input.GetMouseButtonDown(0)) {
+            gc.MoveSelectedCharacter(gameObject.transform.position);
+        }
 	}
 
     //private void OnMouseDown()
