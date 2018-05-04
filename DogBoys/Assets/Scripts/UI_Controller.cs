@@ -54,8 +54,23 @@ public class UI_Controller : MonoBehaviour
         }
     }
 
-    public void updateCurrentGunName(string newName)
-    {
+    public void updateCurrentGunName(string newName) { 
         currentPlayerGunName_.text = newName;
+    }
+
+    public void onClickAttackButton() {
+        Debug.Log("Tail wipe that cat!");
+    }
+
+    public void onClickOverwatchButton() {
+        Debug.Log("If it moves... I'll hit with a water attack!");
+    }
+
+    public void onClickHunkerDownButton() {
+        Debug.Log("I'm pretty scratched up here... give me a paw.");
+    }
+
+    public void onClickSkipTurn() {
+        Debug.Log("I'm going for a treat break... See you in five.");
     }
 }

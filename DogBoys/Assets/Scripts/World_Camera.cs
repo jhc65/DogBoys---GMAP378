@@ -8,17 +8,19 @@ public class World_Camera : MonoBehaviour {
     [SerializeField]
     private float cameraZoomSpeed_;
     [SerializeField]
+    private float cameraSmooth_;
+    [SerializeField]
     private float cameraMovementRangeXMin_, cameraMovementRangeXMax_;
     [SerializeField]
     private float cameraMovementRangeZMin_, cameraMovementRangeZMax_;
     [SerializeField]
     private float cameraZoomRangeYMin_, cameraZoomRangeYMax_;
     [SerializeField]
-    private float targetCameraFollow_;
+    private Transform targetCameraFollow_;
     [SerializeField]
-    private float cameraOffset_;
+    private Vector3 cameraOffset_;
     [SerializeField]
-    private bool cameraFollowing_;
+    private bool cameraFollowing_ = false;
 
 
     private float horizontalInput_;
@@ -32,12 +34,20 @@ public class World_Camera : MonoBehaviour {
 
     private void LateUpdate()
     {
-        cameraFreeMovement();
+        if (cameraFollowing_) {
+            cameraFollow();
+        }
+        else {
+            cameraFreeMovement();
+        }
     }
 
     private void cameraFollow()
     {
-        
+        Vector3 newPosition = targetCameraFollow_.position + cameraOffset_;
+        Vector3 smoothed = Vector3.Lerp(transform.position, newPosition, cameraSmooth_ * Time.deltaTime);
+        targetCameraFollow_.position = newPosition;
+        transform.LookAt(targetCameraFollow_);
     }
 
     private void cameraFreeMovement()
