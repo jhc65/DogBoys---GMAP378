@@ -38,7 +38,7 @@ public class Character : MonoBehaviour {
     {
         newPos = new Vector3(position.x, gameObject.transform.position.y, position.z);
         gameObject.transform.position = newPos;
-        Debug.Log("move");
+        //Debug.Log("move");
         //if (canMove) {
         //    newPos = new Vector3(position.x, gameObject.transform.position.y, position.z);
         //    isMoving = true;
