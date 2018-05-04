@@ -22,6 +22,9 @@ public class Character : MonoBehaviour {
     private GameController gc;
 
     #region Getters and Setters
+	public bool getCanMove(){
+		return canMove;
+	}
     #endregion
     #endregion
 
@@ -40,6 +43,10 @@ public class Character : MonoBehaviour {
         //    newPos = new Vector3(position.x, gameObject.transform.position.y, position.z);
         //    isMoving = true;
         //}
+
+		UnselectCharacter ();
+		canMove = false;
+
     }
 
     private void CenterOnSpace() {
@@ -107,6 +114,7 @@ public class Character : MonoBehaviour {
 
     private void OnMouseOver() {
         if (!isMoving && Input.GetMouseButtonDown(0)) {
+        if (!isMoving && Input.GetMouseButtonDown(0) && canMove) {
             SelectCharacter();
         }
     }
