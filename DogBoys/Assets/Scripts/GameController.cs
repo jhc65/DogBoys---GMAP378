@@ -9,7 +9,7 @@ public class GameController : MonoBehaviour {
     public GameObject currentlySelectedCharacter = null;
 	public List<GameObject> p1Chars = new List<GameObject>();
 	public List<GameObject> p2Chars = new List<GameObject>();
-	private string turn = "";
+	public string turn = "";
 
     #region Getters and Setters
     public static GameController Instance {
