@@ -25,6 +25,9 @@ public class Character : MonoBehaviour {
 	public bool getCanMove(){
 		return canMove;
 	}
+	public void setCanMove(bool setter){
+		canMove = setter;
+	}
     #endregion
     #endregion
 
@@ -44,8 +47,8 @@ public class Character : MonoBehaviour {
         //    isMoving = true;
         //}
 
-		UnselectCharacter ();
 		canMove = false;
+		UnselectCharacter ();
 
     }
 
@@ -81,6 +84,8 @@ public class Character : MonoBehaviour {
     public void UnselectCharacter() {
         SetIsSelected(false);
         characterHUD.SetActive(false);
+		gc.SetSelectedCharacter (null);
+		gc.updateTurns ();
     }
     #endregion
 
