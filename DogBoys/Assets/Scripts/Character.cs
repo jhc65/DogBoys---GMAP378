@@ -113,7 +113,6 @@ public class Character : MonoBehaviour {
     }
 
     private void OnMouseOver() {
-        if (!isMoving && Input.GetMouseButtonDown(0)) {
         if (!isMoving && Input.GetMouseButtonDown(0) && canMove) {
             SelectCharacter();
         }
