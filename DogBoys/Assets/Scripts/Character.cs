@@ -9,7 +9,7 @@ public class Character : MonoBehaviour {
     [SerializeField]
 	private string status;
     [SerializeField]
-	private string weapon; //TODO: weapon class
+	private Weapon weapon; //TODO: weapon class
     [SerializeField]
     private GameObject characterHUD;
 
@@ -27,6 +27,9 @@ public class Character : MonoBehaviour {
 	}
 	public void setCanMove(bool setter){
 		canMove = setter;
+	}
+	public int hurt(int dmg){
+
 	}
     #endregion
     #endregion
@@ -96,7 +99,6 @@ public class Character : MonoBehaviour {
         canMove = true;
 		health = 100;
 		status = "";
-		weapon = "";
 
         CenterOnSpace();
     }
