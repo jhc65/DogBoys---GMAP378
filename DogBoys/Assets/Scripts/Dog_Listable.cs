@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 
 public class Dog_Listable : MonoBehaviour {
-	//constants_values
+	//constants_values object
 	public GameObject constants_values;
 	//buttons and text
 	public Button left;
@@ -14,9 +14,16 @@ public class Dog_Listable : MonoBehaviour {
 	private GameObject listAvailable;
 	private GameObject listBlue;
 	private GameObject listRed;
+	//character this object represents
+	private Character thisDog;
 
+	public void setChar(Character s){
+		thisDog = s;
+		Debug.Log (thisDog);
+	}
 
 	void Start () {
+		constants_values = GameObject.Find ("Game_Constants");
 		Button lButton = left.GetComponent<Button> ();
 		Button rButton = right.GetComponent<Button>();
 		Text display = text.GetComponent<Text> ();
@@ -32,22 +39,26 @@ public class Dog_Listable : MonoBehaviour {
 	void MoveLeft(){
 		if (transform.parent.name == "Red_Drafted"){
 			this.transform.parent = listAvailable.transform;
-			//script to update the lists in constants
+			constants_values.GetComponent<Constants_Values> ()
+				.moveChar (thisDog, constants_values.GetComponent<Constants_Values>().getRed(), constants_values.GetComponent<Constants_Values>().getAvailable());
 		}
 		else if(transform.parent.name == "Dog_Available"){
 			this.transform.parent = listBlue.transform;
-			//script to update the lists in constants
+			constants_values.GetComponent<Constants_Values> ()
+				.moveChar (thisDog, constants_values.GetComponent<Constants_Values>().getAvailable(),  constants_values.GetComponent<Constants_Values>().getBlue());
 		}
 	}
 
 	void MoveRight(){
 		if (transform.parent.name == "Blue_Drafted"){
 			this.transform.parent = listAvailable.transform;
-			//script to update the lists in constants
+			constants_values.GetComponent<Constants_Values> ()
+				.moveChar (thisDog, constants_values.GetComponent<Constants_Values>().getBlue(), constants_values.GetComponent<Constants_Values>().getAvailable());
 		}
 		else if(transform.parent.name == "Dog_Available"){
 			this.transform.parent = listRed.transform;
-			//script to update the lists in constants
+			constants_values.GetComponent<Constants_Values> ()
+				.moveChar (thisDog, constants_values.GetComponent<Constants_Values>().getAvailable(),  constants_values.GetComponent<Constants_Values>().getRed());
 		}
 	}
 
