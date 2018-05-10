@@ -9,7 +9,7 @@ public class Character : MonoBehaviour {
     [SerializeField]
 	private string status;
     [SerializeField]
-	private string weapon; //TODO: weapon class
+	private Weapon weapon;
     [SerializeField]
     private GameObject characterHUD;
 
@@ -28,12 +28,22 @@ public class Character : MonoBehaviour {
 	public void setCanMove(bool setter){
 		canMove = setter;
 	}
+	public int hurt(int dmg){
+		health -= dmg;
+		if (health <= 0)
+			Die ();
+		return health;
+	}
     #endregion
     #endregion
 
     #region Character Functions
     void Die()
     {
+		if (gc.p1Chars.Contains (gameObject))
+			gc.p1Chars.Remove (gameObject);
+		if (gc.p2Chars.Contains (gameObject))
+			gc.p2Chars.Remove (gameObject);
         Destroy(gameObject);
     }
 
@@ -87,6 +97,10 @@ public class Character : MonoBehaviour {
 		gc.SetSelectedCharacter (null);
 		gc.updateTurns ();
     }
+
+	public void Shoot(Character enemy){
+		weapon.use (enemy);
+	}
     #endregion
 
     #region Unity Overrides
@@ -96,16 +110,12 @@ public class Character : MonoBehaviour {
         canMove = true;
 		health = 100;
 		status = "";
-		weapon = "";
 
         CenterOnSpace();
     }
 	
 	// Update is called once per frame
 	void Update () {
-		if (health <= 0) {
-			Die ();
-		}
         
         //if (isMoving) {
         //    if (gameObject.transform.position != newPos) {
@@ -121,6 +131,19 @@ public class Character : MonoBehaviour {
         if (!isMoving && Input.GetMouseButtonDown(0) && canMove) {
             SelectCharacter();
         }
+		if (Input.GetMouseButtonDown (0) && gc.HasSelectedCharacter() && gc.currentlySelectedCharacter != gameObject) {
+			Character selected = gc.currentlySelectedCharacter.GetComponent<Character> ();
+
+			//Attack this character and end the other character's turn
+			Debug.Log("Pow");
+			selected.Shoot(this);
+			Debug.Log ("I have " + health.ToString() + " health left");
+			selected.setCanMove (false);
+			selected.SetIsSelected (false);
+			gc.currentlySelectedCharacter = null;
+			gc.updateTurns ();
+
+		}
     }
     #endregion
 }
