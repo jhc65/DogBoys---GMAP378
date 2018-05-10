@@ -5,22 +5,27 @@ using UnityEngine;
 public class Weapon : Equippable {
 
 	protected int maxShots;
-	private int shotsRemaining;
+	protected int shotsRemaining;
 	protected float range;
 	private bool reloading;
 	protected int damage;
 
+
 	public void use(Character chara){
+		Debug.Log ("Getting to use?");
 		if (!reloading) {
 			fire (chara);
 		} else {
+			Debug.Log ("Reloading");
 			reload ();
 		}
 	}
 
 	public void fire(Character chara) {
+		Debug.Log ("Firing for " + damage.ToString () + " damage");
 		chara.hurt (damage);
 		shotsRemaining--;
+		Debug.Log (shotsRemaining.ToString () + " shots left");
 		if (shotsRemaining <= 0) {
 			reloading = true;
 		}
@@ -30,28 +35,4 @@ public class Weapon : Equippable {
 		shotsRemaining = maxShots;
 		reloading = false;
 	}
-}
-
-public class Pistol : Weapon {
-	public void Start() {
-		maxShots = Constants.WeaponStats.PistolStats.maxShots;
-		range = Constants.WeaponStats.PistolStats.range;
-		damage = Constants.WeaponStats.PistolStats.damage;
-	}
-}
-
-public class Shotgun : Weapon {
-	public void Start() {
-		maxShots = Constants.WeaponStats.ShotgunStats.maxShots;
-		range = Constants.WeaponStats.ShotgunStats.range;
-		damage = Constants.WeaponStats.ShotgunStats.damage;
-	}
-}
-
-public class Sniper : Weapon {
-	public void Start() {
-		maxShots = Constants.WeaponStats.SniperStats.maxShots;
-		range = Constants.WeaponStats.SniperStats.range;
-		damage = Constants.WeaponStats.SniperStats.damage;
-	}
-}
+}	

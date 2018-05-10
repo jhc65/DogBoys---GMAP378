@@ -4,6 +4,8 @@ using UnityEngine;
 
 public abstract class Equippable : MonoBehaviour {
 	
-	public void use (Character chara);
+	public virtual void use (Character chara){
+		Debug.Log ("Use an item");
+	}
 
 }

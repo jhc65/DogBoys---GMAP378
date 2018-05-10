@@ -20,7 +20,7 @@ public static class Constants {
 			public static float range = 5.0f;
 			public static int damage = 50;
 		}
-		public static class SniperStats {
+		public static class RifleStats {
 			public static int maxShots = 4;
 			public static float range = 50.0f;
 			public static int damage = 40;
