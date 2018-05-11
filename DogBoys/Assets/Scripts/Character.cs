@@ -139,7 +139,7 @@ public class Character : MonoBehaviour {
 			selected.Shoot(this);
 			Debug.Log ("I have " + health.ToString() + " health left");
 			selected.setCanMove (false);
-			selected.SetIsSelected (false);
+			selected.UnselectCharacter ();
 			gc.currentlySelectedCharacter = null;
 			gc.updateTurns ();
 
