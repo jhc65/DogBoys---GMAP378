@@ -32,6 +32,8 @@ public class Character : MonoBehaviour {
 		health -= dmg;
 		if (health <= 0)
 			Die ();
+
+		characterHUD.GetComponent<UI_Controller> ().updateCurrentHealthBar (health, 100);
 		return health;
 	}
     #endregion
