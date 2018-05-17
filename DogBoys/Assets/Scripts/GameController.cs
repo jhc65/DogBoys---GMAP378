@@ -10,6 +10,14 @@ public class GameController : MonoBehaviour {
 	public List<GameObject> p1Chars = new List<GameObject>();
 	public List<GameObject> p2Chars = new List<GameObject>();
 	public string turn = "";
+	/*
+	 * Board status
+	 * 0 - empty
+	 * 1 - character
+	 * 2 - cover
+	 * 
+	 * */
+	private int[,] gameBoard = new int[24,32];
 
     #region Getters and Setters
     public static GameController Instance {
@@ -94,6 +102,10 @@ public class GameController : MonoBehaviour {
 		}
 
 		turn = "P2";
+	}
+
+	public void setSpace(int x, int y, int status){
+		gameBoard [x, y] = status;
 	}
     #endregion
 

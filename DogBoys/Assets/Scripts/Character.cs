@@ -50,12 +50,15 @@ public class Character : MonoBehaviour {
     public void Move(Vector3 position)
     {
         newPos = new Vector3(position.x, gameObject.transform.position.y, position.z);
+		gc.setSpace (gameObject.transform.position.x, gameObject.transform.position.z, 0);
         gameObject.transform.position = newPos;
         //Debug.Log("move");
         //if (canMove) {
         //    newPos = new Vector3(position.x, gameObject.transform.position.y, position.z);
         //    isMoving = true;
         //}
+
+		gc.setSpace (position.x, position.z, 1);
 
 		canMove = false;
 		UnselectCharacter ();
