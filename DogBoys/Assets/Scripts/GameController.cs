@@ -105,7 +105,18 @@ public class GameController : MonoBehaviour {
 	}
 
 	public void setSpace(int x, int y, int status){
-		gameBoard [x, y] = status;
+		gameBoard [x,y] = status;
+	}
+
+	public void printBoard() {
+		string Out = "";
+		for (int i = 0; i < 24; i++) {
+			for (int j = 0; j < 32; j++) {
+				Out += gameBoard [i, j].ToString ();
+			}
+			Out += '\n';
+		}
+		Debug.Log (Out);
 	}
     #endregion
 

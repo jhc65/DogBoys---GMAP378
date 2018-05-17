@@ -44,13 +44,14 @@ public class Character : MonoBehaviour {
 			gc.p1Chars.Remove (gameObject);
 		if (gc.p2Chars.Contains (gameObject))
 			gc.p2Chars.Remove (gameObject);
+		gc.setSpace (Mathf.RoundToInt (gameObject.transform.position.x), Mathf.RoundToInt (gameObject.transform.position.z), 0);
         Destroy(gameObject);
     }
 
     public void Move(Vector3 position)
     {
         newPos = new Vector3(position.x, gameObject.transform.position.y, position.z);
-		gc.setSpace (gameObject.transform.position.x, gameObject.transform.position.z, 0);
+		gc.setSpace (Mathf.RoundToInt(gameObject.transform.position.x), Mathf.RoundToInt(gameObject.transform.position.z), 0);
         gameObject.transform.position = newPos;
         //Debug.Log("move");
         //if (canMove) {
@@ -58,7 +59,8 @@ public class Character : MonoBehaviour {
         //    isMoving = true;
         //}
 
-		gc.setSpace (position.x, position.z, 1);
+		gc.setSpace (Mathf.RoundToInt(position.x), Mathf.RoundToInt(position.z), 1);
+		gc.printBoard ();
 
 		canMove = false;
 		UnselectCharacter ();
@@ -115,6 +117,7 @@ public class Character : MonoBehaviour {
 		status = "";
 
         CenterOnSpace();
+		gc.setSpace (Mathf.RoundToInt (gameObject.transform.position.x), Mathf.RoundToInt (gameObject.transform.position.z), 1);
     }
 	
 	// Update is called once per frame
