@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Camera_tiles : MonoBehaviour {
-
-	public GameObject tileHighlight;
+public class Camera_mouse : MonoBehaviour {
+	[SerializeField]
+	private GameObject tileHighlight;
 
 	// Keep track of where the player clicks in the game world
 	private RaycastHit hit;
