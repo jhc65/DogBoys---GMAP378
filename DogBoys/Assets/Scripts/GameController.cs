@@ -10,6 +10,7 @@ public class GameController : MonoBehaviour {
 	public List<GameObject> p1Chars = new List<GameObject>();
 	public List<GameObject> p2Chars = new List<GameObject>();
 	public string turn = "";
+    private bool gameOver = false;
 	/*
 	 * Board status
 	 * 0 - empty
@@ -210,6 +211,23 @@ public class GameController : MonoBehaviour {
 
         }
     }
+
+    public void winGame()
+    {
+        if (!gameOver)
+        {
+            if (p1Chars.Count == 0)
+            {
+                Debug.Log("Player 2 Wins!");
+                gameOver = true;
+            }
+            else if (p2Chars.Count == 0)
+            {
+                Debug.Log("Player 1 Wins!");
+                gameOver = true;
+            }
+        }
+    }
     #endregion
 
     #region Unity Overrides
@@ -228,6 +246,7 @@ public class GameController : MonoBehaviour {
     void Update()
     {
         lineOfSight();
+        winGame();
         if (currentlySelectedCharacter && Input.GetMouseButtonDown(1)) {
             UnselectCharacter();
         }
