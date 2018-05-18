@@ -93,7 +93,20 @@ public class GameController : MonoBehaviour {
         }
     }
 
-	private bool p1CanMove() {
+    public void MoveSelectedCharacter(Vector3 position, bool inCover) {
+        if (currentlySelectedCharacter) {
+            currentlySelectedCharacter.GetComponent<Character>().Move(position, inCover);
+        }
+    }
+
+    public void MoveSelectedCharacter_NoHit(Vector3 position)
+    {
+        if (currentlySelectedCharacter) {
+            currentlySelectedCharacter.GetComponent<Character>().Move_NoHit(position);
+        }
+    }
+
+    private bool p1CanMove() {
 		foreach (GameObject chara in p1Chars) {
 			if (chara.GetComponent<Character> ().getCanMove ()) {
 				Debug.Log ("P1 can still move");
@@ -148,8 +161,8 @@ public class GameController : MonoBehaviour {
 
 	public void printBoard() {
 		string Out = "";
-		for (int i = 0; i < 24; i++) {
-			for (int j = 0; j < 32; j++) {
+		for (int i = 0; i < 32; i++) {
+			for (int j = 0; j < 24; j++) {
 				Out += gameBoard [i, j].ToString ();
 			}
 			Out += '\n';

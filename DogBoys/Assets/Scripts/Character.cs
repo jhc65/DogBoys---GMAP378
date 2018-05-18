@@ -16,6 +16,10 @@ public class Character : MonoBehaviour {
     private bool canMove = false;
     private bool isMoving = false;
     private bool isSelected = false;
+    [SerializeField]
+    private bool isInCover = false;
+    [SerializeField]
+    private bool isNoHitCover = false;
 	private int xPos, yPos;
     private Vector3 newPos;
 
@@ -37,6 +41,14 @@ public class Character : MonoBehaviour {
 			Die ();
 		return health;
 	}
+
+    public bool IsInCover {
+        get { return isInCover; }
+    }
+
+    public bool IsInNoHitCover {
+        get { return isNoHitCover; }
+    }
     #endregion
     #endregion
 
@@ -53,6 +65,8 @@ public class Character : MonoBehaviour {
 
     public void Move(Vector3 position)
     {
+        isInCover = false;
+        isNoHitCover = false;
         newPos = new Vector3(position.x, gameObject.transform.position.y, position.z);
 		gc.setSpace (Mathf.RoundToInt(gameObject.transform.position.x), Mathf.RoundToInt(gameObject.transform.position.z), 0);
         gameObject.transform.position = newPos;
@@ -67,6 +81,48 @@ public class Character : MonoBehaviour {
 
 		canMove = false;
 		UnselectCharacter ();
+
+    }
+
+    public void Move(Vector3 position, bool inCover)
+    {
+        isInCover = inCover;
+        isNoHitCover = false;
+        newPos = new Vector3(position.x, gameObject.transform.position.y, position.z);
+        gc.setSpace(Mathf.RoundToInt(gameObject.transform.position.x), Mathf.RoundToInt(gameObject.transform.position.z), 0);
+        gameObject.transform.position = newPos;
+        //Debug.Log("move");
+        //if (canMove) {
+        //    newPos = new Vector3(position.x, gameObject.transform.position.y, position.z);
+        //    isMoving = true;
+        //}
+
+        gc.setSpace(Mathf.RoundToInt(position.x), Mathf.RoundToInt(position.z), 1);
+        gc.printBoard();
+
+        canMove = false;
+        UnselectCharacter();
+
+    }
+
+    public void Move_NoHit(Vector3 position)
+    {
+        isInCover = false;
+        isNoHitCover = true;
+        newPos = new Vector3(position.x, gameObject.transform.position.y, position.z);
+        gc.setSpace(Mathf.RoundToInt(gameObject.transform.position.x), Mathf.RoundToInt(gameObject.transform.position.z), 0);
+        gameObject.transform.position = newPos;
+        //Debug.Log("move");
+        //if (canMove) {
+        //    newPos = new Vector3(position.x, gameObject.transform.position.y, position.z);
+        //    isMoving = true;
+        //}
+
+        gc.setSpace(Mathf.RoundToInt(position.x), Mathf.RoundToInt(position.z), 1);
+        gc.printBoard();
+
+        canMove = false;
+        UnselectCharacter();
 
     }
 
@@ -182,18 +238,23 @@ public class Character : MonoBehaviour {
             SelectCharacter();
         }
 		if (Input.GetMouseButtonDown (0) && gc.HasSelectedCharacter() && gc.currentlySelectedCharacter != gameObject) {
-			Character selected = gc.currentlySelectedCharacter.GetComponent<Character> ();
+			Character selected = gc.currentlySelectedCharacter.GetComponent<Character>();
 
 			int range = selected.getWeapon ().getRange ();
 			if (isInRange (gameObject, gc.currentlySelectedCharacter, range)) {
 				//Attack this character and end the other character's turn
-				Debug.Log ("Pow");
-				selected.Shoot (this);
-				Debug.Log ("I have " + health.ToString () + " health left");
-				selected.setCanMove (false);
-				selected.UnselectCharacter ();
-				gc.currentlySelectedCharacter = null;
-				gc.updateTurns ();
+                if (isInCover && gc.currentlySelectedCharacter.GetComponent<Character>().IsInNoHitCover) {
+                    Debug.Log("You can't attack because cover system");
+                }
+                else {
+                    Debug.Log("Pow");
+                    selected.Shoot(this);
+                    Debug.Log("I have " + health.ToString() + " health left");
+                    selected.setCanMove(false);
+                    selected.UnselectCharacter();
+                    gc.currentlySelectedCharacter = null;
+                    gc.updateTurns();
+                }
 			} else {
 				Debug.Log ("That's out of range!");
 			}
