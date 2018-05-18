@@ -59,11 +59,11 @@ public class GameController : MonoBehaviour {
     }
 
 	public void setSpace(int x, int y, int status){
-		gameBoard [x,y] = status;
+		gameBoard [y,x] = status;
 	}
 
 	public int getSpace(int x, int y){
-		return gameBoard[x,y];
+		return gameBoard[y,x];
 	}
     #endregion
     #endregion

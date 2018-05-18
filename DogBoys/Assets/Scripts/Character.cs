@@ -174,6 +174,7 @@ public class Character : MonoBehaviour {
 
 		if (x1 == x2) {
 			if (Mathf.Abs (y1 - y2) > range) {
+				Debug.Log ("Too far");
 				return false;
 			} else {
 				int adder;
@@ -181,14 +182,17 @@ public class Character : MonoBehaviour {
 					adder = -1;
 				else
 					adder = 1;
-				for (int i = y1; i != (y1 + (adder * range)); i += adder) {
-					if (gc.getSpace (x1, i) == 3)
+				for (int i = y1; ((i != (y1 + (adder * range))) && (i > 0) && (i < 32)); i += adder) {
+					if (gc.getSpace (x1, i) == 3) {
+						Debug.Log ("Something in the way");
 						return false;
+					}
 				}
 			}
 
 		} else if (y1 == y2) {
 			if (Mathf.Abs (x1 - x2) > range) {
+				Debug.Log ("Too far");
 				return false;
 			} else {
 				int adder;
@@ -196,12 +200,15 @@ public class Character : MonoBehaviour {
 					adder = -1;
 				else
 					adder = 1;
-				for (int i = x1; i != (x1 + (adder * range)); i += adder) {
-					if (gc.getSpace (i, y1) == 3)
+				for (int i = x1; ((i != (x1 + (adder * range))) && (i > 0) && (i < 24)) ; i += adder) {
+					if (gc.getSpace (i, y1) == 3) {
+						Debug.Log ("Something in the way");
 						return false;
+					}
 				}
 			}
 		} else {
+			Debug.Log ("Not orthogonal");
 			return false;
 		}
 		return true;
