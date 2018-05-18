@@ -15,6 +15,7 @@ public class GameController : MonoBehaviour {
 	 * 0 - empty
 	 * 1 - character
 	 * 2 - cover
+	 * 3 - dead
 	 * 
 	 * */
 	private int[,] gameBoard = new int[24,32];
@@ -23,6 +24,14 @@ public class GameController : MonoBehaviour {
     public static GameController Instance {
         get { return instance; }
     }
+
+	public void setSpace(int x, int y, int status){
+		gameBoard [x,y] = status;
+	}
+
+	public int getSpace(int x, int y){
+		return gameBoard[x,y];
+	}
     #endregion
     #endregion
 
@@ -102,10 +111,6 @@ public class GameController : MonoBehaviour {
 		}
 
 		turn = "P2";
-	}
-
-	public void setSpace(int x, int y, int status){
-		gameBoard [x,y] = status;
 	}
 
 	public void printBoard() {

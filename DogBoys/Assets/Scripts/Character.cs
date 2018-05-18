@@ -6,8 +6,8 @@ public class Character : MonoBehaviour {
     #region Variables
     [SerializeField]
     private int health;
-    [SerializeField]
-	private string status;
+//    [SerializeField]
+	//private string status;
     [SerializeField]
 	private Weapon weapon;
     [SerializeField]
@@ -22,6 +22,9 @@ public class Character : MonoBehaviour {
     private GameController gc;
 
     #region Getters and Setters
+	public Weapon getWeapon(){
+		return weapon;
+	}
 	public bool getCanMove(){
 		return canMove;
 	}
@@ -106,6 +109,47 @@ public class Character : MonoBehaviour {
 	public void Shoot(Character enemy){
 		weapon.use (enemy);
 	}
+
+	private bool isInRange(GameObject char1, GameObject char2, int range){
+		int x1 = Mathf.RoundToInt (char1.transform.position.x);
+		int x2 = Mathf.RoundToInt (char2.transform.position.x);
+		int y1 = Mathf.RoundToInt (char1.transform.position.z);
+		int y2 = Mathf.RoundToInt (char2.transform.position.z);
+
+		if (x1 == x2) {
+			if (Mathf.Abs (y1 - y2) > range) {
+				return false;
+			} else {
+				int adder;
+				if (y1 > y2)
+					adder = -1;
+				else
+					adder = 1;
+				for (int i = y1; i != (y1 + (adder * range)); i += adder) {
+					if (gc.getSpace (x1, i) == 3)
+						return false;
+				}
+			}
+
+		} else if (y1 == y2) {
+			if (Mathf.Abs (x1 - x2) > range) {
+				return false;
+			} else {
+				int adder;
+				if (x1 > x2)
+					adder = -1;
+				else
+					adder = 1;
+				for (int i = x1; i != (x1 + (adder * range)); i += adder) {
+					if (gc.getSpace (i, y1) == 3)
+						return false;
+				}
+			}
+		} else {
+			return false;
+		}
+		return true;
+	}
     #endregion
 
     #region Unity Overrides
@@ -114,7 +158,7 @@ public class Character : MonoBehaviour {
         gc = GameController.Instance;
         canMove = true;
 		health = 100;
-		status = "";
+//		status = "";
 
         CenterOnSpace();
 		gc.setSpace (Mathf.RoundToInt (gameObject.transform.position.x), Mathf.RoundToInt (gameObject.transform.position.z), 1);
@@ -140,15 +184,19 @@ public class Character : MonoBehaviour {
 		if (Input.GetMouseButtonDown (0) && gc.HasSelectedCharacter() && gc.currentlySelectedCharacter != gameObject) {
 			Character selected = gc.currentlySelectedCharacter.GetComponent<Character> ();
 
-			//Attack this character and end the other character's turn
-			Debug.Log("Pow");
-			selected.Shoot(this);
-			Debug.Log ("I have " + health.ToString() + " health left");
-			selected.setCanMove (false);
-			selected.UnselectCharacter ();
-			gc.currentlySelectedCharacter = null;
-			gc.updateTurns ();
-
+			int range = selected.getWeapon ().getRange ();
+			if (isInRange (gameObject, gc.currentlySelectedCharacter, range)) {
+				//Attack this character and end the other character's turn
+				Debug.Log ("Pow");
+				selected.Shoot (this);
+				Debug.Log ("I have " + health.ToString () + " health left");
+				selected.setCanMove (false);
+				selected.UnselectCharacter ();
+				gc.currentlySelectedCharacter = null;
+				gc.updateTurns ();
+			} else {
+				Debug.Log ("That's out of range!");
+			}
 		}
     }
     #endregion
