@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Sniper : Weapon {
+public class Rifle : Weapon {
 	public void Start() {
 		maxShots = Constants.WeaponStats.RifleStats.maxShots;
 		shotsRemaining = maxShots;

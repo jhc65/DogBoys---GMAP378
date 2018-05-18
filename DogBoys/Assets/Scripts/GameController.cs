@@ -10,11 +10,61 @@ public class GameController : MonoBehaviour {
 	public List<GameObject> p1Chars = new List<GameObject>();
 	public List<GameObject> p2Chars = new List<GameObject>();
 	public string turn = "";
+	/*
+	 * Board status
+	 * 0 - empty
+	 * 1 - character
+	 * 2 - half cover
+	 * 3 - full cover
+	 * 4 - dead
+	 * */
+	private int[,] gameBoard = new int[32, 24] {
+        { 4, 4, 4, 4, 4, 4, 4, 4, 0, 0, 0, 0, 0, 0, 0, 0, 4, 4, 4, 4, 4, 4, 4, 4},
+        { 4, 4, 4, 4, 4, 4, 4, 4, 0, 0, 0, 0, 0, 0, 0, 0, 4, 4, 4, 4, 4, 4, 4, 4},
+        { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
+        { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
+        { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
+        { 0, 0, 3, 3, 3, 3, 3, 3, 3, 0, 0, 0, 0, 0, 0, 3, 3, 3, 3, 3, 3, 3, 0, 0},
+        { 0, 0, 3, 4, 4, 4, 4, 4, 3, 0, 0, 0, 0, 0, 0, 3, 4, 4, 4, 4, 4, 3, 0, 0},
+        { 0, 0, 3, 4, 4, 4, 4, 4, 3, 0, 0, 0, 0, 0, 0, 3, 4, 4, 4, 4, 4, 3, 0, 0},
+        { 0, 0, 3, 4, 4, 4, 4, 4, 3, 0, 0, 0, 0, 0, 0, 3, 4, 4, 4, 4, 4, 3, 0, 0},
+        { 0, 0, 3, 3, 3, 3, 3, 3, 3, 0, 0, 0, 0, 0, 0, 3, 3, 3, 3, 3, 3, 3, 0, 0},
+        { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
+        { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
+        { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 3, 3, 3, 3, 3},
+        { 3, 3, 3, 3, 3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 3, 4, 4, 4, 4},
+        { 4, 4, 4, 4, 3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 3, 4, 4, 4, 4},
+        { 4, 4, 4, 4, 3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 3, 4, 4, 4, 4},
+        { 4, 4, 4, 4, 3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 3, 4, 4, 4, 4},
+        { 4, 4, 4, 4, 3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 3, 4, 4, 4, 4},
+        { 4, 4, 4, 4, 3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 3, 3, 3, 3, 3},
+        { 3, 3, 3, 3, 3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
+        { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
+        { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
+        { 0, 0, 3, 3, 3, 3, 3, 3, 3, 0, 1, 0, 1, 0, 1, 3, 3, 3, 3, 3, 3, 3, 0, 0},
+        { 0, 0, 3, 4, 4, 4, 4, 4, 3, 0, 0, 0, 0, 0, 0, 3, 4, 4, 4, 4, 4, 3, 0, 0},
+        { 0, 0, 3, 4, 4, 4, 4, 4, 3, 0, 0, 0, 0, 0, 0, 3, 4, 4, 4, 4, 4, 3, 0, 0},
+        { 0, 0, 3, 4, 4, 4, 4, 4, 3, 0, 0, 0, 0, 0, 0, 3, 4, 4, 4, 4, 4, 3, 0, 0},
+        { 0, 0, 3, 3, 3, 3, 3, 3, 3, 0, 0, 0, 0, 0, 0, 3, 3, 3, 3, 3, 3, 3, 0, 0},
+        { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
+        { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
+        { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
+        { 4, 4, 4, 4, 4, 4, 4, 4, 0, 0, 1, 0, 1, 0, 1, 0, 4, 4, 4, 4, 4, 4, 4, 4},
+        { 4, 4, 4, 4, 4, 4, 4, 4, 0, 0, 0, 0, 0, 0, 0, 0, 4, 4, 4, 4, 4, 4, 4, 4}
+    };
 
     #region Getters and Setters
     public static GameController Instance {
         get { return instance; }
     }
+
+	public void setSpace(int x, int y, int status){
+		gameBoard [x,y] = status;
+	}
+
+	public int getSpace(int x, int y){
+		return gameBoard[x,y];
+	}
     #endregion
     #endregion
 
@@ -43,7 +93,20 @@ public class GameController : MonoBehaviour {
         }
     }
 
-	private bool p1CanMove() {
+    public void MoveSelectedCharacter(Vector3 position, bool inCover) {
+        if (currentlySelectedCharacter) {
+            currentlySelectedCharacter.GetComponent<Character>().Move(position, inCover);
+        }
+    }
+
+    public void MoveSelectedCharacter_NoHit(Vector3 position)
+    {
+        if (currentlySelectedCharacter) {
+            currentlySelectedCharacter.GetComponent<Character>().Move_NoHit(position);
+        }
+    }
+
+    private bool p1CanMove() {
 		foreach (GameObject chara in p1Chars) {
 			if (chara.GetComponent<Character> ().getCanMove ()) {
 				Debug.Log ("P1 can still move");
@@ -94,6 +157,17 @@ public class GameController : MonoBehaviour {
 		}
 
 		turn = "P2";
+	}
+
+	public void printBoard() {
+		string Out = "";
+		for (int i = 0; i < 32; i++) {
+			for (int j = 0; j < 24; j++) {
+				Out += gameBoard [i, j].ToString ();
+			}
+			Out += '\n';
+		}
+		Debug.Log (Out);
 	}
     #endregion
 

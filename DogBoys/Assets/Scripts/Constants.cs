@@ -12,17 +12,17 @@ public static class Constants {
 	public static class WeaponStats {
 		public static class PistolStats {
 			public static int maxShots = 6;
-			public static float range = 10.0f;
-			public static int damage = 20;
+			public static int range = 8;
+			public static int damage = 12;
 		}
 		public static class ShotgunStats {
 			public static int maxShots = 2;
-			public static float range = 5.0f;
-			public static int damage = 50;
+			public static int range = 5;
+			public static int damage = 34;
 		}
 		public static class RifleStats {
-			public static int maxShots = 4;
-			public static float range = 50.0f;
+			public static int maxShots = 1;
+			public static int range = 10;
 			public static int damage = 40;
 		}
 	}
