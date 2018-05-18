@@ -9,6 +9,7 @@ TagManager:
   - HalfCover
   - FullCover
   - DeadTile
+  - NoHitCover
   layers:
   - Default
   - TransparentFX
