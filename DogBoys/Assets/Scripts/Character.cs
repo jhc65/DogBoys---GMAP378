@@ -166,11 +166,11 @@ public class Character : MonoBehaviour {
 		weapon.use (enemy);
 	}
 
-	private bool isInRange(GameObject char1, GameObject char2, int range){
-		int x1 = Mathf.RoundToInt (char1.transform.position.x);
-		int x2 = Mathf.RoundToInt (char2.transform.position.x);
-		int y1 = Mathf.RoundToInt (char1.transform.position.z);
-		int y2 = Mathf.RoundToInt (char2.transform.position.z);
+	private bool isInRange(Vector3 char1, Vector3 char2, int range){
+		int x1 = Mathf.RoundToInt (char1.x);
+		int x2 = Mathf.RoundToInt (char2.x);
+		int y1 = Mathf.RoundToInt (char1.z);
+		int y2 = Mathf.RoundToInt (char2.z);
 
 		if (x1 == x2) {
 			if (Mathf.Abs (y1 - y2) > range) {
@@ -241,7 +241,7 @@ public class Character : MonoBehaviour {
 			Character selected = gc.currentlySelectedCharacter.GetComponent<Character>();
 
 			int range = selected.getWeapon ().getRange ();
-			if (isInRange (gameObject, gc.currentlySelectedCharacter, range)) {
+			if (isInRange (gameObject.transform.position, gc.currentlySelectedCharacter.transform.position, range)) {
 				//Attack this character and end the other character's turn
                 if (isInCover && gc.currentlySelectedCharacter.GetComponent<Character>().IsInNoHitCover) {
                     Debug.Log("You can't attack because cover system");

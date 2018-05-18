@@ -8,5 +8,6 @@ public class Rifle : Weapon {
 		shotsRemaining = maxShots;
 		range = Constants.WeaponStats.RifleStats.range;
 		damage = Constants.WeaponStats.RifleStats.damage;
+		moveRange = Constants.WeaponStats.RifleStats.moveRange;
 	}
 }

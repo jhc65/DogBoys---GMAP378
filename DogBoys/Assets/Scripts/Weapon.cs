@@ -7,11 +7,16 @@ public class Weapon : Equippable {
 	protected int maxShots;
 	protected int shotsRemaining;
 	protected int range;
+	protected int moveRange;
 	private bool reloading;
 	protected int damage;
 
 	public int getRange() {
 		return range;
+	}
+
+	public int getMoveRange() {
+		return moveRange;
 	}
 
 	 public override void use(Character chara){
