@@ -86,23 +86,26 @@ public class Character : MonoBehaviour {
 
     public void Move(Vector3 position, bool inCover)
     {
-        isInCover = inCover;
-        isNoHitCover = false;
-        newPos = new Vector3(position.x, gameObject.transform.position.y, position.z);
-        gc.setSpace(Mathf.RoundToInt(gameObject.transform.position.x), Mathf.RoundToInt(gameObject.transform.position.z), 0);
-        gameObject.transform.position = newPos;
-        //Debug.Log("move");
-        //if (canMove) {
-        //    newPos = new Vector3(position.x, gameObject.transform.position.y, position.z);
-        //    isMoving = true;
-        //}
+		if (isInRange (gameObject.transform.position, position, weapon.getMoveRange ())) {
+			isInCover = inCover;
+			isNoHitCover = false;
+			newPos = new Vector3 (position.x, gameObject.transform.position.y, position.z);
+			gc.setSpace (Mathf.RoundToInt (gameObject.transform.position.x), Mathf.RoundToInt (gameObject.transform.position.z), 0);
+			gameObject.transform.position = newPos;
+			//Debug.Log("move");
+			//if (canMove) {
+			//    newPos = new Vector3(position.x, gameObject.transform.position.y, position.z);
+			//    isMoving = true;
+			//}
 
-        gc.setSpace(Mathf.RoundToInt(position.x), Mathf.RoundToInt(position.z), 1);
-        gc.printBoard();
+			gc.setSpace (Mathf.RoundToInt (position.x), Mathf.RoundToInt (position.z), 1);
+			gc.printBoard ();
 
-        canMove = false;
-        UnselectCharacter();
-
+			canMove = false;
+			UnselectCharacter ();
+		} else {
+			Debug.Log ("Can't go there from here.");
+		}
     }
 
     public void Move_NoHit(Vector3 position)
