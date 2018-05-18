@@ -118,6 +118,98 @@ public class GameController : MonoBehaviour {
 		}
 		Debug.Log (Out);
 	}
+
+    public void lineOfSight() {
+        GameObject whatDidIHit = null;
+        if (turn == "P1") {
+            //Make sure that the current player's team is active 
+            foreach (GameObject friendly in p1Chars) {
+                friendly.GetComponent<Character>().turnOnGameObject();
+            }
+            
+            //Each frame reset the enemy can be seen boolean to false
+            foreach (GameObject enemy in p2Chars) {
+                 enemy.GetComponent<Character>().CanBeSeen = false;
+            }
+
+            //Check to see if the enemy can be seen
+            foreach (GameObject friendly in p1Chars) {
+                foreach(GameObject enemy in p2Chars) {
+                    whatDidIHit = friendly.GetComponent<Character>().characterLineOfSight(enemy.transform.position);
+                    //Debug.Log(whatDidIHit.name);
+                    if (whatDidIHit != null)
+                    {
+                        if (enemy.name == whatDidIHit.name)
+                        {
+                            if (!enemy.GetComponent<Character>().CanBeSeen)
+                            {
+                                enemy.GetComponent<Character>().CanBeSeen = true;
+                            }
+                        }
+                    }
+                    else
+                    {
+                        enemy.GetComponent<Character>().turnOnGameObject();
+                        enemy.GetComponent<Character>().CanBeSeen = true;
+                    }
+                }
+            }
+
+            //Turn on/off characters if they can be seen
+            foreach (GameObject enemy in p2Chars) {
+                if (enemy.GetComponent<Character>().CanBeSeen || whatDidIHit == null) {
+                    enemy.GetComponent<Character>().turnOnGameObject();
+                }
+                else {
+                    enemy.GetComponent<Character>().turnOffGameObject();
+                }
+            }
+        }
+        else {
+            //Make sure that the current player's team is active 
+            foreach (GameObject friendly in p2Chars) {
+                friendly.GetComponent<Character>().turnOnGameObject();
+            }
+
+            //Each frame reset the enemy can be seen boolean to false
+            foreach (GameObject enemy in p1Chars) {
+                enemy.GetComponent<Character>().CanBeSeen = false;
+            }
+
+            //Check to see if the enemy can be seen
+            foreach (GameObject friendly in p2Chars) {
+                foreach (GameObject enemy in p1Chars) {
+                    whatDidIHit = friendly.GetComponent<Character>().characterLineOfSight(enemy.transform.position);
+                    if (whatDidIHit != null)
+                    {
+                        if (enemy.name == whatDidIHit.name)
+                        {
+                            if (!enemy.GetComponent<Character>().CanBeSeen)
+                            {
+                                enemy.GetComponent<Character>().CanBeSeen = true;
+                            }
+                        }
+                    }
+                    else
+                    {
+                        enemy.GetComponent<Character>().turnOnGameObject();
+                        enemy.GetComponent<Character>().CanBeSeen = true;
+                    }
+                }
+            }
+
+            //Turn on/off characters if they can be seen
+            foreach (GameObject enemy in p1Chars) {
+                if (enemy.GetComponent<Character>().CanBeSeen || whatDidIHit == null) {
+                    enemy.GetComponent<Character>().turnOnGameObject();
+                }
+                else {
+                    enemy.GetComponent<Character>().turnOffGameObject();
+                }
+            }
+
+        }
+    }
     #endregion
 
     #region Unity Overrides
@@ -135,6 +227,7 @@ public class GameController : MonoBehaviour {
     // Update is called once per frame
     void Update()
     {
+        lineOfSight();
         if (currentlySelectedCharacter && Input.GetMouseButtonDown(1)) {
             UnselectCharacter();
         }
