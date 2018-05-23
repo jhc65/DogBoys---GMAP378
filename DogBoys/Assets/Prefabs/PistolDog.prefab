@@ -214,7 +214,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &1423882360191232
 GameObject:
   m_ObjectHideFlags: 1
@@ -505,7 +505,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1802889224258522}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 6, y: 0.5, z: 1}
+  m_LocalPosition: {x: 12, y: 0.5, z: 1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 224469205491958576}
@@ -918,10 +918,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dbaf78d219fed7541a81312aef714d4f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 0
-  status: 
+  health: 100
   weapon: {fileID: 114760920349442078}
   characterHUD: {fileID: 1540739352884452}
+  isInCover: 0
+  isNoHitCover: 0
 --- !u!114 &114275707185319594
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1982,7 +1983,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 361.005, y: 56.684998}
+  m_AnchoredPosition: {x: 510, y: 21.446167}
   m_SizeDelta: {x: 380.84, y: 40}
   m_Pivot: {x: 0.5, y: 0}
 --- !u!224 &224292676757716966
@@ -2288,7 +2289,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: 59.11254, y: 57.4}
+  m_AnchoredPosition: {x: -7.887459, y: 108.76117}
   m_SizeDelta: {x: 473.32, y: 94.79}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!224 &224975194328242036
