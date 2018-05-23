@@ -17,7 +17,7 @@ public class Camera_tiles : MonoBehaviour {
 	}
 
 	// Update is called once per frame
-	void Update () {
+	void  Update () {
 		// Shoot a raycast from the camera to where player is pointing
 		Ray tempRay = Camera.main.ScreenPointToRay(Input.mousePosition);
 		// If that raycast hit something...
@@ -39,5 +39,9 @@ public class Camera_tiles : MonoBehaviour {
 				currentHighlight.transform.position = new Vector3(currentHighlight.transform.position.x,-10,currentHighlight.transform.position.z);
 			}
 		}
+	}
+
+	private void OnMouseOver() {
+		
 	}
 }

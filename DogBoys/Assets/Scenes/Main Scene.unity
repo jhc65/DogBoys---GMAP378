@@ -14080,9 +14080,11 @@ GameObject:
   - component: {fileID: 1928419132}
   - component: {fileID: 1928419131}
   - component: {fileID: 1928419130}
+  - component: {fileID: 1928419134}
+  - component: {fileID: 1928419135}
   m_Layer: 0
   m_Name: Camera
-  m_TagString: Untagged
+  m_TagString: MainCamera
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -14150,6 +14152,42 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 35, y: 0, z: 0}
+--- !u!114 &1928419134
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1928419129}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0fe46f8263c67714b8c0e20524d32521, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tileHighlight: {fileID: 1489482452094200, guid: 8b8934210ad7ede418166c634dde6352,
+    type: 2}
+--- !u!114 &1928419135
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1928419129}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 939fd2e82f555e441aff0033656acc05, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cameraSpeed_: 20
+  cameraZoomSpeed_: 20
+  cameraSmooth_: 0
+  cameraMovementRangeXMin_: -20
+  cameraMovementRangeXMax_: 20
+  cameraMovementRangeZMin_: -20
+  cameraMovementRangeZMax_: 20
+  cameraZoomRangeYMin_: -20
+  cameraZoomRangeYMax_: 20
+  targetCameraFollow_: {fileID: 0}
+  cameraOffset_: {x: 0, y: 0, z: 0}
+  cameraFollowing_: 0
 --- !u!1 &1934366265
 GameObject:
   m_ObjectHideFlags: 0
