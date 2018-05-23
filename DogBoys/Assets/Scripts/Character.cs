@@ -16,11 +16,12 @@ public class Character : MonoBehaviour {
     private bool canMove = false;
     private bool isMoving = false;
     private bool isSelected = false;
+    private bool canBeSeen = false;
+    private int xPos, yPos;
     [SerializeField]
     private bool isInCover = false;
     [SerializeField]
     private bool isNoHitCover = false;
-	private int xPos, yPos;
     private Vector3 newPos;
 
     private GameController gc;
@@ -41,6 +42,18 @@ public class Character : MonoBehaviour {
 			Die ();
 		return health;
 	}
+    public bool CanBeSeen
+    {
+        get
+        {
+            return canBeSeen;
+        }
+
+        set
+        {
+            canBeSeen = value;
+        }
+    }
 
     public bool IsInCover {
         get { return isInCover; }
@@ -218,9 +231,35 @@ public class Character : MonoBehaviour {
 	}
     #endregion
 
-    #region Unity Overrides
-    // Use this for initialization
-    void Start () {
+    public GameObject characterLineOfSight(Vector3 enemiesLocation)
+    {
+        RaycastHit hitMyTarget;
+        Vector3 raycastFromHere = transform.position;
+        enemiesLocation.y += 0.5f;
+        raycastFromHere.y += 0.5f;
+        if (Physics.Linecast(raycastFromHere, enemiesLocation, out hitMyTarget))
+        {
+            Debug.DrawLine(raycastFromHere, enemiesLocation, Color.yellow);
+            return hitMyTarget.collider.gameObject;
+        }
+        else
+        {
+            Debug.DrawLine(raycastFromHere, enemiesLocation, Color.red);
+            return null;
+        }
+    }
+
+    public void turnOffGameObject() {
+        gameObject.SetActive(false);
+    }
+
+    public void turnOnGameObject() {
+        gameObject.SetActive(true);
+    }
+
+        #region Unity Overrides
+        // Use this for initialization
+        void Start () {
         gc = GameController.Instance;
         canMove = true;
 		health = 100;
