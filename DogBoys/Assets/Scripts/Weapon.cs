@@ -6,12 +6,15 @@ public class Weapon : Equippable {
 
 	protected int maxShots;
 	protected int shotsRemaining;
-	protected float range;
+	protected int range;
 	private bool reloading;
 	protected int damage;
 
+	public int getRange() {
+		return range;
+	}
 
-	public void use(Character chara){
+	 public override void use(Character chara){
 		Debug.Log ("Getting to use?");
 		if (!reloading) {
 			fire (chara);

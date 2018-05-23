@@ -6,8 +6,8 @@ public class Character : MonoBehaviour {
     #region Variables
     [SerializeField]
     private int health;
-    [SerializeField]
-	private string status;
+//    [SerializeField]
+	//private string status;
     [SerializeField]
 	private Weapon weapon;
     [SerializeField]
@@ -16,12 +16,20 @@ public class Character : MonoBehaviour {
     private bool canMove = false;
     private bool isMoving = false;
     private bool isSelected = false;
-	private int xPos, yPos;
+    private bool canBeSeen = false;
+    private int xPos, yPos;
+    [SerializeField]
+    private bool isInCover = false;
+    [SerializeField]
+    private bool isNoHitCover = false;
     private Vector3 newPos;
 
     private GameController gc;
 
     #region Getters and Setters
+	public Weapon getWeapon(){
+		return weapon;
+	}
 	public bool getCanMove(){
 		return canMove;
 	}
@@ -34,6 +42,26 @@ public class Character : MonoBehaviour {
 			Die ();
 		return health;
 	}
+    public bool CanBeSeen
+    {
+        get
+        {
+            return canBeSeen;
+        }
+
+        set
+        {
+            canBeSeen = value;
+        }
+    }
+
+    public bool IsInCover {
+        get { return isInCover; }
+    }
+
+    public bool IsInNoHitCover {
+        get { return isNoHitCover; }
+    }
     #endregion
     #endregion
 
@@ -44,12 +72,16 @@ public class Character : MonoBehaviour {
 			gc.p1Chars.Remove (gameObject);
 		if (gc.p2Chars.Contains (gameObject))
 			gc.p2Chars.Remove (gameObject);
+		gc.setSpace (Mathf.RoundToInt (gameObject.transform.position.x), Mathf.RoundToInt (gameObject.transform.position.z), 0);
         Destroy(gameObject);
     }
 
     public void Move(Vector3 position)
     {
+        isInCover = false;
+        isNoHitCover = false;
         newPos = new Vector3(position.x, gameObject.transform.position.y, position.z);
+		gc.setSpace (Mathf.RoundToInt(gameObject.transform.position.x), Mathf.RoundToInt(gameObject.transform.position.z), 0);
         gameObject.transform.position = newPos;
         //Debug.Log("move");
         //if (canMove) {
@@ -57,8 +89,53 @@ public class Character : MonoBehaviour {
         //    isMoving = true;
         //}
 
+		gc.setSpace (Mathf.RoundToInt(position.x), Mathf.RoundToInt(position.z), 1);
+		gc.printBoard ();
+
 		canMove = false;
 		UnselectCharacter ();
+
+    }
+
+    public void Move(Vector3 position, bool inCover)
+    {
+        isInCover = inCover;
+        isNoHitCover = false;
+        newPos = new Vector3(position.x, gameObject.transform.position.y, position.z);
+        gc.setSpace(Mathf.RoundToInt(gameObject.transform.position.x), Mathf.RoundToInt(gameObject.transform.position.z), 0);
+        gameObject.transform.position = newPos;
+        //Debug.Log("move");
+        //if (canMove) {
+        //    newPos = new Vector3(position.x, gameObject.transform.position.y, position.z);
+        //    isMoving = true;
+        //}
+
+        gc.setSpace(Mathf.RoundToInt(position.x), Mathf.RoundToInt(position.z), 1);
+        gc.printBoard();
+
+        canMove = false;
+        UnselectCharacter();
+
+    }
+
+    public void Move_NoHit(Vector3 position)
+    {
+        isInCover = false;
+        isNoHitCover = true;
+        newPos = new Vector3(position.x, gameObject.transform.position.y, position.z);
+        gc.setSpace(Mathf.RoundToInt(gameObject.transform.position.x), Mathf.RoundToInt(gameObject.transform.position.z), 0);
+        gameObject.transform.position = newPos;
+        //Debug.Log("move");
+        //if (canMove) {
+        //    newPos = new Vector3(position.x, gameObject.transform.position.y, position.z);
+        //    isMoving = true;
+        //}
+
+        gc.setSpace(Mathf.RoundToInt(position.x), Mathf.RoundToInt(position.z), 1);
+        gc.printBoard();
+
+        canMove = false;
+        UnselectCharacter();
 
     }
 
@@ -101,17 +178,85 @@ public class Character : MonoBehaviour {
 	public void Shoot(Character enemy){
 		weapon.use (enemy);
 	}
+
+	private bool isInRange(GameObject char1, GameObject char2, int range){
+		int x1 = Mathf.RoundToInt (char1.transform.position.x);
+		int x2 = Mathf.RoundToInt (char2.transform.position.x);
+		int y1 = Mathf.RoundToInt (char1.transform.position.z);
+		int y2 = Mathf.RoundToInt (char2.transform.position.z);
+
+		if (x1 == x2) {
+			if (Mathf.Abs (y1 - y2) > range) {
+				return false;
+			} else {
+				int adder;
+				if (y1 > y2)
+					adder = -1;
+				else
+					adder = 1;
+				for (int i = y1; i != (y1 + (adder * range)); i += adder) {
+					if (gc.getSpace (x1, i) == 3)
+						return false;
+				}
+			}
+
+		} else if (y1 == y2) {
+			if (Mathf.Abs (x1 - x2) > range) {
+				return false;
+			} else {
+				int adder;
+				if (x1 > x2)
+					adder = -1;
+				else
+					adder = 1;
+				for (int i = x1; i != (x1 + (adder * range)); i += adder) {
+					if (gc.getSpace (i, y1) == 3)
+						return false;
+				}
+			}
+		} else {
+			return false;
+		}
+		return true;
+	}
     #endregion
 
-    #region Unity Overrides
-    // Use this for initialization
-    void Start () {
+    public GameObject characterLineOfSight(Vector3 enemiesLocation)
+    {
+        RaycastHit hitMyTarget;
+        Vector3 raycastFromHere = transform.position;
+        enemiesLocation.y += 0.5f;
+        raycastFromHere.y += 0.5f;
+        if (Physics.Linecast(raycastFromHere, enemiesLocation, out hitMyTarget))
+        {
+            Debug.DrawLine(raycastFromHere, enemiesLocation, Color.yellow);
+            return hitMyTarget.collider.gameObject;
+        }
+        else
+        {
+            Debug.DrawLine(raycastFromHere, enemiesLocation, Color.red);
+            return null;
+        }
+    }
+
+    public void turnOffGameObject() {
+        gameObject.SetActive(false);
+    }
+
+    public void turnOnGameObject() {
+        gameObject.SetActive(true);
+    }
+
+        #region Unity Overrides
+        // Use this for initialization
+        void Start () {
         gc = GameController.Instance;
         canMove = true;
 		health = 100;
-		status = "";
+//		status = "";
 
         CenterOnSpace();
+		gc.setSpace (Mathf.RoundToInt (gameObject.transform.position.x), Mathf.RoundToInt (gameObject.transform.position.z), 1);
     }
 	
 	// Update is called once per frame
@@ -132,17 +277,26 @@ public class Character : MonoBehaviour {
             SelectCharacter();
         }
 		if (Input.GetMouseButtonDown (0) && gc.HasSelectedCharacter() && gc.currentlySelectedCharacter != gameObject) {
-			Character selected = gc.currentlySelectedCharacter.GetComponent<Character> ();
+			Character selected = gc.currentlySelectedCharacter.GetComponent<Character>();
 
-			//Attack this character and end the other character's turn
-			Debug.Log("Pow");
-			selected.Shoot(this);
-			Debug.Log ("I have " + health.ToString() + " health left");
-			selected.setCanMove (false);
-			selected.UnselectCharacter ();
-			gc.currentlySelectedCharacter = null;
-			gc.updateTurns ();
-
+			int range = selected.getWeapon ().getRange ();
+			if (isInRange (gameObject, gc.currentlySelectedCharacter, range)) {
+				//Attack this character and end the other character's turn
+                if (isInCover && gc.currentlySelectedCharacter.GetComponent<Character>().IsInNoHitCover) {
+                    Debug.Log("You can't attack because cover system");
+                }
+                else {
+                    Debug.Log("Pow");
+                    selected.Shoot(this);
+                    Debug.Log("I have " + health.ToString() + " health left");
+                    selected.setCanMove(false);
+                    selected.UnselectCharacter();
+                    gc.currentlySelectedCharacter = null;
+                    gc.updateTurns();
+                }
+			} else {
+				Debug.Log ("That's out of range!");
+			}
 		}
     }
     #endregion

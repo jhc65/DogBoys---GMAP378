@@ -5,6 +5,11 @@ TagManager:
   serializedVersion: 2
   tags:
   - Tile
+  - World HUD
+  - HalfCover
+  - FullCover
+  - DeadTile
+  - NoHitCover
   layers:
   - Default
   - TransparentFX
