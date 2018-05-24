@@ -26,4 +26,11 @@ public static class Constants {
 			public static int damage = 40;
 		}
 	}
+
+    public static class WinScreen
+    {
+        public static string C_WinText = "";
+    }
 }
+
+

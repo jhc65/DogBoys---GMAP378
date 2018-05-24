@@ -13,7 +13,7 @@ public class Character : MonoBehaviour {
     [SerializeField]
     private GameObject characterHUD;
 
-    private bool isOnOverwatch = true;
+    private bool isOnOverwatch = false;
     private List<Character> enemySeen;
     private bool canMove = false;
     private bool isMoving = false;

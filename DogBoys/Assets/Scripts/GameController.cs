@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameController : MonoBehaviour {
     #region Variables and Declarations
@@ -244,13 +245,15 @@ public class GameController : MonoBehaviour {
         {
             if (p1Chars.Count == 0)
             {
-                Debug.Log("Player 2 Wins!");
+                Constants.WinScreen.C_WinText = "Player 2 Wins!!";
                 gameOver = true;
+                SceneManager.LoadScene("Win Scene");
             }
             else if (p2Chars.Count == 0)
             {
-                Debug.Log("Player 1 Wins!");
+                Constants. WinScreen.C_WinText = "Player 1 Wins!!";
                 gameOver = true;
+                SceneManager.LoadScene("Win Scene");
             }
         }
     }
@@ -272,7 +275,7 @@ public class GameController : MonoBehaviour {
     // Update is called once per frame
     void Update()
     {
-        lineOfSight();
+        //lineOfSight();
         //winGame();
         if (currentlySelectedCharacter && Input.GetMouseButtonDown(1)) {
             UnselectCharacter();
