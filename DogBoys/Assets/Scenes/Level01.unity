@@ -47008,6 +47008,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tileHighlight: {fileID: 1489482452094200, guid: 8b8934210ad7ede418166c634dde6352,
     type: 2}
+  nullHighlight: {fileID: 1012679814923280, guid: 221c41dd0f883b242b2bebe114f0ab4d,
+    type: 2}
 --- !u!81 &1351920337
 AudioListener:
   m_ObjectHideFlags: 0
