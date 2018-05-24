@@ -30,7 +30,7 @@ public class Character : MonoBehaviour {
 	public Weapon getWeapon(){
 		return weapon;
 	}
-	public bool getMovesLeft(){
+	public int getMovesLeft(){
 		return movesLeft;
 	}
 	public void setMovesLeft(int setter){
@@ -67,6 +67,10 @@ public class Character : MonoBehaviour {
 
 	#region Character Functions
 
+	public void useMove(){
+		movesLeft--;
+	}
+
 	public void skipTurn() {
 		setMovesLeft (0);
 		UnselectCharacter ();
@@ -98,7 +102,7 @@ public class Character : MonoBehaviour {
 		gc.setSpace (Mathf.RoundToInt(position.x), Mathf.RoundToInt(position.z), 1);
 		gc.printBoard ();
 
-		canMove = false;
+		useMove ();
 		UnselectCharacter ();
 
 	}
@@ -120,7 +124,7 @@ public class Character : MonoBehaviour {
 			gc.setSpace (Mathf.RoundToInt (position.x), Mathf.RoundToInt (position.z), 1);
 			gc.printBoard ();
 
-			canMove = false;
+			useMove ();
 			UnselectCharacter ();
 		} else {
 			Debug.Log ("Can't go there from here.");
@@ -143,7 +147,7 @@ public class Character : MonoBehaviour {
 		gc.setSpace(Mathf.RoundToInt(position.x), Mathf.RoundToInt(position.z), 1);
 		gc.printBoard();
 
-		canMove = false;
+		useMove ();
 		UnselectCharacter();
 
 	}
@@ -188,11 +192,11 @@ public class Character : MonoBehaviour {
 		weapon.use (enemy);
 	}
 
-	private bool isInRange(GameObject char1, GameObject char2, int range){
-		int x1 = Mathf.RoundToInt (char1.transform.position.x);
-		int x2 = Mathf.RoundToInt (char2.transform.position.x);
-		int y1 = Mathf.RoundToInt (char1.transform.position.z);
-		int y2 = Mathf.RoundToInt (char2.transform.position.z);
+	private bool isInRange(Vector3 char1, Vector3 char2, int range){
+		int x1 = Mathf.RoundToInt (char1.x);
+		int x2 = Mathf.RoundToInt (char2.x);
+		int y1 = Mathf.RoundToInt (char1.z);
+		int y2 = Mathf.RoundToInt (char2.z);
 
 		if (x1 == x2) {
 			if (Mathf.Abs (y1 - y2) > range) {
@@ -235,6 +239,9 @@ public class Character : MonoBehaviour {
 		}
 		return true;
 	}
+	private bool isInRange(GameObject char1, GameObject char2, int range){
+		return isInRange (char1.transform.position, char2.transform.position, range);
+	}
 	#endregion
 
 	public GameObject characterLineOfSight(Vector3 enemiesLocation)
@@ -267,7 +274,7 @@ public class Character : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		gc = GameController.Instance;
-		canMove = true;
+		movesLeft = 2;
 		health = 100;
 		//		status = "";
 
@@ -289,7 +296,7 @@ public class Character : MonoBehaviour {
 	}
 
 	private void OnMouseOver() {
-		if (!isMoving && Input.GetMouseButtonDown(0) && canMove) {
+		if (!isMoving && Input.GetMouseButtonDown(0) && movesLeft > 0) {
 			SelectCharacter();
 		}
 		if (Input.GetMouseButtonDown (0) && gc.HasSelectedCharacter() && gc.currentlySelectedCharacter != gameObject) {
@@ -305,7 +312,7 @@ public class Character : MonoBehaviour {
 					Debug.Log("Pow");
 					selected.Shoot(this);
 					Debug.Log("I have " + health.ToString() + " health left");
-					selected.setCanMove(false);
+					selected.useMove ();;
 					selected.UnselectCharacter();
 					gc.currentlySelectedCharacter = null;
 					gc.updateTurns();
