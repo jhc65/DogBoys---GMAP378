@@ -14,13 +14,16 @@ public class Weapon : Equippable {
 	public int getRange() {
 		return range;
 	}
-
+		
 	public int getMoveRange() {
 		return moveRange;
 	}
+	public int getShotsRemaining(){
+		return shotsRemaining;
+	}
 
 	 public override void use(Character chara){
-		Debug.Log ("Getting to use?");
+		//Debug.Log ("Getting to use?");
 		if (!reloading) {
 			fire (chara);
 		} else {

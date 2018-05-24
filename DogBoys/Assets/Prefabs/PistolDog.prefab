@@ -919,9 +919,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 0
-  status: 
   weapon: {fileID: 114760920349442078}
   characterHUD: {fileID: 1540739352884452}
+  isInCover: 0
+  isNoHitCover: 0
 --- !u!114 &114275707185319594
 MonoBehaviour:
   m_ObjectHideFlags: 1

@@ -109,7 +109,7 @@ public class GameController : MonoBehaviour {
 
     private bool p1CanMove() {
 		foreach (GameObject chara in p1Chars) {
-			if (chara.GetComponent<Character> ().getCanMove ()) {
+			if (chara.GetComponent<Character> ().getMovesLeft () > 0) {
 				Debug.Log ("P1 can still move");
 				return true;
 			}
@@ -119,7 +119,7 @@ public class GameController : MonoBehaviour {
 
 	private bool p2CanMove() {
 		foreach (GameObject chara in p2Chars) {
-			if (chara.GetComponent<Character> ().getCanMove ()) {
+			if (chara.GetComponent<Character> ().getMovesLeft () > 0) {
 				Debug.Log ("P2 can still move");
 				return true;
 			}
@@ -139,10 +139,10 @@ public class GameController : MonoBehaviour {
 	private void StartP1Turn() {
 		Debug.Log ("P1 turn start");
 		foreach (GameObject chara in p2Chars) {
-			chara.GetComponent<Character> ().setCanMove (false);
+			chara.GetComponent<Character> ().setMovesLeft (0);
 		}
 		foreach (GameObject chara in p1Chars) {
-			chara.GetComponent<Character> ().setCanMove (true);
+			chara.GetComponent<Character> ().setMovesLeft (2);
 		}
 
 		turn = "P1";
@@ -151,10 +151,10 @@ public class GameController : MonoBehaviour {
 	private void StartP2Turn() {
 		Debug.Log ("P2 turn start");
 		foreach (GameObject chara in p1Chars) {
-			chara.GetComponent<Character> ().setCanMove (false);
+			chara.GetComponent<Character> ().setMovesLeft (0);
 		}
 		foreach (GameObject chara in p2Chars) {
-			chara.GetComponent<Character> ().setCanMove (true);
+			chara.GetComponent<Character> ().setMovesLeft (2);
 		}
 
 		turn = "P2";

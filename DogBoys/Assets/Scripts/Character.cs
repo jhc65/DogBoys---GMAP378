@@ -3,38 +3,38 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Character : MonoBehaviour {
-    #region Variables
-    [SerializeField]
-    private int health;
-//    [SerializeField]
+	#region Variables
+	[SerializeField]
+	private int health;
+	//    [SerializeField]
 	//private string status;
-    [SerializeField]
+	[SerializeField]
 	private Weapon weapon;
-    [SerializeField]
-    private GameObject characterHUD;
+	[SerializeField]
+	private GameObject characterHUD;
 
-    private bool canMove = false;
-    private bool isMoving = false;
-    private bool isSelected = false;
-    private bool canBeSeen = false;
-    private int xPos, yPos;
-    [SerializeField]
-    private bool isInCover = false;
-    [SerializeField]
-    private bool isNoHitCover = false;
-    private Vector3 newPos;
+	private int movesLeft = 2;
+	private bool isMoving = false;
+	private bool isSelected = false;
+	private bool canBeSeen = false;
+	private int xPos, yPos;
+	[SerializeField]
+	private bool isInCover = false;
+	[SerializeField]
+	private bool isNoHitCover = false;
+	private Vector3 newPos;
 
-    private GameController gc;
+	private GameController gc;
 
-    #region Getters and Setters
+	#region Getters and Setters
 	public Weapon getWeapon(){
 		return weapon;
 	}
-	public bool getCanMove(){
-		return canMove;
+	public bool getMovesLeft(){
+		return movesLeft;
 	}
-	public void setCanMove(bool setter){
-		canMove = setter;
+	public void setMovesLeft(int setter){
+		movesLeft = setter;
 	}
 	public int hurt(int dmg){
 		health -= dmg;
@@ -42,52 +42,58 @@ public class Character : MonoBehaviour {
 			Die ();
 		return health;
 	}
-    public bool CanBeSeen
-    {
-        get
-        {
-            return canBeSeen;
-        }
+	public bool CanBeSeen
+	{
+		get
+		{
+			return canBeSeen;
+		}
 
-        set
-        {
-            canBeSeen = value;
-        }
-    }
+		set
+		{
+			canBeSeen = value;
+		}
+	}
 
-    public bool IsInCover {
-        get { return isInCover; }
-    }
+	public bool IsInCover {
+		get { return isInCover; }
+	}
 
-    public bool IsInNoHitCover {
-        get { return isNoHitCover; }
-    }
-    #endregion
-    #endregion
+	public bool IsInNoHitCover {
+		get { return isNoHitCover; }
+	}
+	#endregion
+	#endregion
 
-    #region Character Functions
-    void Die()
-    {
+	#region Character Functions
+
+	public void skipTurn() {
+		setMovesLeft (0);
+		UnselectCharacter ();
+	}
+
+	void Die()
+	{
 		if (gc.p1Chars.Contains (gameObject))
 			gc.p1Chars.Remove (gameObject);
 		if (gc.p2Chars.Contains (gameObject))
 			gc.p2Chars.Remove (gameObject);
 		gc.setSpace (Mathf.RoundToInt (gameObject.transform.position.x), Mathf.RoundToInt (gameObject.transform.position.z), 0);
-        Destroy(gameObject);
-    }
+		Destroy(gameObject);
+	}
 
-    public void Move(Vector3 position)
-    {
-        isInCover = false;
-        isNoHitCover = false;
-        newPos = new Vector3(position.x, gameObject.transform.position.y, position.z);
+	public void Move(Vector3 position)
+	{
+		isInCover = false;
+		isNoHitCover = false;
+		newPos = new Vector3(position.x, gameObject.transform.position.y, position.z);
 		gc.setSpace (Mathf.RoundToInt(gameObject.transform.position.x), Mathf.RoundToInt(gameObject.transform.position.z), 0);
-        gameObject.transform.position = newPos;
-        //Debug.Log("move");
-        //if (canMove) {
-        //    newPos = new Vector3(position.x, gameObject.transform.position.y, position.z);
-        //    isMoving = true;
-        //}
+		gameObject.transform.position = newPos;
+		//Debug.Log("move");
+		//if (canMove) {
+		//    newPos = new Vector3(position.x, gameObject.transform.position.y, position.z);
+		//    isMoving = true;
+		//}
 
 		gc.setSpace (Mathf.RoundToInt(position.x), Mathf.RoundToInt(position.z), 1);
 		gc.printBoard ();
@@ -95,10 +101,10 @@ public class Character : MonoBehaviour {
 		canMove = false;
 		UnselectCharacter ();
 
-    }
+	}
 
-    public void Move(Vector3 position, bool inCover)
-    {
+	public void Move(Vector3 position, bool inCover)
+	{
 		if (isInRange (gameObject.transform.position, position, weapon.getMoveRange ())) {
 			isInCover = inCover;
 			isNoHitCover = false;
@@ -119,74 +125,74 @@ public class Character : MonoBehaviour {
 		} else {
 			Debug.Log ("Can't go there from here.");
 		}
-    }
+	}
 
-    public void Move_NoHit(Vector3 position)
-    {
-        isInCover = false;
-        isNoHitCover = true;
-        newPos = new Vector3(position.x, gameObject.transform.position.y, position.z);
-        gc.setSpace(Mathf.RoundToInt(gameObject.transform.position.x), Mathf.RoundToInt(gameObject.transform.position.z), 0);
-        gameObject.transform.position = newPos;
-        //Debug.Log("move");
-        //if (canMove) {
-        //    newPos = new Vector3(position.x, gameObject.transform.position.y, position.z);
-        //    isMoving = true;
-        //}
+	public void Move_NoHit(Vector3 position)
+	{
+		isInCover = false;
+		isNoHitCover = true;
+		newPos = new Vector3(position.x, gameObject.transform.position.y, position.z);
+		gc.setSpace(Mathf.RoundToInt(gameObject.transform.position.x), Mathf.RoundToInt(gameObject.transform.position.z), 0);
+		gameObject.transform.position = newPos;
+		//Debug.Log("move");
+		//if (canMove) {
+		//    newPos = new Vector3(position.x, gameObject.transform.position.y, position.z);
+		//    isMoving = true;
+		//}
 
-        gc.setSpace(Mathf.RoundToInt(position.x), Mathf.RoundToInt(position.z), 1);
-        gc.printBoard();
+		gc.setSpace(Mathf.RoundToInt(position.x), Mathf.RoundToInt(position.z), 1);
+		gc.printBoard();
 
-        canMove = false;
-        UnselectCharacter();
+		canMove = false;
+		UnselectCharacter();
 
-    }
+	}
 
-    private void CenterOnSpace() {
-        // Don't collide with Player layer
+	private void CenterOnSpace() {
+		// Don't collide with Player layer
 
-        RaycastHit hit;
-        if (Physics.Raycast(gameObject.transform.position, transform.TransformDirection(Vector3.down) * 3f, out hit, Mathf.Infinity)) {
-            Vector3 centered = new Vector3(hit.transform.position.x, gameObject.transform.position.y, hit.transform.position.z);
-            gameObject.transform.position = centered;
-        }
-    }
+		RaycastHit hit;
+		if (Physics.Raycast(gameObject.transform.position, transform.TransformDirection(Vector3.down) * 3f, out hit, Mathf.Infinity)) {
+			Vector3 centered = new Vector3(hit.transform.position.x, gameObject.transform.position.y, hit.transform.position.z);
+			gameObject.transform.position = centered;
+		}
+	}
 
-    private void ToggleIsSelected() {
-        if (isSelected) {
-            isSelected = false;
-        }
-        else {
-            isSelected = true;
-        }
-    }
+	private void ToggleIsSelected() {
+		if (isSelected) {
+			isSelected = false;
+		}
+		else {
+			isSelected = true;
+		}
+	}
 
-    private void SetIsSelected(bool inSelection) {
-        isSelected = inSelection;
-    }
+	private void SetIsSelected(bool inSelection) {
+		isSelected = inSelection;
+	}
 
-    private void SelectCharacter() {
-        SetIsSelected(true);
-        characterHUD.SetActive(true);
-        gc.SetSelectedCharacter(gameObject);
-    }
+	private void SelectCharacter() {
+		SetIsSelected(true);
+		characterHUD.SetActive(true);
+		gc.SetSelectedCharacter(gameObject);
+	}
 
-    public void UnselectCharacter() {
-        SetIsSelected(false);
-        characterHUD.SetActive(false);
+	public void UnselectCharacter() {
+		SetIsSelected(false);
+		characterHUD.SetActive(false);
 		gc.SetSelectedCharacter (null);
 		gc.updateTurns ();
-    }
+	}
 
 	public void Shoot(Character enemy){
 		weapon.use (enemy);
 	}
 
-	private bool isInRange(Vector3 char1, Vector3 char2, int range){
-		int x1 = Mathf.RoundToInt (char1.x);
-		int x2 = Mathf.RoundToInt (char2.x);
-		int y1 = Mathf.RoundToInt (char1.z);
-		int y2 = Mathf.RoundToInt (char2.z);
+	private bool isInRange(GameObject char1, GameObject char2, int range){
+		int x1 = Mathf.RoundToInt (char1.transform.position.x);
+		int x2 = Mathf.RoundToInt (char2.transform.position.x);
+		int y1 = Mathf.RoundToInt (char1.transform.position.z);
+		int y2 = Mathf.RoundToInt (char2.transform.position.z);
 
 		if (x1 == x2) {
 			if (Mathf.Abs (y1 - y2) > range) {
@@ -229,85 +235,85 @@ public class Character : MonoBehaviour {
 		}
 		return true;
 	}
-    #endregion
+	#endregion
 
-    public GameObject characterLineOfSight(Vector3 enemiesLocation)
-    {
-        RaycastHit hitMyTarget;
-        Vector3 raycastFromHere = transform.position;
-        enemiesLocation.y += 0.5f;
-        raycastFromHere.y += 0.5f;
-        if (Physics.Linecast(raycastFromHere, enemiesLocation, out hitMyTarget))
-        {
-            Debug.DrawLine(raycastFromHere, enemiesLocation, Color.yellow);
-            return hitMyTarget.collider.gameObject;
-        }
-        else
-        {
-            Debug.DrawLine(raycastFromHere, enemiesLocation, Color.red);
-            return null;
-        }
-    }
+	public GameObject characterLineOfSight(Vector3 enemiesLocation)
+	{
+		RaycastHit hitMyTarget;
+		Vector3 raycastFromHere = transform.position;
+		enemiesLocation.y += 0.5f;
+		raycastFromHere.y += 0.5f;
+		if (Physics.Linecast(raycastFromHere, enemiesLocation, out hitMyTarget))
+		{
+			Debug.DrawLine(raycastFromHere, enemiesLocation, Color.yellow);
+			return hitMyTarget.collider.gameObject;
+		}
+		else
+		{
+			Debug.DrawLine(raycastFromHere, enemiesLocation, Color.red);
+			return null;
+		}
+	}
 
-    public void turnOffGameObject() {
-        gameObject.SetActive(false);
-    }
+	public void turnOffGameObject() {
+		gameObject.SetActive(false);
+	}
 
-    public void turnOnGameObject() {
-        gameObject.SetActive(true);
-    }
+	public void turnOnGameObject() {
+		gameObject.SetActive(true);
+	}
 
-        #region Unity Overrides
-        // Use this for initialization
-        void Start () {
-        gc = GameController.Instance;
-        canMove = true;
+	#region Unity Overrides
+	// Use this for initialization
+	void Start () {
+		gc = GameController.Instance;
+		canMove = true;
 		health = 100;
-//		status = "";
+		//		status = "";
 
-        CenterOnSpace();
+		CenterOnSpace();
 		gc.setSpace (Mathf.RoundToInt (gameObject.transform.position.x), Mathf.RoundToInt (gameObject.transform.position.z), 1);
-    }
-	
+	}
+
 	// Update is called once per frame
 	void Update () {
-        
-        //if (isMoving) {
-        //    if (gameObject.transform.position != newPos) {
-        //        Vector3.Lerp(gameObject.transform.position, newPos, (Time.deltaTime * 0.5f));
-        //    }
-        //    else {
-        //        isMoving = false;
-        //    }
-        //}
-    }
 
-    private void OnMouseOver() {
-        if (!isMoving && Input.GetMouseButtonDown(0) && canMove) {
-            SelectCharacter();
-        }
+		//if (isMoving) {
+		//    if (gameObject.transform.position != newPos) {
+		//        Vector3.Lerp(gameObject.transform.position, newPos, (Time.deltaTime * 0.5f));
+		//    }
+		//    else {
+		//        isMoving = false;
+		//    }
+		//}
+	}
+
+	private void OnMouseOver() {
+		if (!isMoving && Input.GetMouseButtonDown(0) && canMove) {
+			SelectCharacter();
+		}
 		if (Input.GetMouseButtonDown (0) && gc.HasSelectedCharacter() && gc.currentlySelectedCharacter != gameObject) {
 			Character selected = gc.currentlySelectedCharacter.GetComponent<Character>();
 
 			int range = selected.getWeapon ().getRange ();
-			if (isInRange (gameObject.transform.position, gc.currentlySelectedCharacter.transform.position, range)) {
+			if (isInRange (gameObject, gc.currentlySelectedCharacter, range)) {
 				//Attack this character and end the other character's turn
-                if (isInCover && gc.currentlySelectedCharacter.GetComponent<Character>().IsInNoHitCover) {
-                    Debug.Log("You can't attack because cover system");
-                }
-                else {
-                    Debug.Log("Pow");
-                    selected.Shoot(this);
-                    Debug.Log("I have " + health.ToString() + " health left");
-                    selected.setCanMove(false);
-                    selected.UnselectCharacter();
-                    gc.currentlySelectedCharacter = null;
-                    gc.updateTurns();
-                }
+				if (isInCover && gc.currentlySelectedCharacter.GetComponent<Character>().IsInNoHitCover) {
+					Debug.Log("You can't attack because cover system");
+				}
+				else {
+					Debug.Log("Pow");
+					selected.Shoot(this);
+					Debug.Log("I have " + health.ToString() + " health left");
+					selected.setCanMove(false);
+					selected.UnselectCharacter();
+					gc.currentlySelectedCharacter = null;
+					gc.updateTurns();
+				}
 			} else {
 				Debug.Log ("That's out of range!");
 			}
 		}
-    }
-    #endregion
+	}
+	#endregion
 }
