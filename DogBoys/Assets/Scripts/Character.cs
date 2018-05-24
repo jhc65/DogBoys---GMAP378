@@ -192,7 +192,7 @@ public class Character : MonoBehaviour {
 		weapon.use (enemy);
 	}
 
-	private bool isInRange(Vector3 char1, Vector3 char2, int range){
+	public bool isInRange(Vector3 char1, Vector3 char2, int range){
 		int x1 = Mathf.RoundToInt (char1.x);
 		int x2 = Mathf.RoundToInt (char2.x);
 		int y1 = Mathf.RoundToInt (char1.z);
@@ -239,7 +239,7 @@ public class Character : MonoBehaviour {
 		}
 		return true;
 	}
-	private bool isInRange(GameObject char1, GameObject char2, int range){
+	public bool isInRange(GameObject char1, GameObject char2, int range){
 		return isInRange (char1.transform.position, char2.transform.position, range);
 	}
 	#endregion
