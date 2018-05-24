@@ -318,7 +318,8 @@ public class Character : MonoBehaviour {
 					Debug.Log("Pow");
 					selected.Shoot(this);
 					Debug.Log("I have " + health.ToString() + " health left");
-					selected.useMove ();;
+					selected.useMove ();
+					gc.toggleAttackMode ();
 					selected.UnselectCharacter();
 					gc.currentlySelectedCharacter = null;
 					gc.updateTurns();
