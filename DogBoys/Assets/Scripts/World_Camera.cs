@@ -21,11 +21,16 @@ public class World_Camera : MonoBehaviour {
     private Vector3 cameraOffset_;
     [SerializeField]
     private bool cameraFollowing_ = false;
-
+    [SerializeField]
+    private float cameraRoatationSmoother_;
+    [SerializeField]
+    private float cameraRotationSpeed_;
 
     private float horizontalInput_;
     private float verticalInput_;
     private float mouseScrollWheelInput_;
+    private float rotationCameraInput_;
+
 
     private void Update()
     {
@@ -39,6 +44,7 @@ public class World_Camera : MonoBehaviour {
         }
         else {
             cameraFreeMovement();
+            rotateCamera();
         }
     }
 
@@ -97,5 +103,16 @@ public class World_Camera : MonoBehaviour {
         mouseScrollWheelInput_ = Input.GetAxisRaw("Mouse ScrollWheel");
         verticalInput_ = Input.GetAxisRaw("Vertical");
         horizontalInput_ = Input.GetAxisRaw("Horizontal");
+    }
+
+    private void rotateCamera() {
+        rotationCameraInput_ = Input.GetAxis("Camera Rotation");
+        if(rotationCameraInput_ != 0.0f)
+        {
+            float tempValue = transform.rotation.y + (rotationCameraInput_ * cameraRotationSpeed_);
+            Quaternion target = Quaternion.Euler(transform.rotation.x, tempValue, transform.rotation.z);
+            transform.rotation = Quaternion.Slerp(transform.rotation, target, Time.deltaTime * cameraRoatationSmoother_);
+        }
+        
     }
 }

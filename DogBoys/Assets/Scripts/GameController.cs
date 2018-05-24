@@ -72,7 +72,6 @@ public class GameController : MonoBehaviour {
 		return false;
 	}
 
-
 	public void updateTurns(){
 		if (turn == "P1" && !p1CanMove ()) {
 			StartP2Turn ();
@@ -138,6 +137,7 @@ public class GameController : MonoBehaviour {
                 foreach(GameObject enemy in p2Chars) {
                     whatDidIHit = friendly.GetComponent<Character>().characterLineOfSight(enemy.transform.position);
                     //Debug.Log(whatDidIHit.name);
+                    //Debug.Log(enemy.name);
                     if (whatDidIHit != null)
                     {
                         if (enemy.name == whatDidIHit.name)
@@ -145,6 +145,16 @@ public class GameController : MonoBehaviour {
                             if (!enemy.GetComponent<Character>().CanBeSeen)
                             {
                                 enemy.GetComponent<Character>().CanBeSeen = true;
+                                List<Character> tempList = friendly.GetComponent<Character>().EnemySeen;
+                                tempList.Add(enemy.GetComponent<Character>());
+                                friendly.GetComponent<Character>().EnemySeen = tempList;
+                            }
+                            //Update EnemySeen list if the target is already visable to the player
+                            else
+                            {
+                                List<Character> tempList = friendly.GetComponent<Character>().EnemySeen;
+                                tempList.Add(enemy.GetComponent<Character>());
+                                friendly.GetComponent<Character>().EnemySeen = tempList;
                             }
                         }
                     }
@@ -152,6 +162,9 @@ public class GameController : MonoBehaviour {
                     {
                         enemy.GetComponent<Character>().turnOnGameObject();
                         enemy.GetComponent<Character>().CanBeSeen = true;
+                        List<Character> tempList = friendly.GetComponent<Character>().EnemySeen;
+                        tempList.Add(enemy.GetComponent<Character>());
+                        friendly.GetComponent<Character>().EnemySeen = tempList;
                     }
                 }
             }
@@ -188,6 +201,16 @@ public class GameController : MonoBehaviour {
                             if (!enemy.GetComponent<Character>().CanBeSeen)
                             {
                                 enemy.GetComponent<Character>().CanBeSeen = true;
+                                List<Character> tempList = friendly.GetComponent<Character>().EnemySeen;
+                                tempList.Add(enemy.GetComponent<Character>());
+                                friendly.GetComponent<Character>().EnemySeen = tempList;
+                            }
+                            //Update EnemySeen list if the target is already visable to the player
+                            else
+                            {
+                                List<Character> tempList = friendly.GetComponent<Character>().EnemySeen;
+                                tempList.Add(enemy.GetComponent<Character>());
+                                friendly.GetComponent<Character>().EnemySeen = tempList;
                             }
                         }
                     }
@@ -195,6 +218,9 @@ public class GameController : MonoBehaviour {
                     {
                         enemy.GetComponent<Character>().turnOnGameObject();
                         enemy.GetComponent<Character>().CanBeSeen = true;
+                        List<Character> tempList = friendly.GetComponent<Character>().EnemySeen;
+                        tempList.Add(enemy.GetComponent<Character>());
+                        friendly.GetComponent<Character>().EnemySeen = tempList;
                     }
                 }
             }
@@ -234,6 +260,7 @@ public class GameController : MonoBehaviour {
     // Use this for initialization
     void Start() {
 		StartP1Turn ();
+        lineOfSight();
     }
 
     private void Awake() {
@@ -246,7 +273,7 @@ public class GameController : MonoBehaviour {
     void Update()
     {
         lineOfSight();
-        winGame();
+        //winGame();
         if (currentlySelectedCharacter && Input.GetMouseButtonDown(1)) {
             UnselectCharacter();
         }

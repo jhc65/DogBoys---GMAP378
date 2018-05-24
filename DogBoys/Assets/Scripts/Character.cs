@@ -13,6 +13,8 @@ public class Character : MonoBehaviour {
     [SerializeField]
     private GameObject characterHUD;
 
+    private bool isOnOverwatch = true;
+    private List<Character> enemySeen;
     private bool canMove = false;
     private bool isMoving = false;
     private bool isSelected = false;
@@ -47,6 +49,31 @@ public class Character : MonoBehaviour {
             canBeSeen = value;
         }
     }
+    public bool IsOnOverwatch
+    {
+        get
+        {
+            return isOnOverwatch;
+        }
+
+        set
+        {
+            isOnOverwatch = value;
+        }
+    }
+    public List<Character> EnemySeen
+    {
+        get
+        {
+            return enemySeen;
+        }
+
+        set
+        {
+            enemySeen = value;
+        }
+    }
+
     #endregion
     #endregion
 
@@ -59,10 +86,12 @@ public class Character : MonoBehaviour {
 			gc.p2Chars.Remove (gameObject);
 		gc.setSpace (Mathf.RoundToInt (gameObject.transform.position.x), Mathf.RoundToInt (gameObject.transform.position.z), 0);
         Destroy(gameObject);
+        gc.winGame();
     }
 
     public void Move(Vector3 position)
     {
+        enemySeen.Clear();
         newPos = new Vector3(position.x, gameObject.transform.position.y, position.z);
 		gc.setSpace (Mathf.RoundToInt(gameObject.transform.position.x), Mathf.RoundToInt(gameObject.transform.position.z), 0);
         gameObject.transform.position = newPos;
@@ -78,6 +107,22 @@ public class Character : MonoBehaviour {
 		canMove = false;
 		UnselectCharacter ();
 
+        //While moving, update LoS info
+        gc.lineOfSight();
+
+        //Overwatch attack
+        if (enemySeen.Count > 0) {
+            //Debug.Log("Enemy sees me");
+            foreach (Character enemy in enemySeen)
+            {
+                if (enemy.IsOnOverwatch)
+                {
+                    //Debug.Log("Enemy shoot me");
+                    overwatchAttack(enemy);
+                }
+            }
+        }
+        enemySeen.Clear();
     }
 
     private void CenterOnSpace() {
@@ -138,6 +183,13 @@ public class Character : MonoBehaviour {
         }
     }
 
+    public void overwatchAttack(Character enemy) {
+        Debug.Log(enemy.name + " shot " + this.name);
+        enemy.turnOnGameObject();
+        enemy.Shoot(this);
+        enemy.IsOnOverwatch = false;
+    }
+
     public void turnOffGameObject() {
         gameObject.SetActive(false);
     }
@@ -151,6 +203,7 @@ public class Character : MonoBehaviour {
         // Use this for initialization
         void Start () {
         gc = GameController.Instance;
+        enemySeen = new List<Character>();
         canMove = true;
 		health = 100;
 		status = "";
@@ -161,7 +214,7 @@ public class Character : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        
+
         //if (isMoving) {
         //    if (gameObject.transform.position != newPos) {
         //        Vector3.Lerp(gameObject.transform.position, newPos, (Time.deltaTime * 0.5f));
