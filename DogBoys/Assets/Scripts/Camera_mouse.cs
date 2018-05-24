@@ -13,6 +13,7 @@ public class Camera_mouse : MonoBehaviour {
 	private bool highlighted;
 	private Transform currentTile;
 	private GameObject currentHighlight;
+	private GameObject nully;
 	private GameController gc;	//game controller
 
 	void Start() {
@@ -35,10 +36,23 @@ public class Camera_mouse : MonoBehaviour {
 				if (highlighted == false) {
 					currentTile = hit.transform.gameObject.transform;
 					currentHighlight = Instantiate (tileHighlight, currentTile);
+					nully = Instantiate (nullHighlight, currentTile);
+					nully.SetActive (false);
 					highlighted = true;
 				//current tile is highlighted
-				} else {
+				} else if (currentHighlight.transform.position != currentTile.position) {
+					if (gc.HasSelectedCharacter ()) {
+						Character chara = gc.currentlySelectedCharacter.GetComponent<Character> ();
+						if(!chara.isInRange(gc.currentlySelectedCharacter.transform.position, currentTile.position, chara.getWeapon().getMoveRange())){
+							currentHighlight.SetActive (false);
+							nully.SetActive(true);
+						} else {
+							currentHighlight.SetActive (true);
+							nully.SetActive(false);
+						}
+					}
 					currentHighlight.transform.position = currentTile.position;
+					nully.transform.position = currentTile.position;
 				}
 				//-------------------------------------------------------------
 				//input bs
