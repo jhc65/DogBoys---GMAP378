@@ -68,6 +68,12 @@ public class Character : MonoBehaviour {
     #endregion
 
     #region Character Functions
+
+	public void skipTurn(){
+		setMovesLeft (0);
+		UnselectCharacter ();
+	}
+
     void Die()
     {
 		if (gc.p1Chars.Contains (gameObject))
