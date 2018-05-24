@@ -10,6 +10,7 @@ public class GameController : MonoBehaviour {
 	public List<GameObject> p1Chars = new List<GameObject>();
 	public List<GameObject> p2Chars = new List<GameObject>();
 	public string turn = "";
+	public bool attackMode = false;
     private bool gameOver = false;
 	/*
 	 * Board status
@@ -84,8 +85,11 @@ public class GameController : MonoBehaviour {
     }
 
     private void UnselectCharacter() {
+		if (attackMode)
+			toggleAttackMode ();
         currentlySelectedCharacter.GetComponent<Character>().UnselectCharacter();
         currentlySelectedCharacter = null;
+
     }
 
     public void MoveSelectedCharacter(Vector3 position) {
@@ -279,6 +283,12 @@ public class GameController : MonoBehaviour {
             }
         }
     }
+
+	public void toggleAttackMode(){
+		attackMode = !attackMode;
+		currentlySelectedCharacter.GetComponent<Character>().toggleAttackMode ();
+	}
+
     #endregion
 
     #region Unity Overrides

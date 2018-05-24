@@ -17,10 +17,28 @@ public class UI_Controller : MonoBehaviour
     private Text currentPlayerGunName_;
     [SerializeField]
     private Image currentPlayerAmmoCount_;
+	[SerializeField]
+	private Image attackMode_;
+	[SerializeField]
+	private Text outOfRange_;
+	[SerializeField]
+	private Text needToReload_;
+
     private int lastRecordedHealth_ = 0;
     private int lastRecordedMovement_ = 0;
     private int lastRecoredAmmoCount_ = 0;
 
+	public void setReloadText(bool setter) {
+		needToReload_.enabled = setter;
+	}
+
+	public void setRangeText(bool setter) {
+		outOfRange_.enabled = setter;
+	}
+
+	public void setAttackMode(bool setter) {
+		attackMode_.enabled = setter;
+	}
 
     public void updateCurrentHealthBar(int currentHealth, int maxHealth) {
         if(currentHealth != lastRecordedHealth_) {

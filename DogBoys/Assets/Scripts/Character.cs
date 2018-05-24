@@ -70,6 +70,11 @@ public class Character : MonoBehaviour {
 
     #region Character Functions
 
+	public void toggleAttackMode() {
+		Debug.Log ("Setting attack mode visual to " + gc.attackMode.ToString ());
+		characterHUD.GetComponent<UI_Controller> ().setAttackMode (gc.attackMode);
+	}
+
 	public void useMove(){
 		movesLeft--;
 	}
@@ -300,7 +305,7 @@ public class Character : MonoBehaviour {
 		if (!isMoving && Input.GetMouseButtonDown(0) && movesLeft > 0) {
 			SelectCharacter();
 		}
-		if (Input.GetMouseButtonDown (0) && gc.HasSelectedCharacter() && gc.currentlySelectedCharacter != gameObject) {
+		if (Input.GetMouseButtonDown (0) && gc.HasSelectedCharacter() && gc.currentlySelectedCharacter != gameObject && gc.attackMode) {
 			Character selected = gc.currentlySelectedCharacter.GetComponent<Character>();
 
 			int range = selected.getWeapon ().getRange ();
