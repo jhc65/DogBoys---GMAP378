@@ -13,7 +13,7 @@ public class Character : MonoBehaviour {
     [SerializeField]
     private GameObject characterHUD;
 
-    private bool canMove = false;
+    private int movesLeft = 2;
     private bool isMoving = false;
     private bool isSelected = false;
     private bool canBeSeen = false;
@@ -30,11 +30,11 @@ public class Character : MonoBehaviour {
 	public Weapon getWeapon(){
 		return weapon;
 	}
-	public bool getCanMove(){
-		return canMove;
+	public int getMovesLeft(){
+		return movesLeft;
 	}
-	public void setCanMove(bool setter){
-		canMove = setter;
+	public void setMovesLeft(int setter){
+		movesLeft = setter;
 	}
 	public int hurt(int dmg){
 		health -= dmg;
@@ -94,7 +94,7 @@ public class Character : MonoBehaviour {
 		gc.setSpace (Mathf.RoundToInt(position.x), Mathf.RoundToInt(position.z), 1);
 		gc.printBoard ();
 
-		canMove = false;
+		useMove();
 		UnselectCharacter ();
 
     }
@@ -115,7 +115,7 @@ public class Character : MonoBehaviour {
         gc.setSpace(Mathf.RoundToInt(position.x), Mathf.RoundToInt(position.z), 1);
         gc.printBoard();
 
-        canMove = false;
+		useMove();
         UnselectCharacter();
 
     }
@@ -136,7 +136,7 @@ public class Character : MonoBehaviour {
         gc.setSpace(Mathf.RoundToInt(position.x), Mathf.RoundToInt(position.z), 1);
         gc.printBoard();
 
-        canMove = false;
+		movesLeft--;
         UnselectCharacter();
 
     }
@@ -165,6 +165,7 @@ public class Character : MonoBehaviour {
     }
 
     private void SelectCharacter() {
+		Debug.Log ("selectin this boi");
         SetIsSelected(true);
         characterHUD.SetActive(true);
         gc.SetSelectedCharacter(gameObject);
@@ -179,6 +180,10 @@ public class Character : MonoBehaviour {
 
 	public void Shoot(Character enemy){
 		weapon.use (enemy);
+	}
+
+	public void useMove(){
+		movesLeft--;
 	}
 
 	private bool isInRange(GameObject char1, GameObject char2, int range){
@@ -253,7 +258,7 @@ public class Character : MonoBehaviour {
         // Use this for initialization
         void Start () {
         gc = GameController.Instance;
-        canMove = true;
+		movesLeft = 2;
 		health = 100;
 //		status = "";
 
@@ -275,7 +280,7 @@ public class Character : MonoBehaviour {
     }
 
     private void OnMouseOver() {
-        if (!isMoving && Input.GetMouseButtonDown(0) && canMove) {
+		if (!isMoving && Input.GetMouseButtonDown(0) && movesLeft > 0) {
             SelectCharacter();
         }
 		if (Input.GetMouseButtonDown (0) && gc.HasSelectedCharacter() && gc.currentlySelectedCharacter != gameObject) {
@@ -291,7 +296,7 @@ public class Character : MonoBehaviour {
                     Debug.Log("Pow");
                     selected.Shoot(this);
                     Debug.Log("I have " + health.ToString() + " health left");
-                    selected.setCanMove(false);
+                    selected.useMove();
                     selected.UnselectCharacter();
                     gc.currentlySelectedCharacter = null;
                     gc.updateTurns();
