@@ -5,6 +5,8 @@ using UnityEngine;
 public class Camera_mouse : MonoBehaviour {
 	[SerializeField]
 	private GameObject tileHighlight;
+	[SerializeField]
+	private GameObject nullHighlight;
 
 	// Keep track of where the player clicks in the game world
 	private RaycastHit hit;
