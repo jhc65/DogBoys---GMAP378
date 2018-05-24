@@ -14,8 +14,12 @@ public class Weapon : Equippable {
 		return range;
 	}
 
+	public int getShotsRemaining(){
+		return shotsRemaining;
+	}
+
 	 public override void use(Character chara){
-		Debug.Log ("Getting to use?");
+		//Debug.Log ("Getting to use?");
 		if (!reloading) {
 			fire (chara);
 		} else {
