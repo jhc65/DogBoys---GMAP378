@@ -25,11 +25,15 @@ public class World_Camera : MonoBehaviour {
     private float cameraRoatationSmoother_;
     [SerializeField]
     private float cameraRotationSpeed_;
+    [SerializeField]
+    private float pitchSpeed_;
+    [SerializeField]
+    private float yawSpeed_;
 
     private float horizontalInput_;
     private float verticalInput_;
     private float mouseScrollWheelInput_;
-    private float rotationCameraInput_;
+
 
 
     private void Update()
@@ -106,13 +110,20 @@ public class World_Camera : MonoBehaviour {
     }
 
     private void rotateCamera() {
-        rotationCameraInput_ = Input.GetAxis("Camera Rotation");
-        if(rotationCameraInput_ != 0.0f)
+        /*float yaw = yawSpeed_ * Input.GetAxis("Mouse X") + transform.eulerAngles.y;
+        float pitch = pitchSpeed_ * Input.GetAxis("Mouse Y") - transform.eulerAngles.x;
+        if (yaw != 0.0f && pitch != 0.0f)
         {
-            float tempValue = transform.rotation.y + (rotationCameraInput_ * cameraRotationSpeed_);
-            Quaternion target = Quaternion.Euler(transform.rotation.x, tempValue, transform.rotation.z);
-            transform.rotation = Quaternion.Slerp(transform.rotation, target, Time.deltaTime * cameraRoatationSmoother_);
+            transform.eulerAngles = new Vector3(pitch, yaw, transform.eulerAngles.z);
         }
-        
+        else if (yaw != 0.0f)
+        {
+            transform.eulerAngles = new Vector3(transform.eulerAngles.x, yaw, transform.eulerAngles.z);
+        }
+        else if(pitch != 0.0f)
+        {
+            transform.eulerAngles = new Vector3(pitch, transform.eulerAngles.y, transform.eulerAngles.z);
+        }
+        */
     }
 }
