@@ -3638,7 +3638,7 @@ GameObject:
   - component: {fileID: 124800750}
   m_Layer: 0
   m_Name: Tile (17)
-  m_TagString: NoHitCover
+  m_TagString: Tile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3681,7 +3681,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: bb6f01f6edfd5564184428ef02fe86d8, type: 2}
+  - {fileID: 2100000, guid: a25cbbc2ff10c9a42bf83c6d6f578d14, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -4118,7 +4118,7 @@ GameObject:
   - component: {fileID: 138435139}
   m_Layer: 0
   m_Name: Tile (6)
-  m_TagString: NoHitCover
+  m_TagString: Tile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4161,7 +4161,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: bb6f01f6edfd5564184428ef02fe86d8, type: 2}
+  - {fileID: 2100000, guid: a25cbbc2ff10c9a42bf83c6d6f578d14, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -5174,7 +5174,7 @@ GameObject:
   - component: {fileID: 171205887}
   m_Layer: 0
   m_Name: 
-  m_TagString: NoHitCover
+  m_TagString: Tile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5217,7 +5217,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: bb6f01f6edfd5564184428ef02fe86d8, type: 2}
+  - {fileID: 2100000, guid: a25cbbc2ff10c9a42bf83c6d6f578d14, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -6526,7 +6526,7 @@ GameObject:
   - component: {fileID: 206961694}
   m_Layer: 0
   m_Name: Tile (11)
-  m_TagString: NoHitCover
+  m_TagString: Tile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6569,7 +6569,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: bb6f01f6edfd5564184428ef02fe86d8, type: 2}
+  - {fileID: 2100000, guid: a25cbbc2ff10c9a42bf83c6d6f578d14, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -7107,7 +7107,7 @@ GameObject:
   - component: {fileID: 232693038}
   m_Layer: 0
   m_Name: Tile (5)
-  m_TagString: NoHitCover
+  m_TagString: Tile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7150,7 +7150,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: bb6f01f6edfd5564184428ef02fe86d8, type: 2}
+  - {fileID: 2100000, guid: a25cbbc2ff10c9a42bf83c6d6f578d14, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -11147,7 +11147,7 @@ GameObject:
   - component: {fileID: 320316134}
   m_Layer: 0
   m_Name: Tile (4)
-  m_TagString: NoHitCover
+  m_TagString: Tile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -11190,7 +11190,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: bb6f01f6edfd5564184428ef02fe86d8, type: 2}
+  - {fileID: 2100000, guid: a25cbbc2ff10c9a42bf83c6d6f578d14, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -11627,7 +11627,7 @@ GameObject:
   - component: {fileID: 325706186}
   m_Layer: 0
   m_Name: Tile (23)
-  m_TagString: NoHitCover
+  m_TagString: Tile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -11670,7 +11670,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: bb6f01f6edfd5564184428ef02fe86d8, type: 2}
+  - {fileID: 2100000, guid: a25cbbc2ff10c9a42bf83c6d6f578d14, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -12255,7 +12255,7 @@ GameObject:
   - component: {fileID: 342912352}
   m_Layer: 0
   m_Name: Tile (17)
-  m_TagString: NoHitCover
+  m_TagString: Tile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -12298,7 +12298,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: bb6f01f6edfd5564184428ef02fe86d8, type: 2}
+  - {fileID: 2100000, guid: a25cbbc2ff10c9a42bf83c6d6f578d14, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -13983,7 +13983,7 @@ GameObject:
   - component: {fileID: 388316740}
   m_Layer: 0
   m_Name: Tile (5)
-  m_TagString: NoHitCover
+  m_TagString: Tile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -14026,7 +14026,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: bb6f01f6edfd5564184428ef02fe86d8, type: 2}
+  - {fileID: 2100000, guid: a25cbbc2ff10c9a42bf83c6d6f578d14, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -17801,7 +17801,7 @@ GameObject:
   - component: {fileID: 496046442}
   m_Layer: 0
   m_Name: Tile (17)
-  m_TagString: NoHitCover
+  m_TagString: Tile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -17844,7 +17844,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: bb6f01f6edfd5564184428ef02fe86d8, type: 2}
+  - {fileID: 2100000, guid: a25cbbc2ff10c9a42bf83c6d6f578d14, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -18089,7 +18089,7 @@ GameObject:
   - component: {fileID: 506210091}
   m_Layer: 0
   m_Name: Tile (6)
-  m_TagString: NoHitCover
+  m_TagString: Tile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -18132,7 +18132,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: bb6f01f6edfd5564184428ef02fe86d8, type: 2}
+  - {fileID: 2100000, guid: a25cbbc2ff10c9a42bf83c6d6f578d14, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -18281,7 +18281,7 @@ GameObject:
   - component: {fileID: 511618227}
   m_Layer: 0
   m_Name: Tile (4)
-  m_TagString: NoHitCover
+  m_TagString: Tile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -18324,7 +18324,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: bb6f01f6edfd5564184428ef02fe86d8, type: 2}
+  - {fileID: 2100000, guid: a25cbbc2ff10c9a42bf83c6d6f578d14, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -18377,7 +18377,7 @@ GameObject:
   - component: {fileID: 515029702}
   m_Layer: 0
   m_Name: Tile (23)
-  m_TagString: NoHitCover
+  m_TagString: Tile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -18420,7 +18420,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: bb6f01f6edfd5564184428ef02fe86d8, type: 2}
+  - {fileID: 2100000, guid: a25cbbc2ff10c9a42bf83c6d6f578d14, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -19005,7 +19005,7 @@ GameObject:
   - component: {fileID: 526277024}
   m_Layer: 0
   m_Name: Tile (12)
-  m_TagString: NoHitCover
+  m_TagString: Tile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -19048,7 +19048,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: bb6f01f6edfd5564184428ef02fe86d8, type: 2}
+  - {fileID: 2100000, guid: a25cbbc2ff10c9a42bf83c6d6f578d14, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -20157,7 +20157,7 @@ GameObject:
   - component: {fileID: 564875589}
   m_Layer: 0
   m_Name: 
-  m_TagString: NoHitCover
+  m_TagString: Tile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -20200,7 +20200,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: bb6f01f6edfd5564184428ef02fe86d8, type: 2}
+  - {fileID: 2100000, guid: a25cbbc2ff10c9a42bf83c6d6f578d14, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -20304,7 +20304,7 @@ GameObject:
   - component: {fileID: 567111474}
   m_Layer: 0
   m_Name: Tile (19)
-  m_TagString: NoHitCover
+  m_TagString: Tile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -20347,7 +20347,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: bb6f01f6edfd5564184428ef02fe86d8, type: 2}
+  - {fileID: 2100000, guid: a25cbbc2ff10c9a42bf83c6d6f578d14, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -20592,7 +20592,7 @@ GameObject:
   - component: {fileID: 572898798}
   m_Layer: 0
   m_Name: Tile (4)
-  m_TagString: NoHitCover
+  m_TagString: Tile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -20635,7 +20635,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: bb6f01f6edfd5564184428ef02fe86d8, type: 2}
+  - {fileID: 2100000, guid: a25cbbc2ff10c9a42bf83c6d6f578d14, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -21264,7 +21264,7 @@ GameObject:
   - component: {fileID: 578031160}
   m_Layer: 0
   m_Name: Tile (5)
-  m_TagString: NoHitCover
+  m_TagString: Tile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -21307,7 +21307,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: bb6f01f6edfd5564184428ef02fe86d8, type: 2}
+  - {fileID: 2100000, guid: a25cbbc2ff10c9a42bf83c6d6f578d14, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -24376,7 +24376,7 @@ GameObject:
   - component: {fileID: 676880831}
   m_Layer: 0
   m_Name: Tile
-  m_TagString: NoHitCover
+  m_TagString: Tile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -24419,7 +24419,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: bb6f01f6edfd5564184428ef02fe86d8, type: 2}
+  - {fileID: 2100000, guid: a25cbbc2ff10c9a42bf83c6d6f578d14, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -24952,7 +24952,7 @@ GameObject:
   - component: {fileID: 689302983}
   m_Layer: 0
   m_Name: Tile (19)
-  m_TagString: NoHitCover
+  m_TagString: Tile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -24995,7 +24995,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: bb6f01f6edfd5564184428ef02fe86d8, type: 2}
+  - {fileID: 2100000, guid: a25cbbc2ff10c9a42bf83c6d6f578d14, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -25196,7 +25196,7 @@ GameObject:
   - component: {fileID: 698794502}
   m_Layer: 0
   m_Name: Tile (6)
-  m_TagString: NoHitCover
+  m_TagString: Tile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -25239,7 +25239,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: bb6f01f6edfd5564184428ef02fe86d8, type: 2}
+  - {fileID: 2100000, guid: a25cbbc2ff10c9a42bf83c6d6f578d14, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -25868,7 +25868,7 @@ GameObject:
   - component: {fileID: 728027708}
   m_Layer: 0
   m_Name: Tile (23)
-  m_TagString: NoHitCover
+  m_TagString: Tile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -25911,7 +25911,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: bb6f01f6edfd5564184428ef02fe86d8, type: 2}
+  - {fileID: 2100000, guid: a25cbbc2ff10c9a42bf83c6d6f578d14, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -27788,7 +27788,7 @@ GameObject:
   - component: {fileID: 790046234}
   m_Layer: 0
   m_Name: Tile (4)
-  m_TagString: NoHitCover
+  m_TagString: Tile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -27831,7 +27831,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: bb6f01f6edfd5564184428ef02fe86d8, type: 2}
+  - {fileID: 2100000, guid: a25cbbc2ff10c9a42bf83c6d6f578d14, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -29516,7 +29516,7 @@ GameObject:
   - component: {fileID: 832638720}
   m_Layer: 0
   m_Name: Tile
-  m_TagString: NoHitCover
+  m_TagString: Tile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -29559,7 +29559,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: bb6f01f6edfd5564184428ef02fe86d8, type: 2}
+  - {fileID: 2100000, guid: a25cbbc2ff10c9a42bf83c6d6f578d14, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -29996,7 +29996,7 @@ GameObject:
   - component: {fileID: 843423360}
   m_Layer: 0
   m_Name: 
-  m_TagString: NoHitCover
+  m_TagString: Tile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -30039,7 +30039,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: bb6f01f6edfd5564184428ef02fe86d8, type: 2}
+  - {fileID: 2100000, guid: a25cbbc2ff10c9a42bf83c6d6f578d14, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -32549,7 +32549,7 @@ GameObject:
   - component: {fileID: 935807483}
   m_Layer: 5
   m_Name: Canvas
-  m_TagString: Untagged
+  m_TagString: Tile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -33796,7 +33796,7 @@ GameObject:
   - component: {fileID: 976931586}
   m_Layer: 0
   m_Name: Tile (19)
-  m_TagString: DeadTile
+  m_TagString: Tile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -33839,7 +33839,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: bb6f01f6edfd5564184428ef02fe86d8, type: 2}
+  - {fileID: 2100000, guid: a25cbbc2ff10c9a42bf83c6d6f578d14, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -34468,7 +34468,7 @@ GameObject:
   - component: {fileID: 983389064}
   m_Layer: 0
   m_Name: 
-  m_TagString: NoHitCover
+  m_TagString: Tile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -34511,7 +34511,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: bb6f01f6edfd5564184428ef02fe86d8, type: 2}
+  - {fileID: 2100000, guid: a25cbbc2ff10c9a42bf83c6d6f578d14, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -35236,7 +35236,7 @@ GameObject:
   - component: {fileID: 1010014794}
   m_Layer: 0
   m_Name: Tile
-  m_TagString: NoHitCover
+  m_TagString: Tile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -35279,7 +35279,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: bb6f01f6edfd5564184428ef02fe86d8, type: 2}
+  - {fileID: 2100000, guid: a25cbbc2ff10c9a42bf83c6d6f578d14, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -36152,7 +36152,7 @@ GameObject:
   - component: {fileID: 1039672041}
   m_Layer: 0
   m_Name: 
-  m_TagString: NoHitCover
+  m_TagString: Tile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -36195,7 +36195,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: bb6f01f6edfd5564184428ef02fe86d8, type: 2}
+  - {fileID: 2100000, guid: a25cbbc2ff10c9a42bf83c6d6f578d14, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -37260,7 +37260,7 @@ GameObject:
   - component: {fileID: 1061808610}
   m_Layer: 0
   m_Name: Tile (4)
-  m_TagString: NoHitCover
+  m_TagString: Tile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -37303,7 +37303,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: bb6f01f6edfd5564184428ef02fe86d8, type: 2}
+  - {fileID: 2100000, guid: a25cbbc2ff10c9a42bf83c6d6f578d14, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -38316,7 +38316,7 @@ GameObject:
   - component: {fileID: 1089932523}
   m_Layer: 0
   m_Name: Tile
-  m_TagString: NoHitCover
+  m_TagString: Tile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -38359,7 +38359,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: bb6f01f6edfd5564184428ef02fe86d8, type: 2}
+  - {fileID: 2100000, guid: a25cbbc2ff10c9a42bf83c6d6f578d14, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -39640,7 +39640,7 @@ GameObject:
   - component: {fileID: 1134390368}
   m_Layer: 0
   m_Name: Tile (19)
-  m_TagString: NoHitCover
+  m_TagString: Tile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -39683,7 +39683,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: bb6f01f6edfd5564184428ef02fe86d8, type: 2}
+  - {fileID: 2100000, guid: a25cbbc2ff10c9a42bf83c6d6f578d14, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -40076,7 +40076,7 @@ GameObject:
   - component: {fileID: 1144474369}
   m_Layer: 0
   m_Name: 
-  m_TagString: NoHitCover
+  m_TagString: Tile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -40119,7 +40119,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: bb6f01f6edfd5564184428ef02fe86d8, type: 2}
+  - {fileID: 2100000, guid: a25cbbc2ff10c9a42bf83c6d6f578d14, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -45938,7 +45938,7 @@ GameObject:
   - component: {fileID: 1318829251}
   m_Layer: 0
   m_Name: Tile (4)
-  m_TagString: NoHitCover
+  m_TagString: Tile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -45981,7 +45981,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: bb6f01f6edfd5564184428ef02fe86d8, type: 2}
+  - {fileID: 2100000, guid: a25cbbc2ff10c9a42bf83c6d6f578d14, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -48813,7 +48813,7 @@ GameObject:
   - component: {fileID: 1407581348}
   m_Layer: 0
   m_Name: Tile (18)
-  m_TagString: NoHitCover
+  m_TagString: Tile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -48856,7 +48856,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: bb6f01f6edfd5564184428ef02fe86d8, type: 2}
+  - {fileID: 2100000, guid: a25cbbc2ff10c9a42bf83c6d6f578d14, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -50253,7 +50253,7 @@ GameObject:
   - component: {fileID: 1447106429}
   m_Layer: 0
   m_Name: Tile (5)
-  m_TagString: NoHitCover
+  m_TagString: Tile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -50296,7 +50296,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: bb6f01f6edfd5564184428ef02fe86d8, type: 2}
+  - {fileID: 2100000, guid: a25cbbc2ff10c9a42bf83c6d6f578d14, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -51857,7 +51857,7 @@ GameObject:
   - component: {fileID: 1475294555}
   m_Layer: 0
   m_Name: 
-  m_TagString: NoHitCover
+  m_TagString: Tile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -51900,7 +51900,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: bb6f01f6edfd5564184428ef02fe86d8, type: 2}
+  - {fileID: 2100000, guid: a25cbbc2ff10c9a42bf83c6d6f578d14, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -52817,7 +52817,7 @@ GameObject:
   - component: {fileID: 1504390713}
   m_Layer: 0
   m_Name: Tile
-  m_TagString: NoHitCover
+  m_TagString: Tile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -52860,7 +52860,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: bb6f01f6edfd5564184428ef02fe86d8, type: 2}
+  - {fileID: 2100000, guid: a25cbbc2ff10c9a42bf83c6d6f578d14, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -52913,7 +52913,7 @@ GameObject:
   - component: {fileID: 1508609770}
   m_Layer: 0
   m_Name: Tile (18)
-  m_TagString: NoHitCover
+  m_TagString: Tile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -52956,7 +52956,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: bb6f01f6edfd5564184428ef02fe86d8, type: 2}
+  - {fileID: 2100000, guid: a25cbbc2ff10c9a42bf83c6d6f578d14, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -54161,7 +54161,7 @@ GameObject:
   - component: {fileID: 1536858051}
   m_Layer: 0
   m_Name: Tile (12)
-  m_TagString: NoHitCover
+  m_TagString: Tile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -54204,7 +54204,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: bb6f01f6edfd5564184428ef02fe86d8, type: 2}
+  - {fileID: 2100000, guid: a25cbbc2ff10c9a42bf83c6d6f578d14, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -54737,7 +54737,7 @@ GameObject:
   - component: {fileID: 1545096395}
   m_Layer: 0
   m_Name: Tile (6)
-  m_TagString: NoHitCover
+  m_TagString: Tile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -54780,7 +54780,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: bb6f01f6edfd5564184428ef02fe86d8, type: 2}
+  - {fileID: 2100000, guid: a25cbbc2ff10c9a42bf83c6d6f578d14, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -55889,7 +55889,7 @@ GameObject:
   - component: {fileID: 1558424284}
   m_Layer: 0
   m_Name: Tile (23)
-  m_TagString: NoHitCover
+  m_TagString: Tile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -55932,7 +55932,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: bb6f01f6edfd5564184428ef02fe86d8, type: 2}
+  - {fileID: 2100000, guid: a25cbbc2ff10c9a42bf83c6d6f578d14, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -56613,7 +56613,7 @@ GameObject:
   - component: {fileID: 1573307101}
   m_Layer: 0
   m_Name: Tile (19)
-  m_TagString: DeadTile
+  m_TagString: Tile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -56656,7 +56656,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: bb6f01f6edfd5564184428ef02fe86d8, type: 2}
+  - {fileID: 2100000, guid: a25cbbc2ff10c9a42bf83c6d6f578d14, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -60121,7 +60121,7 @@ GameObject:
   - component: {fileID: 1664000406}
   m_Layer: 0
   m_Name: Tile (23)
-  m_TagString: NoHitCover
+  m_TagString: Tile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -60164,7 +60164,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: bb6f01f6edfd5564184428ef02fe86d8, type: 2}
+  - {fileID: 2100000, guid: a25cbbc2ff10c9a42bf83c6d6f578d14, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -61162,7 +61162,7 @@ GameObject:
   - component: {fileID: 1699866640}
   m_Layer: 0
   m_Name: Tile (23)
-  m_TagString: NoHitCover
+  m_TagString: Tile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -61205,7 +61205,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: bb6f01f6edfd5564184428ef02fe86d8, type: 2}
+  - {fileID: 2100000, guid: a25cbbc2ff10c9a42bf83c6d6f578d14, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -62506,7 +62506,7 @@ GameObject:
   - component: {fileID: 1732326530}
   m_Layer: 0
   m_Name: Tile
-  m_TagString: NoHitCover
+  m_TagString: Tile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -62549,7 +62549,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: bb6f01f6edfd5564184428ef02fe86d8, type: 2}
+  - {fileID: 2100000, guid: a25cbbc2ff10c9a42bf83c6d6f578d14, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -63178,7 +63178,7 @@ GameObject:
   - component: {fileID: 1750903276}
   m_Layer: 0
   m_Name: 
-  m_TagString: NoHitCover
+  m_TagString: Tile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -63221,7 +63221,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: bb6f01f6edfd5564184428ef02fe86d8, type: 2}
+  - {fileID: 2100000, guid: a25cbbc2ff10c9a42bf83c6d6f578d14, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -63904,7 +63904,7 @@ GameObject:
   - component: {fileID: 1778662568}
   m_Layer: 0
   m_Name: 
-  m_TagString: NoHitCover
+  m_TagString: Tile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -63947,7 +63947,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: bb6f01f6edfd5564184428ef02fe86d8, type: 2}
+  - {fileID: 2100000, guid: a25cbbc2ff10c9a42bf83c6d6f578d14, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -64096,7 +64096,7 @@ GameObject:
   - component: {fileID: 1789393758}
   m_Layer: 0
   m_Name: Tile (18)
-  m_TagString: NoHitCover
+  m_TagString: Tile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -64139,7 +64139,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: bb6f01f6edfd5564184428ef02fe86d8, type: 2}
+  - {fileID: 2100000, guid: a25cbbc2ff10c9a42bf83c6d6f578d14, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -64576,7 +64576,7 @@ GameObject:
   - component: {fileID: 1810990225}
   m_Layer: 0
   m_Name: Tile (11)
-  m_TagString: NoHitCover
+  m_TagString: Tile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -64619,7 +64619,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: bb6f01f6edfd5564184428ef02fe86d8, type: 2}
+  - {fileID: 2100000, guid: a25cbbc2ff10c9a42bf83c6d6f578d14, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -65594,7 +65594,7 @@ GameObject:
   - component: {fileID: 1839139103}
   m_Layer: 0
   m_Name: Tile (18)
-  m_TagString: NoHitCover
+  m_TagString: Tile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -65637,7 +65637,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: bb6f01f6edfd5564184428ef02fe86d8, type: 2}
+  - {fileID: 2100000, guid: a25cbbc2ff10c9a42bf83c6d6f578d14, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -66990,7 +66990,7 @@ GameObject:
   - component: {fileID: 1885687631}
   m_Layer: 0
   m_Name: Tile (19)
-  m_TagString: NoHitCover
+  m_TagString: Tile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -67033,7 +67033,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: bb6f01f6edfd5564184428ef02fe86d8, type: 2}
+  - {fileID: 2100000, guid: a25cbbc2ff10c9a42bf83c6d6f578d14, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -67566,7 +67566,7 @@ GameObject:
   - component: {fileID: 1901378522}
   m_Layer: 0
   m_Name: Tile (17)
-  m_TagString: NoHitCover
+  m_TagString: Tile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -67609,7 +67609,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: bb6f01f6edfd5564184428ef02fe86d8, type: 2}
+  - {fileID: 2100000, guid: a25cbbc2ff10c9a42bf83c6d6f578d14, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -70510,7 +70510,7 @@ GameObject:
   - component: {fileID: 1993803140}
   m_Layer: 0
   m_Name: Tile (19)
-  m_TagString: DeadTile
+  m_TagString: Tile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -70553,7 +70553,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: bb6f01f6edfd5564184428ef02fe86d8, type: 2}
+  - {fileID: 2100000, guid: a25cbbc2ff10c9a42bf83c6d6f578d14, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -73310,7 +73310,7 @@ GameObject:
   - component: {fileID: 2067969846}
   m_Layer: 0
   m_Name: 
-  m_TagString: NoHitCover
+  m_TagString: Tile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -73353,7 +73353,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: bb6f01f6edfd5564184428ef02fe86d8, type: 2}
+  - {fileID: 2100000, guid: a25cbbc2ff10c9a42bf83c6d6f578d14, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -74846,7 +74846,7 @@ GameObject:
   - component: {fileID: 2088761178}
   m_Layer: 0
   m_Name: Tile
-  m_TagString: NoHitCover
+  m_TagString: Tile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -74889,7 +74889,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: bb6f01f6edfd5564184428ef02fe86d8, type: 2}
+  - {fileID: 2100000, guid: a25cbbc2ff10c9a42bf83c6d6f578d14, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -75134,7 +75134,7 @@ GameObject:
   - component: {fileID: 2098012165}
   m_Layer: 0
   m_Name: Tile (1)
-  m_TagString: NoHitCover
+  m_TagString: Tile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -75177,7 +75177,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: bb6f01f6edfd5564184428ef02fe86d8, type: 2}
+  - {fileID: 2100000, guid: a25cbbc2ff10c9a42bf83c6d6f578d14, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -76390,7 +76390,7 @@ GameObject:
   - component: {fileID: 2137005140}
   m_Layer: 0
   m_Name: Tile (4)
-  m_TagString: NoHitCover
+  m_TagString: Tile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -76433,7 +76433,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: bb6f01f6edfd5564184428ef02fe86d8, type: 2}
+  - {fileID: 2100000, guid: a25cbbc2ff10c9a42bf83c6d6f578d14, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
