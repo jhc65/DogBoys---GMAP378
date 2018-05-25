@@ -5,8 +5,11 @@ using UnityEngine;
 public class Constants_Values : MonoBehaviour {
 	
 	#region dog lists and functions
+	[SerializeField]
 	private List<Character> _availableDogs = new List<Character>();
+	[SerializeField]
 	private List<Character> _redDogs = new List<Character>();
+	[SerializeField]
 	private List<Character> _blueDogs = new List<Character>();
 
 	public List<Character> getAvailable(){
