@@ -86,10 +86,10 @@ public class GameController : MonoBehaviour {
 
     // Check for cover
     public bool IsEnemyProtected(Vector3 charIn, Vector3 enemyIn) {//float charX, float charY, float enemyX, float enemyY) {
-        if (turn == "P2" && charIn.z < enemyIn.z) {
+        if (turn == "P2" && charIn.z <= enemyIn.z) {
             return false;
         }
-        else if (turn == "P1" && charIn.z > enemyIn.z) {
+        else if (turn == "P1" && charIn.z >= enemyIn.z) {
             return false;
         }
         else {
