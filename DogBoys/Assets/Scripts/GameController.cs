@@ -22,7 +22,7 @@ public class GameController : MonoBehaviour {
 	 * */
 	private int[,] gameBoard = new int[32, 24] {
         { 4, 4, 4, 4, 4, 4, 4, 4, 0, 0, 0, 0, 0, 0, 0, 0, 4, 4, 4, 4, 4, 4, 4, 4},
-        { 4, 4, 4, 4, 4, 4, 4, 4, 0, 0, 0, 0, 0, 0, 0, 0, 4, 4, 4, 4, 4, 4, 4, 4},
+        { 4, 4, 4, 4, 4, 4, 4, 4, 0, 0, 1, 0, 1, 0, 1, 0, 4, 4, 4, 4, 4, 4, 4, 4},
         { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
         { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
         { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
@@ -43,7 +43,7 @@ public class GameController : MonoBehaviour {
         { 3, 3, 3, 3, 3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
         { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
         { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
-        { 0, 0, 3, 3, 3, 3, 3, 3, 3, 0, 1, 0, 1, 0, 1, 3, 3, 3, 3, 3, 3, 3, 0, 0},
+        { 0, 0, 3, 3, 3, 3, 3, 3, 3, 0, 0, 0, 0, 0, 0, 3, 3, 3, 3, 3, 3, 3, 0, 0},
         { 0, 0, 3, 4, 4, 4, 4, 4, 3, 0, 0, 0, 0, 0, 0, 3, 4, 4, 4, 4, 4, 3, 0, 0},
         { 0, 0, 3, 4, 4, 4, 4, 4, 3, 0, 0, 0, 0, 0, 0, 3, 4, 4, 4, 4, 4, 3, 0, 0},
         { 0, 0, 3, 4, 4, 4, 4, 4, 3, 0, 0, 0, 0, 0, 0, 3, 4, 4, 4, 4, 4, 3, 0, 0},
@@ -67,6 +67,10 @@ public class GameController : MonoBehaviour {
 	public int getSpace(int x, int y){
 		return gameBoard[y,x];
 	}
+
+    public int[,] getBoard() {
+        return gameBoard;
+    }
     #endregion
     #endregion
 
@@ -78,6 +82,35 @@ public class GameController : MonoBehaviour {
         else {
             return false;
         }
+    }
+
+    // Check for cover
+    public bool IsEnemyProtected(Vector3 charIn, Vector3 enemyIn) {//float charX, float charY, float enemyX, float enemyY) {
+        if (turn == "P2" && charIn.z < enemyIn.z) {
+            return false;
+        }
+        else if (turn == "P1" && charIn.z > enemyIn.z) {
+            return false;
+        }
+        else {
+            return true;
+        }
+
+        //if (charIn.x == enemyIn.x) {
+        //    return true;
+        //}
+
+        //Vector3 charV;
+        //Vector3 enemyV;
+        //enemyV = new Vector3( (enemyIn.x * -1), enemyIn.y, enemyIn.z);
+        //charV = new Vector3(0, charIn.y, charIn.z);
+
+        //if ((90 - Vector3.Angle(charV, enemyIn)) < 30f) {
+        //    return false;
+        //}
+        //else {
+        //    return true;
+        //}
     }
 
     public void SetSelectedCharacter(GameObject charIn) {

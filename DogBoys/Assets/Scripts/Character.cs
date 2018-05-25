@@ -12,6 +12,10 @@ public class Character : MonoBehaviour {
 	private Weapon weapon;
 	[SerializeField]
 	private GameObject characterHUD;
+    [SerializeField]
+    private int xPosInGrid = 0;
+    [SerializeField]
+    private int yPosInGrid = 0;
 
 	private int movesLeft = 2;
 	private bool isMoving = false;
@@ -112,7 +116,7 @@ public class Character : MonoBehaviour {
 
 		useMove ();
 		UnselectCharacter ();
-
+        CenterOnSpace();
 	}
 
 	public void Move(Vector3 position, bool inCover)
@@ -311,8 +315,17 @@ public class Character : MonoBehaviour {
 			int range = selected.getWeapon ().getRange ();
 			if (isInRange (gameObject, gc.currentlySelectedCharacter, range)) {
 				//Attack this character and end the other character's turn
-				if (isInCover && gc.currentlySelectedCharacter.GetComponent<Character>().IsInNoHitCover) {
-					Debug.Log("You can't attack because cover system");
+				if (isInCover) {
+					if (!gc.IsEnemyProtected(selected.transform.position, gameObject.transform.position)) {//selected.transform.position.x, selected.transform.position.z, gameObject.transform.position.x, gameObject.transform.position.z)) {
+                        Debug.Log("Pow");
+                        selected.Shoot(this);
+                        Debug.Log("I have " + health.ToString() + " health left");
+                        selected.useMove();
+                        gc.toggleAttackMode();
+                        selected.UnselectCharacter();
+                        gc.currentlySelectedCharacter = null;
+                        gc.updateTurns();
+                    }
 				}
 				else {
 					Debug.Log("Pow");
