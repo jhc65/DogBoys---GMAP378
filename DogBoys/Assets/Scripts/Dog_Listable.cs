@@ -15,9 +15,10 @@ public class Dog_Listable : MonoBehaviour {
 	private GameObject listBlue;
 	private GameObject listRed;
 	//character this object represents
-	private Character thisDog;
+	[SerializeField]
+	private string thisDog;
 
-	public void setChar(Character s){
+	public void setType(string s){
 		thisDog = s;
 		Debug.Log (thisDog);
 	}

@@ -6,23 +6,23 @@ public class Constants_Values : MonoBehaviour {
 	
 	#region dog lists and functions
 	[SerializeField]
-	private List<Character> _availableDogs = new List<Character>();
+	private List<string> _availableDogs = new List<string>();
 	[SerializeField]
-	private List<Character> _redDogs = new List<Character>();
+	private List<string> _redDogs = new List<string>();
 	[SerializeField]
-	private List<Character> _blueDogs = new List<Character>();
+	private List<string> _blueDogs = new List<string>();
 
-	public List<Character> getAvailable(){
+	public List<string> getAvailable(){
 		return _availableDogs;
 	}
-	public List<Character> getBlue(){
+	public List<string> getBlue(){
 		return _blueDogs;
 	}
-	public List<Character> getRed(){
+	public List<string> getRed(){
 		return _redDogs;
 	}
 
-	public void moveChar(Character n, List<Character> from, List<Character> to){
+	public void moveChar(string n, List<string> from, List<string> to){
 		if(from.Contains(n))
 			from.Remove(n);
 		Debug.Log ("removed");
@@ -33,9 +33,9 @@ public class Constants_Values : MonoBehaviour {
 
 	void Start(){
 		//test cases
-		_availableDogs.Add(new Character());
-		_redDogs.Add(new Character());
-		_blueDogs.Add(new Character());
+		_availableDogs.Add("rv");
+		_redDogs.Add("rv");
+		_blueDogs.Add("rv");
 		Debug.Log (_availableDogs + "-" + _blueDogs + "-" + _redDogs);
 	}
 	#endregion

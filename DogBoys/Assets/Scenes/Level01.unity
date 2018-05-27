@@ -4886,7 +4886,7 @@ GameObject:
   - component: {fileID: 164044186}
   m_Layer: 0
   m_Name: Tile (13)
-  m_TagString: Tile
+  m_TagString: redSpawn
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4929,7 +4929,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: 73cb5987d252539459701a6cdae2864e, type: 2}
+  - {fileID: 2100000, guid: 041e9010092c18a469c417a4b1fb2014, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -6622,7 +6622,7 @@ GameObject:
   - component: {fileID: 210525640}
   m_Layer: 0
   m_Name: Tile (14)
-  m_TagString: Tile
+  m_TagString: blueSpawn
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6665,7 +6665,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: 73cb5987d252539459701a6cdae2864e, type: 2}
+  - {fileID: 2100000, guid: d661ddb86b00f3244a0303bd50ab521d, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -19235,7 +19235,7 @@ GameObject:
   - component: {fileID: 535980222}
   m_Layer: 0
   m_Name: Tile (11)
-  m_TagString: Tile
+  m_TagString: redSpawn
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -19278,7 +19278,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: 73cb5987d252539459701a6cdae2864e, type: 2}
+  - {fileID: 2100000, guid: 041e9010092c18a469c417a4b1fb2014, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -22827,6 +22827,10 @@ Prefab:
     - target: {fileID: 1667939285346304, guid: fa428632733856047aacd7da3bc6f41e, type: 2}
       propertyPath: m_Name
       value: Revolver_Dog (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1667939285346304, guid: fa428632733856047aacd7da3bc6f41e, type: 2}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: fa428632733856047aacd7da3bc6f41e, type: 2}
@@ -30870,7 +30874,7 @@ GameObject:
   - component: {fileID: 891839849}
   m_Layer: 0
   m_Name: Tile (9)
-  m_TagString: Tile
+  m_TagString: redSpawn
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -30913,7 +30917,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: 73cb5987d252539459701a6cdae2864e, type: 2}
+  - {fileID: 2100000, guid: 041e9010092c18a469c417a4b1fb2014, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -38460,7 +38464,7 @@ GameObject:
   - component: {fileID: 1097372793}
   m_Layer: 0
   m_Name: Tile (12)
-  m_TagString: Tile
+  m_TagString: blueSpawn
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -38503,7 +38507,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: 73cb5987d252539459701a6cdae2864e, type: 2}
+  - {fileID: 2100000, guid: d661ddb86b00f3244a0303bd50ab521d, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -43860,7 +43864,7 @@ GameObject:
   - component: {fileID: 1250789133}
   m_Layer: 0
   m_Name: Tile (13)
-  m_TagString: Tile
+  m_TagString: blueSpawn
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -43903,7 +43907,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: 73cb5987d252539459701a6cdae2864e, type: 2}
+  - {fileID: 2100000, guid: d661ddb86b00f3244a0303bd50ab521d, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -48745,7 +48749,7 @@ GameObject:
   - component: {fileID: 1408162987}
   m_Layer: 0
   m_Name: Tile (12)
-  m_TagString: Tile
+  m_TagString: redSpawn
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -48788,7 +48792,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: 73cb5987d252539459701a6cdae2864e, type: 2}
+  - {fileID: 2100000, guid: 041e9010092c18a469c417a4b1fb2014, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -62822,7 +62826,7 @@ GameObject:
   - component: {fileID: 1750195459}
   m_Layer: 0
   m_Name: Tile (10)
-  m_TagString: Tile
+  m_TagString: redSpawn
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -62865,7 +62869,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: 73cb5987d252539459701a6cdae2864e, type: 2}
+  - {fileID: 2100000, guid: 041e9010092c18a469c417a4b1fb2014, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -63302,7 +63306,7 @@ GameObject:
   - component: {fileID: 1760744366}
   m_Layer: 0
   m_Name: Tile (11)
-  m_TagString: Tile
+  m_TagString: blueSpawn
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -63345,7 +63349,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: 73cb5987d252539459701a6cdae2864e, type: 2}
+  - {fileID: 2100000, guid: d661ddb86b00f3244a0303bd50ab521d, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -69999,13 +70003,29 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d72926843add71c429eb244009e66e32, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  revolverDog: {fileID: 1667939285346304, guid: fa428632733856047aacd7da3bc6f41e,
+  revolverDogR: {fileID: 1667939285346304, guid: fa428632733856047aacd7da3bc6f41e,
     type: 2}
-  rifleDog: {fileID: 0}
-  shotgunDog: {fileID: 0}
+  revolverDogB: {fileID: 1667939285346304, guid: fa428632733856047aacd7da3bc6f41e,
+    type: 2}
+  rifleDogR: {fileID: 0}
+  rifleDogB: {fileID: 0}
+  shotgunDogR: {fileID: 0}
+  shotgunDogB: {fileID: 0}
   fromDraft: {fileID: 0}
   redTeam: []
   blueTeam: []
+  redSpawn:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  blueSpawn:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
 --- !u!4 &1989373261
 Transform:
   m_ObjectHideFlags: 0
@@ -74713,7 +74733,7 @@ GameObject:
   - component: {fileID: 2095117659}
   m_Layer: 0
   m_Name: Tile (10)
-  m_TagString: Tile
+  m_TagString: blueSpawn
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -74756,7 +74776,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: 73cb5987d252539459701a6cdae2864e, type: 2}
+  - {fileID: 2100000, guid: d661ddb86b00f3244a0303bd50ab521d, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
