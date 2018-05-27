@@ -33,10 +33,18 @@ public class Constants_Values : MonoBehaviour {
 
 	void Start(){
 		//test cases
+		//Debug.Log (_availableDogs + "-" + _blueDogs + "-" + _redDogs);
 		_availableDogs.Add("rv");
-		_redDogs.Add("rv");
-		_blueDogs.Add("rv");
-		Debug.Log (_availableDogs + "-" + _blueDogs + "-" + _redDogs);
+		_availableDogs.Add("rv");
+		_availableDogs.Add("rv");
+		_availableDogs.Add("rv");
+		_availableDogs.Add("rv");
+		_availableDogs.Add("rv");
+		_availableDogs.Add("rv");
+		_availableDogs.Add("rv");
+		_availableDogs.Add("rv");
+		_availableDogs.Add("rv");
+
 	}
 	#endregion
 }

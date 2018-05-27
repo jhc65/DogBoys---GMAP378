@@ -16,7 +16,7 @@ public class Dog_Listable : MonoBehaviour {
 	private GameObject listRed;
 	//character this object represents
 	[SerializeField]
-	private string thisDog;
+	private string thisDog;//dog type
 
 	public void setType(string s){
 		thisDog = s;
@@ -35,6 +35,19 @@ public class Dog_Listable : MonoBehaviour {
 		listAvailable = GameObject.Find("Dog_Available");
 		listBlue= GameObject.Find("Blue_Drafted");
 		listRed= GameObject.Find("Red_Drafted");
+
+		//determine text to be displayed based on type
+		switch (thisDog){
+		case "rv":
+			display.text = "Revolver";
+			break;
+		case "rf":
+			display.text = "Rifle";
+			break;
+		case "sg":
+			display.text = "Shotgun";
+			break;
+		}
 	}
 
 	void MoveLeft(){
