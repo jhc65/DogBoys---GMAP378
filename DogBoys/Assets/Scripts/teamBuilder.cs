@@ -71,14 +71,17 @@ public class teamBuilder : MonoBehaviour {
 		switch (type) {		//create new dog based on type
 		case "rv":
 			GameObject newRevolver = Instantiate (revolverDogR, location, Quaternion.identity);	
+			newRevolver.transform.Rotate(0, 180, 0, Space.Self);//rotates dog so it faces the right direction
 			gc.p2Chars.Add(newRevolver);		//add new dog to player 1s characters in game controller
 			break;
 		case "rf":
 			GameObject newRifle = Instantiate (rifleDogR, location, Quaternion.identity);
+			newRifle.transform.Rotate(0, 180, 0, Space.Self);	//rotates dog so it faces the right direction
 			gc.p2Chars.Add(newRifle);		//add new dog to player 1s characters in game controller
 			break;
 		case "sg":
 			GameObject newShotgun = Instantiate (shotgunDogR, location, Quaternion.identity);
+			newShotgun.transform.Rotate(0, 180, 0, Space.Self);//rotates dog so it faces the right direction
 			gc.p2Chars.Add(newShotgun);		//add new dog to player 1s characters in game controller
 			break;
 		}
