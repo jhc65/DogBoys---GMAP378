@@ -13,7 +13,7 @@ public class Character : MonoBehaviour {
     [SerializeField]
     private GameObject characterHUD;
 
-    private bool isOnOverwatch = false;
+    private bool isOnOverwatch = true;
     private List<Character> enemySeen;
     private bool canMove = false;
     private bool isMoving = false;
@@ -112,7 +112,7 @@ public class Character : MonoBehaviour {
 
         //Overwatch attack
         if (enemySeen.Count > 0) {
-            //Debug.Log("Enemy sees me");
+            Debug.Log("Enemy sees me");
             foreach (Character enemy in enemySeen)
             {
                 if (enemy.IsOnOverwatch)
@@ -173,21 +173,19 @@ public class Character : MonoBehaviour {
         raycastFromHere.y += 0.5f;
         if (Physics.Linecast(raycastFromHere, enemiesLocation, out hitMyTarget))
         {
-            Debug.DrawLine(raycastFromHere, enemiesLocation, Color.yellow);
+            //Debug.DrawLine(raycastFromHere, enemiesLocation, Color.yellow);
             return hitMyTarget.collider.gameObject;
         }
         else
         {
-            Debug.DrawLine(raycastFromHere, enemiesLocation, Color.red);
+            //Debug.DrawLine(raycastFromHere, enemiesLocation, Color.red);
             return null;
         }
     }
 
     public void overwatchAttack(Character enemy) {
-        Debug.Log(enemy.name + " shot " + this.name);
-        enemy.turnOnGameObject();
         enemy.Shoot(this);
-        enemy.IsOnOverwatch = false;
+        //enemy.IsOnOverwatch = false;
     }
 
     public void turnOffGameObject() {

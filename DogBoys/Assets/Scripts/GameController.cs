@@ -91,7 +91,9 @@ public class GameController : MonoBehaviour {
 		}
 
 		turn = "P1";
-	}
+        lineOfSight();
+
+    }
 
 	private void StartP2Turn() {
 		Debug.Log ("P2 turn start");
@@ -103,7 +105,9 @@ public class GameController : MonoBehaviour {
 		}
 
 		turn = "P2";
-	}
+        lineOfSight();
+
+    }
 
 	public void setSpace(int x, int y, int status){
 		gameBoard [x,y] = status;
@@ -132,7 +136,7 @@ public class GameController : MonoBehaviour {
             foreach (GameObject enemy in p2Chars) {
                  enemy.GetComponent<Character>().CanBeSeen = false;
             }
-
+            Debug.Log("P1 LoS check");
             //Check to see if the enemy can be seen
             foreach (GameObject friendly in p1Chars) {
                 foreach(GameObject enemy in p2Chars) {
@@ -190,7 +194,7 @@ public class GameController : MonoBehaviour {
             foreach (GameObject enemy in p1Chars) {
                 enemy.GetComponent<Character>().CanBeSeen = false;
             }
-
+            Debug.Log("P2 LoS check");
             //Check to see if the enemy can be seen
             foreach (GameObject friendly in p2Chars) {
                 foreach (GameObject enemy in p1Chars) {

@@ -13979,13 +13979,13 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1928419129}
-  m_LocalRotation: {x: 0.28832328, y: -0.002142431, z: 0.00093467196, w: 0.95753026}
-  m_LocalPosition: {x: 6.065, y: 9.045, z: -9.891}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 6.065, y: 4.6, z: -9.891}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 33.515003, y: -0.245, z: 0.038000003}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1928419134
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14017,15 +14017,15 @@ MonoBehaviour:
   cameraMovementRangeXMax_: 20
   cameraMovementRangeZMin_: -20
   cameraMovementRangeZMax_: 20
+  cameraMovementRangeYMin_: 90
+  cameraMovementRangeYMax_: -90
   cameraZoomRangeYMin_: -20
   cameraZoomRangeYMax_: 20
   targetCameraFollow_: {fileID: 0}
   cameraOffset_: {x: 0, y: 0, z: 0}
   cameraFollowing_: 0
   cameraRoatationSmoother_: 10
-  cameraRotationSpeed_: 20
-  pitchSpeed_: 0
-  yawSpeed_: 0
+  cameraRotationSpeed_: 0.5
 --- !u!1 &1934366265
 GameObject:
   m_ObjectHideFlags: 0

@@ -14,6 +14,8 @@ public class World_Camera : MonoBehaviour {
     [SerializeField]
     private float cameraMovementRangeZMin_, cameraMovementRangeZMax_;
     [SerializeField]
+    private float cameraMovementRangeYMin_, cameraMovementRangeYMax_;
+    [SerializeField]
     private float cameraZoomRangeYMin_, cameraZoomRangeYMax_;
     [SerializeField]
     private Transform targetCameraFollow_;
@@ -25,14 +27,13 @@ public class World_Camera : MonoBehaviour {
     private float cameraRoatationSmoother_;
     [SerializeField]
     private float cameraRotationSpeed_;
-    [SerializeField]
-    private float pitchSpeed_;
-    [SerializeField]
-    private float yawSpeed_;
 
     private float horizontalInput_;
     private float verticalInput_;
     private float mouseScrollWheelInput_;
+    private float playerMouseMoveX_;
+    private float playerMouseMoveY_;
+    private Vector2 totalCameraMovement;
 
 
 
@@ -61,32 +62,45 @@ public class World_Camera : MonoBehaviour {
     }
 
     private void cameraFreeMovement()
-    {       
-        float x = 0;
-        float z = 0;
+    {
         if((horizontalInput_ != 0.0f) && (verticalInput_ != 0.0f))
         {
-            x = (transform.position.x + (cameraSpeed_ * Time.deltaTime * horizontalInput_));
-            z = (transform.position.z + (cameraSpeed_ * Time.deltaTime * verticalInput_));
-            z = Mathf.Clamp(z, cameraMovementRangeZMin_, cameraMovementRangeZMax_);
-            x = Mathf.Clamp(x, cameraMovementRangeXMin_, cameraMovementRangeXMax_);
-            Vector3 movement = new Vector3(x, transform.position.y, z);
-            transform.position = movement;
+            Vector3 cameraForward = transform.forward;
+            Vector3 cameraRight = transform.right;
+            cameraForward.y = 0.0f;
+            cameraRight.y = 0.0f;
+            cameraForward.Normalize();
+            cameraRight.Normalize();
+            Vector3 moveDirection = cameraForward * verticalInput_ + cameraRight * horizontalInput_;
+            moveDirection.Normalize();
+            moveDirection.z = Mathf.Clamp(moveDirection.z, cameraMovementRangeZMin_, cameraMovementRangeZMax_);
+            moveDirection.x = Mathf.Clamp(moveDirection.x, cameraMovementRangeXMin_, cameraMovementRangeXMax_);
+            transform.position = transform.position + moveDirection * cameraSpeed_ * Time.fixedDeltaTime;
 
         }
         else if (horizontalInput_ != 0.0f)
         {
-            x = (transform.position.x + (cameraSpeed_ * Time.deltaTime * horizontalInput_));
-            x =Mathf.Clamp(x, cameraMovementRangeXMin_, cameraMovementRangeXMax_);
-            Vector3 movement = new Vector3(x, transform.position.y, transform.position.z);
-            transform.position = movement;
+            Vector3 cameraForward = transform.forward;
+            Vector3 cameraRight = transform.right;
+            cameraForward.y = 0.0f;
+            cameraRight.y = 0.0f;
+            cameraForward.Normalize();
+            cameraRight.Normalize();
+            Vector3 moveDirection = cameraForward * 0.0f + cameraRight * horizontalInput_;
+            moveDirection.x = Mathf.Clamp(moveDirection.x, cameraMovementRangeXMin_, cameraMovementRangeXMax_);
+            transform.position = transform.position + moveDirection  * cameraSpeed_ * Time.fixedDeltaTime;
         }
         else if (verticalInput_ != 0.0f)
         {
-            z = (transform.position.z + (cameraSpeed_ * Time.deltaTime * verticalInput_));
-            z = Mathf.Clamp(z, cameraMovementRangeZMin_, cameraMovementRangeZMax_);
-            Vector3 movement = new Vector3(transform.position.x, transform.position.y, z);
-            transform.position = movement;
+            Vector3 cameraForward = transform.forward;
+            Vector3 cameraRight = transform.right;
+            cameraForward.y = 0.0f;
+            cameraRight.y = 0.0f;
+            cameraForward.Normalize();
+            cameraRight.Normalize();
+            Vector3 moveDirection = cameraForward * verticalInput_ + cameraRight * 0.0f;
+            moveDirection.z = Mathf.Clamp(moveDirection.z, cameraMovementRangeZMin_, cameraMovementRangeZMax_);
+            transform.position = transform.position + moveDirection * cameraSpeed_ * Time.fixedDeltaTime;
         }
         cameraZoom();
     }
@@ -107,23 +121,19 @@ public class World_Camera : MonoBehaviour {
         mouseScrollWheelInput_ = Input.GetAxisRaw("Mouse ScrollWheel");
         verticalInput_ = Input.GetAxisRaw("Vertical");
         horizontalInput_ = Input.GetAxisRaw("Horizontal");
+        playerMouseMoveX_ = Input.GetAxisRaw("Mouse X");
+        playerMouseMoveY_ = Input.GetAxisRaw("Mouse Y");
     }
 
     private void rotateCamera() {
-        /*float yaw = yawSpeed_ * Input.GetAxis("Mouse X") + transform.eulerAngles.y;
-        float pitch = pitchSpeed_ * Input.GetAxis("Mouse Y") - transform.eulerAngles.x;
-        if (yaw != 0.0f && pitch != 0.0f)
-        {
-            transform.eulerAngles = new Vector3(pitch, yaw, transform.eulerAngles.z);
-        }
-        else if (yaw != 0.0f)
-        {
-            transform.eulerAngles = new Vector3(transform.eulerAngles.x, yaw, transform.eulerAngles.z);
-        }
-        else if(pitch != 0.0f)
-        {
-            transform.eulerAngles = new Vector3(pitch, transform.eulerAngles.y, transform.eulerAngles.z);
-        }
-        */
+        Vector2 userInput = new Vector2(playerMouseMoveX_, playerMouseMoveY_);
+        userInput = Vector2.Scale(userInput, new Vector2(cameraRotationSpeed_ * cameraRoatationSmoother_, cameraRotationSpeed_ * cameraRoatationSmoother_));
+        Vector2 smoothingVector = new Vector2();
+        smoothingVector.x = Mathf.Lerp(smoothingVector.x, userInput.x, 1.0f / cameraRoatationSmoother_);
+        smoothingVector.y = Mathf.Lerp(smoothingVector.y, userInput.y, 1.0f / cameraRoatationSmoother_);
+        totalCameraMovement += smoothingVector;
+
+        transform.eulerAngles = new Vector3(-1 * totalCameraMovement.y, totalCameraMovement.x, transform.eulerAngles.z);
+
     }
 }
