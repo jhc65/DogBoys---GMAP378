@@ -5,24 +5,21 @@ using UnityEngine;
 public class Constants_Values : MonoBehaviour {
 	
 	#region dog lists and functions
-	[SerializeField]
-	private List<string> _availableDogs = new List<string>();
-	[SerializeField]
-	private List<string> _redDogs = new List<string>();
-	[SerializeField]
-	private List<string> _blueDogs = new List<string>();
+	private List<Character> _availableDogs = new List<Character>();
+	private List<Character> _redDogs = new List<Character>();
+	private List<Character> _blueDogs = new List<Character>();
 
-	public List<string> getAvailable(){
+	public List<Character> getAvailable(){
 		return _availableDogs;
 	}
-	public List<string> getBlue(){
+	public List<Character> getBlue(){
 		return _blueDogs;
 	}
-	public List<string> getRed(){
+	public List<Character> getRed(){
 		return _redDogs;
 	}
 
-	public void moveChar(string n, List<string> from, List<string> to){
+	public void moveChar(Character n, List<Character> from, List<Character> to){
 		if(from.Contains(n))
 			from.Remove(n);
 		Debug.Log ("removed");
@@ -33,18 +30,10 @@ public class Constants_Values : MonoBehaviour {
 
 	void Start(){
 		//test cases
-		//Debug.Log (_availableDogs + "-" + _blueDogs + "-" + _redDogs);
-		_availableDogs.Add("rv");
-		_availableDogs.Add("rv");
-		_availableDogs.Add("rv");
-		_availableDogs.Add("rv");
-		_availableDogs.Add("rv");
-		_availableDogs.Add("rv");
-		_availableDogs.Add("rv");
-		_availableDogs.Add("rv");
-		_availableDogs.Add("rv");
-		_availableDogs.Add("rv");
-
+		_availableDogs.Add(new Character());
+		_redDogs.Add(new Character());
+		_blueDogs.Add(new Character());
+		Debug.Log (_availableDogs + "-" + _blueDogs + "-" + _redDogs);
 	}
 	#endregion
 }

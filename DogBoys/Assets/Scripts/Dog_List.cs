@@ -5,9 +5,9 @@ using UnityEngine;
 public class Dog_List : MonoBehaviour {
 	public GameObject constants_values;
 	public GameObject dog_listable;
-	private List<string> available = new List<string>();
-	private List<string> blue = new List<string>();
-	private List<string> red = new List<string>();
+	private List<Character> available = new List<Character>();
+	private List<Character> blue = new List<Character>();
+	private List<Character> red = new List<Character>();
 	private GameObject listAvailable;
 	private GameObject listBlue;
 	private GameObject listRed;
@@ -29,11 +29,11 @@ public class Dog_List : MonoBehaviour {
 	}
 
 
-	void populate(List<string> list, GameObject panel){
+	void populate(List<Character> list, GameObject panel){
 		//Debug.Log ("fill" + panel.name);
-		foreach (string s in list){
+		foreach (Character s in list){
 			GameObject newDogL = Instantiate (dog_listable, transform.position, Quaternion.identity);
-			newDogL.GetComponent<Dog_Listable> ().setType (s);
+			newDogL.GetComponent<Dog_Listable> ().setChar (s);
 			newDogL.transform.parent = panel.transform;
 		}
 	}

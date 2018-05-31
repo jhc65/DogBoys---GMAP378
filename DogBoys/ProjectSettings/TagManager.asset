@@ -10,8 +10,6 @@ TagManager:
   - FullCover
   - DeadTile
   - NoHitCover
-  - blueSpawn
-  - redSpawn
   layers:
   - Default
   - TransparentFX
