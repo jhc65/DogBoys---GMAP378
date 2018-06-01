@@ -85,16 +85,39 @@ public class GameController : MonoBehaviour {
     }
 
     // Check for cover
-    public bool IsEnemyProtected(Vector3 charIn, Vector3 enemyIn) {//float charX, float charY, float enemyX, float enemyY) {
-        if (turn == "P2" && charIn.z <= enemyIn.z) {
-            return false;
+    public bool IsEnemyProtected(GameObject charIn, GameObject enemyIn) {// Vector3 charIn, Vector3 enemyIn) {//float charX, float charY, float enemyX, float enemyY) {
+        if (charIn.GetComponent<Character>().GetCoverDirection() == Constants.Global.C_CoverDirection.N) {
+            if (Mathf.Round(enemyIn.transform.position.z) < Mathf.Round(charIn.transform.position.z)) {
+                return false;
+            }
         }
-        else if (turn == "P1" && charIn.z >= enemyIn.z) {
-            return false;
+        else if (charIn.GetComponent<Character>().GetCoverDirection() == Constants.Global.C_CoverDirection.S) {
+            if (Mathf.Round(enemyIn.transform.position.z) > Mathf.Round(charIn.transform.position.z)) {
+                return false;
+            }
+        }
+        else if (charIn.GetComponent<Character>().GetCoverDirection() == Constants.Global.C_CoverDirection.E) {
+            if (Mathf.Round(enemyIn.transform.position.x) < Mathf.Round(charIn.transform.position.x)) {
+                return false;
+            }
         }
         else {
-            return true;
+            if (Mathf.Round(enemyIn.transform.position.x) > Mathf.Round(charIn.transform.position.x)) {
+                return false;
+            }
         }
+
+        return true;
+
+        //if (turn == "P2" && charIn.z <= enemyIn.z) {
+        //    return false;
+        //}
+        //else if (turn == "P1" && charIn.z >= enemyIn.z) {
+        //    return false;
+        //}
+        //else {
+        //    return true;
+        //}
 
         //if (charIn.x == enemyIn.x) {
         //    return true;
@@ -134,6 +157,12 @@ public class GameController : MonoBehaviour {
     public void MoveSelectedCharacter(Vector3 position, bool inCover) {
         if (currentlySelectedCharacter) {
             currentlySelectedCharacter.GetComponent<Character>().Move(position, inCover);
+        }
+    }
+
+    public void MoveSelectedCharacter(Vector3 position, bool inCover, Constants.Global.C_CoverDirection dirIn) {
+        if (currentlySelectedCharacter) {
+            currentlySelectedCharacter.GetComponent<Character>().Move(position, inCover, dirIn);
         }
     }
 

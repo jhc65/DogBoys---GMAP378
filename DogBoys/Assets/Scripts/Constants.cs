@@ -7,6 +7,10 @@ public static class Constants {
     public static class CameraStats {
         public static float C_cameraMoveSpeed = 20.0f;
     }
+
+    public static class Global {
+        public enum C_CoverDirection { N, S, E, W };
+    }
 		
 	// Weapon Values
 	public static class WeaponStats {

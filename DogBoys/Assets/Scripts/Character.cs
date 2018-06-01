@@ -25,6 +25,7 @@ public class Character : MonoBehaviour {
 	private int xPos, yPos;
 	[SerializeField]
 	private bool isInCover = false;
+    private Constants.Global.C_CoverDirection coverDir;
 	[SerializeField]
 	private bool isNoHitCover = false;
 	private Vector3 newPos;
@@ -35,6 +36,9 @@ public class Character : MonoBehaviour {
 	public Weapon getWeapon(){
 		return weapon;
 	}
+    public Constants.Global.C_CoverDirection GetCoverDirection() {
+        return coverDir;
+    }
 	public int getMovesLeft(){
 		return movesLeft;
 	}
@@ -120,10 +124,36 @@ public class Character : MonoBehaviour {
         CenterOnSpace();
 	}
 
-	public void Move(Vector3 position, bool inCover)
+    public void Move(Vector3 position, bool inCover)
+    {
+        if (isInRange(gameObject.transform.position, position, weapon.getMoveRange())) {
+            isInCover = inCover;
+            isNoHitCover = false;
+            newPos = new Vector3(position.x, gameObject.transform.position.y, position.z);
+            gc.setSpace(Mathf.RoundToInt(gameObject.transform.position.x), Mathf.RoundToInt(gameObject.transform.position.z), 0);
+            gameObject.transform.position = newPos;
+            //Debug.Log("move");
+            //if (canMove) {
+            //    newPos = new Vector3(position.x, gameObject.transform.position.y, position.z);
+            //    isMoving = true;
+            //}
+
+            gc.setSpace(Mathf.RoundToInt(position.x), Mathf.RoundToInt(position.z), 1);
+            gc.printBoard();
+
+            useMove();
+            UnselectCharacter();
+        }
+        else {
+            Debug.Log("Can't go there from here.");
+        }
+    }
+
+    public void Move(Vector3 position, bool inCover, Constants.Global.C_CoverDirection dirIn)
 	{
 		if (isInRange (gameObject.transform.position, position, weapon.getMoveRange ())) {
 			isInCover = inCover;
+            coverDir = dirIn;
 			isNoHitCover = false;
 			newPos = new Vector3 (position.x, gameObject.transform.position.y, position.z);
 			gc.setSpace (Mathf.RoundToInt (gameObject.transform.position.x), Mathf.RoundToInt (gameObject.transform.position.z), 0);
@@ -311,13 +341,14 @@ public class Character : MonoBehaviour {
 			SelectCharacter();
 		}
 		if (Input.GetMouseButtonDown (0) && gc.HasSelectedCharacter() && gc.currentlySelectedCharacter != gameObject && gc.attackMode) {
-			Character selected = gc.currentlySelectedCharacter.GetComponent<Character>();
+            Character selected = gc.currentlySelectedCharacter.GetComponent<Character>();
+            GameObject selectedGO = gc.currentlySelectedCharacter;
 
 			int range = selected.getWeapon ().getRange ();
 			if (isInRange (gameObject, gc.currentlySelectedCharacter, range)) {
-				//Attack this character and end the other character's turn
-				if (isInCover) {
-					if (!gc.IsEnemyProtected(selected.transform.position, gameObject.transform.position)) {//selected.transform.position.x, selected.transform.position.z, gameObject.transform.position.x, gameObject.transform.position.z)) {
+                //Attack this character and end the other character's turn
+                if (isInCover) {
+                    if (!gc.IsEnemyProtected(selectedGO, gameObject)) {// selected.transform.position, gameObject.transform.position)) {//selected.transform.position.x, selected.transform.position.z, gameObject.transform.position.x, gameObject.transform.position.z)) {
                         Debug.Log("Pow");
                         selected.Shoot(this);
                         Debug.Log("I have " + health.ToString() + " health left");

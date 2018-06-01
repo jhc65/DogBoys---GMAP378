@@ -58,7 +58,7 @@ public class Camera_mouse : MonoBehaviour {
 				//input bs
 				if (Input.GetMouseButtonDown(0)) {					//as of now, all this does is move, but other functionality should be easy to implement
                     if (hit.transform.gameObject.tag == "FullCover") {
-                        gc.MoveSelectedCharacter(currentTile.position, true);
+                        gc.MoveSelectedCharacter(currentTile.position, true, hit.transform.gameObject.GetComponent<CoverTile>().GetDirection());
                     }
                     else if (hit.transform.gameObject.tag == "NoHitCover") {
                         gc.MoveSelectedCharacter_NoHit(currentTile.position);
