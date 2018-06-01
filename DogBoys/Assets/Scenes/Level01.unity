@@ -16642,7 +16642,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: e45abe6f6bafa4749ba19c87bf110a82, type: 3}
       propertyPath: m_RootOrder
-      value: 10
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: e45abe6f6bafa4749ba19c87bf110a82, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
@@ -23424,7 +23424,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &657325127
 GameObject:
@@ -30331,7 +30331,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: e45abe6f6bafa4749ba19c87bf110a82, type: 3}
       propertyPath: m_RootOrder
-      value: 9
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: e45abe6f6bafa4749ba19c87bf110a82, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
@@ -37685,10 +37685,12 @@ MonoBehaviour:
     type: 2}
   revolverDogB: {fileID: 1667939285346304, guid: fa428632733856047aacd7da3bc6f41e,
     type: 2}
-  rifleDogR: {fileID: 0}
-  rifleDogB: {fileID: 0}
-  shotgunDogR: {fileID: 0}
-  shotgunDogB: {fileID: 0}
+  rifleDogR: {fileID: 1975320116539714, guid: 793694a571b2291478992ab80801bea8, type: 2}
+  rifleDogB: {fileID: 1975320116539714, guid: 793694a571b2291478992ab80801bea8, type: 2}
+  shotgunDogR: {fileID: 1968724042816066, guid: 17ffbb8db93e51143a6456e28ff5a2f2,
+    type: 2}
+  shotgunDogB: {fileID: 1968724042816066, guid: 17ffbb8db93e51143a6456e28ff5a2f2,
+    type: 2}
   fromDraft: {fileID: 0}
   redTeam: []
   blueTeam: []
@@ -39135,7 +39137,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1129151429
 GameObject:
@@ -60545,7 +60547,7 @@ Transform:
   - {fileID: 1381970001}
   - {fileID: 1352332864}
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1674393243
 GameObject:
@@ -63708,7 +63710,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: e45abe6f6bafa4749ba19c87bf110a82, type: 3}
       propertyPath: m_RootOrder
-      value: 8
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: e45abe6f6bafa4749ba19c87bf110a82, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
