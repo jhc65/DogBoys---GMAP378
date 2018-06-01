@@ -20636,14 +20636,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentlySelectedCharacter: {fileID: 0}
-  p1Chars:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  p2Chars:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  p1Chars: []
+  p2Chars: []
   turn: 
   attackMode: 0
 --- !u!4 &566524617
