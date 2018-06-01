@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Character : MonoBehaviour {
 	#region Variables
+
 	[SerializeField]
 	private int health;
 	//    [SerializeField]
