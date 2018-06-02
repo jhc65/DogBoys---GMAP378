@@ -24,6 +24,8 @@ public class UI_Controller : MonoBehaviour
 	[SerializeField]
 	private Text needToReload_;
 
+	GameController gc = GameController.Instance;
+
     private int lastRecordedHealth_ = 0;
     private int lastRecordedMovement_ = 0;
     private int lastRecoredAmmoCount_ = 0;
@@ -78,6 +80,8 @@ public class UI_Controller : MonoBehaviour
 
     public void onClickAttackButton() {
         Debug.Log("Tail wipe that cat!");
+		gc.toggleAttackMode ();
+		
     }
 
     public void onClickOverwatchButton() {

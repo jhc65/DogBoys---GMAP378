@@ -19,7 +19,6 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4767825049197258}
-  - component: {fileID: 33528523018351944}
   - component: {fileID: 135527104509328852}
   - component: {fileID: 23965540408526666}
   - component: {fileID: 114867251181675778}
@@ -77,13 +76,6 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!33 &33528523018351944
-MeshFilter:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1138955388967152}
-  m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!114 &114867251181675778
 MonoBehaviour:
   m_ObjectHideFlags: 1
