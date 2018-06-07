@@ -32,7 +32,8 @@ public class Camera_mouse : MonoBehaviour {
 			// Draw a line in the game that follows the ray
 			Debug.DrawLine (tempRay.origin, hit.point, Color.cyan);
 			//if you hit a tile
-			if (hit.transform.gameObject.tag == "Tile" || hit.transform.gameObject.tag == "FullCover" || hit.transform.gameObject.tag == "NoHitCover") {
+			//if (hit.transform.gameObject.tag == "Tile" || hit.transform.gameObject.tag == "FullCover" || hit.transform.gameObject.tag == "NoHitCover") {
+			if(hit.transform.gameObject.tag != "DeadTile"){
 				currentTile = hit.transform.gameObject.transform;
 				//current tile not highlighted
 				if (highlighted == false) {
@@ -53,8 +54,9 @@ public class Camera_mouse : MonoBehaviour {
 							nully.SetActive(false);
 						}
 					}
-					currentHighlight.transform.position = currentTile.position;
-					nully.transform.position = currentTile.position;
+					//currentHighlight.transform.position = currentTile.position;
+				currentHighlight.transform.position = new Vector3(currentTile.position.x, 0, currentTile.position.z);
+				nully.transform.position = currentHighlight.transform.position;
 				}
 				//-------------------------------------------------------------
 				//input bs
