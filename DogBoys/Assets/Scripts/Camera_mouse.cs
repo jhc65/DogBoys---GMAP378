@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 public class Camera_mouse : MonoBehaviour {
 	[SerializeField]
@@ -56,7 +57,7 @@ public class Camera_mouse : MonoBehaviour {
 				}
 				//-------------------------------------------------------------
 				//input bs
-				if (Input.GetMouseButtonDown(0)) {					//as of now, all this does is move, but other functionality should be easy to implement
+				if (Input.GetMouseButtonDown(0) && !EventSystem.current.IsPointerOverGameObject()) {					//as of now, all this does is move, but other functionality should be easy to implement
                     if (hit.transform.gameObject.tag == "FullCover") {
                         gc.MoveSelectedCharacter(currentTile.position, true, hit.transform.gameObject.GetComponent<CoverTile>().GetDirection());
                     }

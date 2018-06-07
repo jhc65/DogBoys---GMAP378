@@ -1471,7 +1471,7 @@ GameObject:
   - component: {fileID: 136966595910733704}
   - component: {fileID: 114497718626775578}
   m_Layer: 0
-  m_Name: Rifle_dog
+  m_Name: Rifle_dog_Red
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2556,7 +2556,7 @@ Animator:
   m_GameObject: {fileID: 1975320116539714}
   m_Enabled: 1
   m_Avatar: {fileID: 9000000, guid: a0d5f9408eaa16744bfeaa98dde61eac, type: 3}
-  m_Controller: {fileID: 9100000, guid: 33dee629b7c20824c99ac06f28638c53, type: 2}
+  m_Controller: {fileID: 9100000, guid: fec0561c29913ff438f4719963a3f5c4, type: 2}
   m_CullingMode: 1
   m_UpdateMode: 0
   m_ApplyRootMotion: 1
@@ -3745,7 +3745,7 @@ SkinnedMeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: ebce5e9c0e57f9e45bef04013fce9ac8, type: 2}
+  - {fileID: 2100000, guid: 760a49a6b1d41d84facb95f857518521, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
