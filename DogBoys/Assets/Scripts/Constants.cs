@@ -33,4 +33,9 @@ public static class Constants {
 			public static int moveRange = 5;
 		}
 	}
+
+    public static class WinScreen
+    {
+        public static string C_WinText = "";
+    }
 }

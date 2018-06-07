@@ -18,7 +18,9 @@ public class Character : MonoBehaviour {
     [SerializeField]
     private int yPosInGrid = 0;
 
-	private int movesLeft = 2;
+    private bool isOnOverwatch = true;
+    private List<Character> enemySeen;
+    private int movesLeft = 2;
 	private bool isMoving = false;
 	private bool isSelected = false;
 	private bool canBeSeen = false;
@@ -74,12 +76,38 @@ public class Character : MonoBehaviour {
     public bool IsInNoHitCover {
         get { return isNoHitCover; }
     }
+
+    public List<Character> EnemySeen
+    {
+        get
+        {
+            return enemySeen;
+        }
+
+        set
+        {
+            enemySeen = value;
+        }
+    }
+
+    public bool IsOnOverwatch
+    {
+        get
+        {
+            return isOnOverwatch;
+        }
+
+        set
+        {
+            isOnOverwatch = value;
+        }
+    }
     #endregion
     #endregion
 
     #region Character Functions
 
-	public void toggleAttackMode() {
+    public void toggleAttackMode() {
 		Debug.Log ("Setting attack mode visual to " + gc.attackMode.ToString ());
 		characterHUD.GetComponent<UI_Controller> ().setAttackMode (gc.attackMode);
 	}
@@ -101,11 +129,13 @@ public class Character : MonoBehaviour {
 			gc.p2Chars.Remove (gameObject);
 		gc.setSpace (Mathf.RoundToInt (gameObject.transform.position.x), Mathf.RoundToInt (gameObject.transform.position.z), 0);
 		Destroy(gameObject);
-	}
+        gc.winGame();
+    }
 
 	public void Move(Vector3 position)
 	{
-		isInCover = false;
+        enemySeen.Clear();
+        isInCover = false;
 		isNoHitCover = false;
 		newPos = new Vector3(position.x, gameObject.transform.position.y, position.z);
 		gc.setSpace (Mathf.RoundToInt(gameObject.transform.position.x), Mathf.RoundToInt(gameObject.transform.position.z), 0);
@@ -119,10 +149,28 @@ public class Character : MonoBehaviour {
 		gc.setSpace (Mathf.RoundToInt(position.x), Mathf.RoundToInt(position.z), 1);
 		gc.printBoard ();
 
-		useMove ();
+        //While moving, update LoS info
+        gc.lineOfSight();
+
+        useMove ();
 		UnselectCharacter ();
         CenterOnSpace();
-	}
+
+        //Overwatch attack
+        if (enemySeen.Count > 0)
+        {
+            Debug.Log("Enemy sees me");
+            foreach (Character enemy in enemySeen)
+            {
+                if (enemy.IsOnOverwatch)
+                {
+                    //Debug.Log("Enemy shoot me");
+                    overwatchAttack(enemy);
+                }
+            }
+        }
+        enemySeen.Clear();
+    }
 
     public void Move(Vector3 position, bool inCover)
     {
@@ -283,7 +331,6 @@ public class Character : MonoBehaviour {
 	public bool isInRange(GameObject char1, GameObject char2, int range){
 		return isInRange (char1.transform.position, char2.transform.position, range);
 	}
-	#endregion
 
 	public GameObject characterLineOfSight(Vector3 enemiesLocation)
 	{
@@ -293,17 +340,23 @@ public class Character : MonoBehaviour {
 		raycastFromHere.y += 0.5f;
 		if (Physics.Linecast(raycastFromHere, enemiesLocation, out hitMyTarget))
 		{
-			Debug.DrawLine(raycastFromHere, enemiesLocation, Color.yellow);
+			//Debug.DrawLine(raycastFromHere, enemiesLocation, Color.yellow);
 			return hitMyTarget.collider.gameObject;
 		}
 		else
 		{
-			Debug.DrawLine(raycastFromHere, enemiesLocation, Color.red);
+			//Debug.DrawLine(raycastFromHere, enemiesLocation, Color.red);
 			return null;
 		}
 	}
 
-	public void turnOffGameObject() {
+    public void overwatchAttack(Character enemy)
+    {
+        enemy.Shoot(this);
+        //enemy.IsOnOverwatch = false;
+    }
+
+    public void turnOffGameObject() {
 		gameObject.SetActive(false);
 	}
 
@@ -311,9 +364,11 @@ public class Character : MonoBehaviour {
 		gameObject.SetActive(true);
 	}
 
-	#region Unity Overrides
-	// Use this for initialization
-	void Start () {
+    #endregion
+
+    #region Unity Overrides
+    // Use this for initialization
+    void Start () {
 		gc = GameController.Instance;
 		movesLeft = 2;
 		health = 100;
