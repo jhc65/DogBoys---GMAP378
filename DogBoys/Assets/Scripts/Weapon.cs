@@ -28,6 +28,7 @@ public class Weapon : Equippable {
 			fire (chara);
 		} else {
 			Debug.Log ("Reloading");
+			GameController.Instance.currentlySelectedCharacter.GetComponent<Character> ().reload ();
 			reload ();
 		}
 	}

@@ -17,6 +17,7 @@ public class Camera_mouse : MonoBehaviour {
 	private GameObject nully;
 	private GameController gc;	//game controller
 
+
 	void Start() {
 		highlighted = false;
 		gc = GameController.Instance;

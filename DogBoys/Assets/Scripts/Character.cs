@@ -34,6 +34,8 @@ public class Character : MonoBehaviour {
 
 	private GameController gc;
 
+	private Animator anim;
+
 	#region Getters and Setters
 	public Weapon getWeapon(){
 		return weapon;
@@ -48,6 +50,7 @@ public class Character : MonoBehaviour {
 		movesLeft = setter;
 	}
 	public int hurt(int dmg){
+		anim.SetTrigger ("a_isHit");
 		health -= dmg;
 		if (health <= 0)
 			Die ();
@@ -120,10 +123,16 @@ public class Character : MonoBehaviour {
 		setMovesLeft (0);
 		UnselectCharacter ();
 	}
+
+	public void reload() {
+		anim.SetTrigger ("a_isReloading");
+	}
 			
 	void Die()
 	{
 		if (gc.p1Chars.Contains (gameObject))
+			anim.SetBool ("a_isAlive", false);
+			anim.SetBool ("a_isDead", true);
 			gc.p1Chars.Remove (gameObject);
 		if (gc.p2Chars.Contains (gameObject))
 			gc.p2Chars.Remove (gameObject);
@@ -280,6 +289,7 @@ public class Character : MonoBehaviour {
 	}
 
 	public void Shoot(Character enemy){
+		anim.SetTrigger ("a_isShooting");
 		weapon.use (enemy);
 	}
 
@@ -372,6 +382,10 @@ public class Character : MonoBehaviour {
 		gc = GameController.Instance;
 		movesLeft = 2;
 		health = 100;
+		anim = gameObject.GetComponent<Animator> ();
+		anim.SetBool ("a_isAlive", true);
+		anim.SetBool ("a_isDead", false);
+		anim.SetBool ("a_isCovered", false);
 		//		status = "";
 
 		CenterOnSpace();
