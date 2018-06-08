@@ -44,6 +44,7 @@ public class Constants_Values : MonoBehaviour {
 		_availableDogs.Add("rf");
 		_availableDogs.Add("sg");
 		_availableDogs.Add("sg");
-			}
+
+	}
 	#endregion
 }
