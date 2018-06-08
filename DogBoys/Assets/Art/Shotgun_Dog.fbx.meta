@@ -204,7 +204,7 @@ ModelImporter:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: lambert2
-    second: {fileID: 2100000, guid: 245d47ac75eb81845be7c27b27e6d893, type: 2}
+    second: {fileID: 2100000, guid: f4e09e9e0a6a1fa41b6d7eee574eae50, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
@@ -259,7 +259,15 @@ ModelImporter:
       mirror: 0
       bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
       curves: []
-      events: []
+      events:
+      - time: 0.2590909
+        functionName: NewEvent
+        data: 
+        objectReferenceParameter: {fileID: 1874604263677668, guid: 1819c4463ef686d4eb82dcba61dd462c,
+          type: 2}
+        floatParameter: 0
+        intParameter: 0
+        messageOptions: 0
       transformMask: []
       maskType: 3
       maskSource: {instanceID: 0}
