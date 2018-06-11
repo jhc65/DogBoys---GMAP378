@@ -11,9 +11,6 @@ public class Weapon : Equippable {
 	private bool reloading;
 	protected int damage;
 
-	public AudioSource fireSound;
-	public AudioSource reloadSound;
-
 	public int getRange() {
 		return range;
 	}
@@ -29,12 +26,10 @@ public class Weapon : Equippable {
 		//Debug.Log ("Getting to use?");
 		if (!reloading) {
 			fire (chara);
-			fireSound.Play ();
 		} else {
 			Debug.Log ("Reloading");
 			GameController.Instance.currentlySelectedCharacter.GetComponent<Character> ().reload ();
 			reload ();
-			reloadSound.Play ();
 		}
 	}
 
