@@ -18,6 +18,11 @@ public class Character : MonoBehaviour {
     [SerializeField]
     private int yPosInGrid = 0;
 
+	[SerializeField]
+	private ParticleSystem hitParticles;
+	[SerializeField]
+	private ParticleSystem shootParticles;
+
     private bool isOnOverwatch = true;
     private List<Character> enemySeen;
     private int movesLeft = 2;
@@ -291,6 +296,14 @@ public class Character : MonoBehaviour {
 	public void Shoot(Character enemy){
 		anim.SetTrigger ("a_isShooting");
 		weapon.use (enemy);
+	}
+
+	public void shootP() {
+		shootParticles.Play ();
+	}
+
+	public void hurtP() {
+		hitParticles.Play();
 	}
 
 	public bool isInRange(Vector3 char1, Vector3 char2, int range){
