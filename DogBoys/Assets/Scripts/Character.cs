@@ -294,6 +294,11 @@ public class Character : MonoBehaviour {
 	}
 
 	public void Shoot(Character enemy){
+		//rotate to face target
+		this.transform.LookAt (enemy.gameObject.transform);
+		float curY = this.transform.rotation.eulerAngles.y;
+		this.transform.rotation = Quaternion.Euler(0,curY,0);
+		//----
 		anim.SetTrigger ("a_isShooting");
 		weapon.use (enemy);
 	}

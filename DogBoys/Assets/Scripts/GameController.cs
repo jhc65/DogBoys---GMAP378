@@ -151,18 +151,33 @@ public class GameController : MonoBehaviour {
 
     public void MoveSelectedCharacter(Vector3 position) {
         if (currentlySelectedCharacter) {
+			//rotate to face target
+			currentlySelectedCharacter.transform.LookAt (position);
+			float curY = currentlySelectedCharacter.transform.rotation.eulerAngles.y;
+			currentlySelectedCharacter.transform.rotation = Quaternion.Euler(0,curY,0);
+			//----
             currentlySelectedCharacter.GetComponent<Character>().Move(position);
         }
     }
 
     public void MoveSelectedCharacter(Vector3 position, bool inCover) {
         if (currentlySelectedCharacter) {
+			//rotate to face target
+			currentlySelectedCharacter.transform.LookAt (position);
+			float curY = currentlySelectedCharacter.transform.rotation.eulerAngles.y;
+			currentlySelectedCharacter.transform.rotation = Quaternion.Euler(0,curY,0);
+			//----
             currentlySelectedCharacter.GetComponent<Character>().Move(position, inCover);
         }
     }
 
     public void MoveSelectedCharacter(Vector3 position, bool inCover, Constants.Global.C_CoverDirection dirIn) {
         if (currentlySelectedCharacter) {
+			//rotate to face target
+			currentlySelectedCharacter.transform.LookAt (position);
+			float curY = currentlySelectedCharacter.transform.rotation.eulerAngles.y;
+			currentlySelectedCharacter.transform.rotation = Quaternion.Euler(0,curY,0);
+			//----
             currentlySelectedCharacter.GetComponent<Character>().Move(position, inCover, dirIn);
         }
     }
@@ -170,6 +185,11 @@ public class GameController : MonoBehaviour {
     public void MoveSelectedCharacter_NoHit(Vector3 position)
     {
         if (currentlySelectedCharacter) {
+			//rotate to face target
+			currentlySelectedCharacter.transform.LookAt (position);
+			float curY = currentlySelectedCharacter.transform.rotation.eulerAngles.y;
+			currentlySelectedCharacter.transform.rotation = Quaternion.Euler(0,curY,0);
+			//----
             currentlySelectedCharacter.GetComponent<Character>().Move_NoHit(position);
         }
     }
