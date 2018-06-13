@@ -234,6 +234,7 @@ public class Character : MonoBehaviour {
     public void Move(Vector3 position, bool inCover)
     {
         if (isInRange(gameObject.transform.position, position, weapon.getMoveRange())) {
+            enemySeen.Clear();
             isInCover = inCover;
             isNoHitCover = false;
             newPos = new Vector3(position.x, gameObject.transform.position.y, position.z);
@@ -248,8 +249,25 @@ public class Character : MonoBehaviour {
             gc.setSpace(Mathf.RoundToInt(position.x), Mathf.RoundToInt(position.z), 1);
             gc.printBoard();
 
+            gc.lineOfSight();
+
             useMove();
             UnselectCharacter();
+
+            //Overwatch attack
+            if (enemySeen.Count > 0)
+            {
+                Debug.Log("Enemy sees me");
+                foreach (Character enemy in enemySeen)
+                {
+                    if (enemy.IsOnOverwatch)
+                    {
+                        Debug.Log("Enemy shoot me");
+                        overwatchAttack(enemy);
+                    }
+                }
+            }
+            enemySeen.Clear();
         }
         else {
             Debug.Log("Can't go there from here.");
@@ -452,7 +470,8 @@ public class Character : MonoBehaviour {
 		gc = GameController.Instance;
 		movesLeft = 2;
 		health = 100;
-		anim = gameObject.GetComponent<Animator> ();
+        enemySeen = new List<Character>();
+        anim = gameObject.GetComponent<Animator> ();
 		anim.SetBool ("a_isAlive", true);
 		anim.SetBool ("a_isDead", false);
 		anim.SetBool ("a_isCovered", false);
