@@ -25,7 +25,7 @@ public class Character : MonoBehaviour {
 	[SerializeField]
 	private ParticleSystem selectParticles;
 
-    private bool isOnOverwatch = true;
+    private bool isOnOverwatch = false;
     private List<Character> enemySeen;
     private int movesLeft = 2;
 	private bool isMoving = false;
@@ -212,13 +212,11 @@ public class Character : MonoBehaviour {
         gc.lineOfSight();
 
         useMove ();
-		UnselectCharacter ();
-        CenterOnSpace();
 
         //Overwatch attack
         if (enemySeen.Count > 0)
         {
-            Debug.Log("Enemy sees me");
+            //Debug.Log("Enemy sees me");
             foreach (Character enemy in enemySeen)
             {
                 if (enemy.IsOnOverwatch)
@@ -228,6 +226,10 @@ public class Character : MonoBehaviour {
                 }
             }
         }
+
+        UnselectCharacter ();
+        CenterOnSpace();
+
         enemySeen.Clear();
     }
 
@@ -252,22 +254,23 @@ public class Character : MonoBehaviour {
             gc.lineOfSight();
 
             useMove();
-            UnselectCharacter();
 
             //Overwatch attack
             if (enemySeen.Count > 0)
             {
-                Debug.Log("Enemy sees me");
+                Debug.Log("Enemy sees me " + enemySeen.Count);
                 foreach (Character enemy in enemySeen)
                 {
                     if (enemy.IsOnOverwatch)
                     {
-                        Debug.Log("Enemy shoot me");
+                        //Debug.Log("Enemy shoot me");
                         overwatchAttack(enemy);
                     }
                 }
             }
             enemySeen.Clear();
+
+            UnselectCharacter();
         }
         else {
             Debug.Log("Can't go there from here.");
@@ -277,7 +280,8 @@ public class Character : MonoBehaviour {
     public void Move(Vector3 position, bool inCover, Constants.Global.C_CoverTypeAndDirection[] dirIn)
 	{
 		if (isInRange (gameObject.transform.position, position, weapon.getMoveRange ())) {
-			isInCover = inCover;
+            enemySeen.Clear();
+            isInCover = inCover;
             coverDir = dirIn;
 			isNoHitCover = false;
 			newPos = new Vector3 (position.x, gameObject.transform.position.y, position.z);
@@ -293,8 +297,24 @@ public class Character : MonoBehaviour {
 			gc.printBoard ();
 
 			useMove ();
-			UnselectCharacter ();
-		} else {
+
+            //Overwatch attack
+            if (enemySeen.Count > 0)
+            {
+                //Debug.Log("Enemy sees me");
+                foreach (Character enemy in enemySeen)
+                {
+                    if (enemy.IsOnOverwatch)
+                    {
+                        //Debug.Log("Enemy shoot me");
+                        overwatchAttack(enemy);
+                    }
+                }
+            }
+
+            UnselectCharacter ();
+            enemySeen.Clear();
+        } else {
 			Debug.Log ("Can't go there from here.");
 		}
 	}
@@ -451,7 +471,7 @@ public class Character : MonoBehaviour {
     public void overwatchAttack(Character enemy)
     {
         enemy.Shoot(this);
-        //enemy.IsOnOverwatch = false;
+        enemy.IsOnOverwatch = false;
     }
 
     public void turnOffGameObject() {
