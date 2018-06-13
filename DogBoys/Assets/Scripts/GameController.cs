@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System;
 using UnityEngine;
 
 public class GameController : MonoBehaviour {
@@ -85,29 +86,89 @@ public class GameController : MonoBehaviour {
     }
 
     // Check for cover
-    public bool IsEnemyProtected(GameObject charIn, GameObject enemyIn) {// Vector3 charIn, Vector3 enemyIn) {//float charX, float charY, float enemyX, float enemyY) {
-        if (charIn.GetComponent<Character>().GetCoverDirection() == Constants.Global.C_CoverDirection.N) {
-            if (Mathf.Round(enemyIn.transform.position.z) <= Mathf.Round(charIn.transform.position.z)) {
-                return false;
+    public Constants.Global.C_CoverType IsEnemyProtected(GameObject charIn, GameObject enemyIn) {// Vector3 charIn, Vector3 enemyIn) {//float charX, float charY, float enemyX, float enemyY) {
+        var charDirArray = charIn.GetComponent<Character>().GetCoverDirection();
+        var enemyDirArray = enemyIn.GetComponent<Character>().GetCoverDirection();
+
+        var isWhole = false;
+        var isHalf = false;
+
+        for (int i = 0; i < enemyDirArray.Length; i++) {
+            if (enemyDirArray[i] == Constants.Global.C_CoverTypeAndDirection.FN) {
+                if (Mathf.RoundToInt(enemyIn.transform.position.z) >= Mathf.RoundToInt(charIn.transform.position.z)) {
+                    return Constants.Global.C_CoverType.NONE;
+                    //isWhole = true;
+                }
+                else {
+                    return Constants.Global.C_CoverType.WHOLE;
+                }
             }
-        }
-        else if (charIn.GetComponent<Character>().GetCoverDirection() == Constants.Global.C_CoverDirection.S) {
-            if (Mathf.Round(enemyIn.transform.position.z) >= Mathf.Round(charIn.transform.position.z)) {
-                return false;
+            else if (enemyDirArray[i] == Constants.Global.C_CoverTypeAndDirection.FS) {
+                if (Mathf.RoundToInt(enemyIn.transform.position.z) <= Mathf.RoundToInt(charIn.transform.position.z)) {
+                    return Constants.Global.C_CoverType.NONE;
+                    //isWhole = true;
+                }
+                else {
+                    return Constants.Global.C_CoverType.WHOLE;
+                }
             }
-        }
-        else if (charIn.GetComponent<Character>().GetCoverDirection() == Constants.Global.C_CoverDirection.E) {
-            if (Mathf.Round(enemyIn.transform.position.x) <= Mathf.Round(charIn.transform.position.x)) {
-                return false;
+            else if (enemyDirArray[i] == Constants.Global.C_CoverTypeAndDirection.FE) {
+                if (Mathf.RoundToInt(enemyIn.transform.position.x) >= Mathf.RoundToInt(charIn.transform.position.x)) {
+                    return Constants.Global.C_CoverType.NONE;
+                    //isWhole = true;
+                }
+                else {
+                    return Constants.Global.C_CoverType.WHOLE;
+                }
             }
-        }
-        else {
-            if (Mathf.Round(enemyIn.transform.position.x) >= Mathf.Round(charIn.transform.position.x)) {
-                return false;
+            else if (enemyDirArray[i] == Constants.Global.C_CoverTypeAndDirection.FW) {
+                if (Mathf.RoundToInt(enemyIn.transform.position.x) <= Mathf.RoundToInt(charIn.transform.position.x)) {
+                    return Constants.Global.C_CoverType.NONE;
+                    //isWhole = true;
+                }
+                else {
+                    return Constants.Global.C_CoverType.WHOLE;
+                }
+            }
+            else if (enemyDirArray[i] == Constants.Global.C_CoverTypeAndDirection.HN) {
+                if (Mathf.RoundToInt(enemyIn.transform.position.z) >= Mathf.RoundToInt(charIn.transform.position.z)) {
+                    return Constants.Global.C_CoverType.NONE;
+                    //isHalf = true;
+                }
+                else {
+                    return Constants.Global.C_CoverType.HALF;
+                }
+            }
+            else if (enemyDirArray[i] == Constants.Global.C_CoverTypeAndDirection.HS) {
+                if (Mathf.RoundToInt(enemyIn.transform.position.z) <= Mathf.RoundToInt(charIn.transform.position.z)) {
+                    return Constants.Global.C_CoverType.NONE;
+                    //isHalf = true;
+                }
+                else {
+                    return Constants.Global.C_CoverType.HALF;
+                }
+            }
+            else if (enemyDirArray[i] == Constants.Global.C_CoverTypeAndDirection.HE) {
+                if (Mathf.RoundToInt(enemyIn.transform.position.x) >= Mathf.RoundToInt(charIn.transform.position.x)) {
+                    return Constants.Global.C_CoverType.NONE;
+                    //isHalf = true;
+                }
+                else {
+                    return Constants.Global.C_CoverType.HALF;
+                }
+            }
+            else if (enemyDirArray[i] == Constants.Global.C_CoverTypeAndDirection.HW) {
+                if (Mathf.RoundToInt(enemyIn.transform.position.x) >= Mathf.RoundToInt(charIn.transform.position.x)) {
+                    return Constants.Global.C_CoverType.NONE;
+                    //isHalf = true;
+                }
+                else {
+                    return Constants.Global.C_CoverType.HALF;
+                }
             }
         }
 
-        return true;
+        return Constants.Global.C_CoverType.NONE;
 
         //if (turn == "P2" && charIn.z <= enemyIn.z) {
         //    return false;
@@ -160,7 +221,7 @@ public class GameController : MonoBehaviour {
         }
     }
 
-    public void MoveSelectedCharacter(Vector3 position, bool inCover, Constants.Global.C_CoverDirection dirIn) {
+    public void MoveSelectedCharacter(Vector3 position, bool inCover, Constants.Global.C_CoverTypeAndDirection[] dirIn) {
         if (currentlySelectedCharacter) {
             currentlySelectedCharacter.GetComponent<Character>().Move(position, inCover, dirIn);
         }

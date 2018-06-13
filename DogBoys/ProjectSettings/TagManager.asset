@@ -12,6 +12,7 @@ TagManager:
   - NoHitCover
   - blueSpawn
   - redSpawn
+  - CoverTile
   layers:
   - Default
   - TransparentFX

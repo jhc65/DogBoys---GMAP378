@@ -8,4 +8,8 @@ public abstract class Equippable : MonoBehaviour {
 		Debug.Log ("Use an item");
 	}
 
+    public virtual void use(Character chara, float dmgReduction)
+    {
+        Debug.Log("Use an item");
+    }
 }

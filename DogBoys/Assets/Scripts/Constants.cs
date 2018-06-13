@@ -9,7 +9,8 @@ public static class Constants {
     }
 
     public static class Global {
-        public enum C_CoverDirection { N, S, E, W };
+        public enum C_CoverTypeAndDirection { FN, FS, FE, FW, HN, HS, HE, HW };
+        public enum C_CoverType { HALF, WHOLE, NONE };
     }
 		
 	// Weapon Values

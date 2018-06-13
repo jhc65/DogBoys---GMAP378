@@ -5,11 +5,11 @@ using UnityEngine;
 public class CoverTile : MonoBehaviour {
     #region Variables and Declarations
     [SerializeField]
-    private Constants.Global.C_CoverDirection dirCoveringPlayer;
+    private Constants.Global.C_CoverTypeAndDirection[] dirCoveringPlayer;
     #endregion
 
     #region CoverTile Methods
-    public Constants.Global.C_CoverDirection GetDirection() {
+    public Constants.Global.C_CoverTypeAndDirection[] GetDirection() {
         return dirCoveringPlayer;
     }
     #endregion

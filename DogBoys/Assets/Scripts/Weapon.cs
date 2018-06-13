@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -32,7 +33,18 @@ public class Weapon : Equippable {
 		}
 	}
 
-	public void fire(Character chara) {
+    public override void use(Character chara, float dmgReduction) {
+        //Debug.Log ("Getting to use?");
+        if (!reloading) {
+            fire(chara, dmgReduction);
+        }
+        else {
+            Debug.Log("Reloading");
+            reload();
+        }
+    }
+
+    public void fire(Character chara) {
 		Debug.Log ("Firing for " + damage.ToString () + " damage");
 		chara.hurt (damage);
 		shotsRemaining--;
@@ -42,7 +54,19 @@ public class Weapon : Equippable {
 		}
 	}
 
-	public void reload() {
+    public void fire(Character chara, float dmgReduction)
+    {
+        int dmg = Convert.ToInt32(damage * dmgReduction);
+        Debug.Log("Firing for " + dmg.ToString() + " damage");
+        chara.hurt(dmg);
+        shotsRemaining--;
+        Debug.Log(shotsRemaining.ToString() + " shots left");
+        if (shotsRemaining <= 0) {
+            reloading = true;
+        }
+    }
+
+    public void reload() {
 		shotsRemaining = maxShots;
 		reloading = false;
 	}

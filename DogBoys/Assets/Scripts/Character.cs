@@ -25,7 +25,7 @@ public class Character : MonoBehaviour {
 	private int xPos, yPos;
 	[SerializeField]
 	private bool isInCover = false;
-    private Constants.Global.C_CoverDirection coverDir;
+    [SerializeField] private Constants.Global.C_CoverTypeAndDirection[] coverDir;
 	[SerializeField]
 	private bool isNoHitCover = false;
 	private Vector3 newPos;
@@ -36,7 +36,7 @@ public class Character : MonoBehaviour {
 	public Weapon getWeapon(){
 		return weapon;
 	}
-    public Constants.Global.C_CoverDirection GetCoverDirection() {
+    public Constants.Global.C_CoverTypeAndDirection[] GetCoverDirection() {
         return coverDir;
     }
 	public int getMovesLeft(){
@@ -149,7 +149,7 @@ public class Character : MonoBehaviour {
         }
     }
 
-    public void Move(Vector3 position, bool inCover, Constants.Global.C_CoverDirection dirIn)
+    public void Move(Vector3 position, bool inCover, Constants.Global.C_CoverTypeAndDirection[] dirIn)
 	{
 		if (isInRange (gameObject.transform.position, position, weapon.getMoveRange ())) {
 			isInCover = inCover;
@@ -234,6 +234,10 @@ public class Character : MonoBehaviour {
 	public void Shoot(Character enemy){
 		weapon.use (enemy);
 	}
+
+    public void Shoot(Character enemy, float dmgReduction) {
+        weapon.use(enemy, dmgReduction);
+    }
 
 	public bool isInRange(Vector3 char1, Vector3 char2, int range){
 		int x1 = Mathf.RoundToInt (char1.x);
@@ -348,7 +352,28 @@ public class Character : MonoBehaviour {
 			if (isInRange (gameObject, gc.currentlySelectedCharacter, range)) {
                 //Attack this character and end the other character's turn
                 if (isInCover) {
-                    if (!gc.IsEnemyProtected(selectedGO, gameObject)) {// selected.transform.position, gameObject.transform.position)) {//selected.transform.position.x, selected.transform.position.z, gameObject.transform.position.x, gameObject.transform.position.z)) {
+                    Constants.Global.C_CoverType coverType = gc.IsEnemyProtected(selectedGO, gameObject);
+                    if (coverType == Constants.Global.C_CoverType.WHOLE) {// selected.transform.position, gameObject.transform.position)) {//selected.transform.position.x, selected.transform.position.z, gameObject.transform.position.x, gameObject.transform.position.z)) {
+                        Debug.Log("Pow");
+                        selected.Shoot(this, 0.25f);
+                        Debug.Log("I have " + health.ToString() + " health left");
+                        selected.useMove();
+                        gc.toggleAttackMode();
+                        selected.UnselectCharacter();
+                        gc.currentlySelectedCharacter = null;
+                        gc.updateTurns();
+                    }
+                    else if (coverType == Constants.Global.C_CoverType.HALF) {
+                        Debug.Log("Pow");
+                        selected.Shoot(this, 0.5f);
+                        Debug.Log("I have " + health.ToString() + " health left");
+                        selected.useMove();
+                        gc.toggleAttackMode();
+                        selected.UnselectCharacter();
+                        gc.currentlySelectedCharacter = null;
+                        gc.updateTurns();
+                    }
+                    else if (gc.IsEnemyProtected(selectedGO, gameObject) == Constants.Global.C_CoverType.NONE) {
                         Debug.Log("Pow");
                         selected.Shoot(this);
                         Debug.Log("I have " + health.ToString() + " health left");
@@ -358,7 +383,7 @@ public class Character : MonoBehaviour {
                         gc.currentlySelectedCharacter = null;
                         gc.updateTurns();
                     }
-				}
+                }
 				else {
 					Debug.Log("Pow");
 					selected.Shoot(this);
