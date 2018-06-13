@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class GunEffects : MonoBehaviour {
 
+	GameController gc = GameController.Instance;
+	private static GunEffects instance = null;
+
 	public AudioSource rifleShot;
 	public AudioSource revolverShot;
 	public AudioSource shotgunShot;
@@ -12,40 +15,41 @@ public class GunEffects : MonoBehaviour {
 	public AudioSource shotgunReload;
 	public AudioSource hit;
 
-	public ParticleSystem rifleShotP;
-	public ParticleSystem revolverShotP;
-	public ParticleSystem shotgunShotP;
-	public ParticleSystem hitP;
-
-	void ShootRifle() {
-		rifleShot.Play ();
-		rifleShotP.Play ();
+	public static GunEffects Instance() {
+		return instance;
 	}
 
-	void ReloadRifle() {
+	public void ShootRifle() {
+		rifleShot.Play ();
+	}
+
+	public void ReloadRifle() {
 		rifleReload.Play ();
 	}
 
-	void ShootRevolver() {
+	public void ShootRevolver() {
 		revolverShot.Play ();
-		revolverShotP.Play ();
 	}
 
-	void ReloadRevolver() {
+	public void ReloadRevolver() {
 		revolverReload.Play ();
 	}
 
-	void ShootShotgun() {
+	public void ShootShotgun() {
 		shotgunShot.Play ();
-		shotgunShotP.Play ();
 	}
 
-	void ReloadShotgun() {
+	public void ReloadShotgun() {
 		shotgunReload.Play ();
 	}
 
-	void Hit() {
+	public void Hit() {
 		hit.Play ();
-		hitP.Play ();
+	}
+
+	public void Awake() {
+		if (!instance) {
+			instance = this;
+		}
 	}
 }

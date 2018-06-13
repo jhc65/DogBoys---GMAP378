@@ -312,7 +312,8 @@ ModelImporter:
       - time: 0.29787233
         functionName: ShootRevolver
         data: 
-        objectReferenceParameter: {instanceID: 0}
+        objectReferenceParameter: {fileID: 11500000, guid: ce12250a612521b4795dbe8aaac97c53,
+          type: 3}
         floatParameter: 0
         intParameter: 0
         messageOptions: 0
@@ -347,7 +348,8 @@ ModelImporter:
       - time: 0
         functionName: Hit
         data: 
-        objectReferenceParameter: {instanceID: 0}
+        objectReferenceParameter: {fileID: 11500000, guid: ce12250a612521b4795dbe8aaac97c53,
+          type: 3}
         floatParameter: 20
         intParameter: 0
         messageOptions: 0

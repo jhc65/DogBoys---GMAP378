@@ -30,6 +30,8 @@ public class Character : MonoBehaviour {
 	private bool isSelected = false;
 	private bool canBeSeen = false;
 	private int xPos, yPos;
+
+	private Character target;
 	[SerializeField]
 	private bool isInCover = false;
     private Constants.Global.C_CoverDirection coverDir;
@@ -38,8 +40,9 @@ public class Character : MonoBehaviour {
 	private Vector3 newPos;
 
 	private GameController gc;
+	private GunEffects sfx = GunEffects.Instance();
 
-	private Animator anim;
+	public Animator anim;
 
 	#region Getters and Setters
 	public Weapon getWeapon(){
@@ -55,13 +58,43 @@ public class Character : MonoBehaviour {
 		movesLeft = setter;
 	}
 	public int hurt(int dmg){
-		anim.SetTrigger ("a_isHit");
 		health -= dmg;
 		if (health <= 0)
 			Die ();
-
 		characterHUD.GetComponent<UI_Controller> ().updateCurrentHealthBar (health, 100);
 		return health;
+	}
+	public void Hit() {
+		sfx.Hit ();
+		hurtP ();
+	}
+	public void ShootRevolver() {
+		sfx.ShootRevolver ();
+		target.anim.SetTrigger ("a_isHit");
+		shootP ();
+	}
+
+	public void ReloadRevolver(){
+		sfx.ReloadRevolver ();
+	}
+
+	public void ShootRifle(){
+		sfx.ShootRifle ();
+		target.anim.SetTrigger ("a_isHit");
+		shootP ();
+	}
+	public void ReloadRifle() {
+		sfx.ReloadRifle();
+	}
+
+	public void ShootShotgun(){
+		sfx.ShootShotgun();
+		target.anim.SetTrigger ("a_isHit");
+		shootP ();
+	}
+
+	public void ReloadShotgun(){
+		sfx.ReloadShotgun();
 	}
 
     public bool CanBeSeen
@@ -295,13 +328,14 @@ public class Character : MonoBehaviour {
 
 	public void Shoot(Character enemy){
 		//rotate to face target
+		target = enemy;
 		this.transform.LookAt (enemy.gameObject.transform);
 		float curY = this.transform.rotation.eulerAngles.y;
 		this.transform.rotation = Quaternion.Euler(0,curY,0);
 		//----
-		anim.SetTrigger ("a_isShooting");
 		weapon.use (enemy);
 	}
+		
 
 	public void shootP() {
 		shootParticles.Play ();
