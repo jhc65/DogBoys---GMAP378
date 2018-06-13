@@ -79,13 +79,13 @@ public class UI_Controller : MonoBehaviour
     }
 
     public void onClickAttackButton() {
-        Debug.Log("Tail wipe that cat!");
+        //Debug.Log("Tail wipe that cat!");
 		gc.toggleAttackMode ();
 		
     }
 
     public void onClickOverwatchButton() {
-        Debug.Log("If it moves... I'll hit with a water attack!");
+        gc.setGuardDog();
     }
 
     public void onClickHunkerDownButton() {
