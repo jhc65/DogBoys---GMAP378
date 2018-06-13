@@ -22,6 +22,8 @@ public class Character : MonoBehaviour {
 	private ParticleSystem hitParticles;
 	[SerializeField]
 	private ParticleSystem shootParticles;
+	[SerializeField]
+	private ParticleSystem selectParticles;
 
     private bool isOnOverwatch = true;
     private List<Character> enemySeen;
@@ -95,6 +97,16 @@ public class Character : MonoBehaviour {
 
 	public void ReloadShotgun(){
 		sfx.ReloadShotgun();
+	}
+
+	public void StartSelectParticles(){
+		selectParticles.Play ();
+	}
+
+	public void StopSelectParticles(){
+		if(selectParticles.isPlaying){
+			selectParticles.Stop();
+		}
 	}
 
     public bool CanBeSeen
@@ -316,12 +328,14 @@ public class Character : MonoBehaviour {
 	private void SelectCharacter() {
 		SetIsSelected(true);
 		characterHUD.SetActive(true);
+		StartSelectParticles ();
 		gc.SetSelectedCharacter(gameObject);
 	}
 
 	public void UnselectCharacter() {
 		SetIsSelected(false);
 		characterHUD.SetActive(false);
+		StopSelectParticles ();
 		gc.SetSelectedCharacter (null);
 		gc.updateTurns ();
 	}

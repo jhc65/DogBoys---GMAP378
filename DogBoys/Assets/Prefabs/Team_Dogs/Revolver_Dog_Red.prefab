@@ -2907,6 +2907,7 @@ MonoBehaviour:
   yPosInGrid: 0
   hitParticles: {fileID: 198100217168650106}
   shootParticles: {fileID: 198674694865390206}
+  selectParticles: {fileID: 198043263705148654}
   isInCover: 0
   isNoHitCover: 0
   anim: {fileID: 0}
