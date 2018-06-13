@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameController : MonoBehaviour {
     #region Variables and Declarations
@@ -211,18 +212,33 @@ public class GameController : MonoBehaviour {
 
     public void MoveSelectedCharacter(Vector3 position) {
         if (currentlySelectedCharacter) {
+			//rotate to face target
+			currentlySelectedCharacter.transform.LookAt (position);
+			float curY = currentlySelectedCharacter.transform.rotation.eulerAngles.y;
+			currentlySelectedCharacter.transform.rotation = Quaternion.Euler(0,curY,0);
+			//----
             currentlySelectedCharacter.GetComponent<Character>().Move(position);
         }
     }
 
     public void MoveSelectedCharacter(Vector3 position, bool inCover) {
         if (currentlySelectedCharacter) {
+			//rotate to face target
+			currentlySelectedCharacter.transform.LookAt (position);
+			float curY = currentlySelectedCharacter.transform.rotation.eulerAngles.y;
+			currentlySelectedCharacter.transform.rotation = Quaternion.Euler(0,curY,0);
+			//----
             currentlySelectedCharacter.GetComponent<Character>().Move(position, inCover);
         }
     }
 
     public void MoveSelectedCharacter(Vector3 position, bool inCover, Constants.Global.C_CoverTypeAndDirection[] dirIn) {
         if (currentlySelectedCharacter) {
+			//rotate to face target
+			currentlySelectedCharacter.transform.LookAt (position);
+			float curY = currentlySelectedCharacter.transform.rotation.eulerAngles.y;
+			currentlySelectedCharacter.transform.rotation = Quaternion.Euler(0,curY,0);
+			//----
             currentlySelectedCharacter.GetComponent<Character>().Move(position, inCover, dirIn);
         }
     }
@@ -230,6 +246,11 @@ public class GameController : MonoBehaviour {
     public void MoveSelectedCharacter_NoHit(Vector3 position)
     {
         if (currentlySelectedCharacter) {
+			//rotate to face target
+			currentlySelectedCharacter.transform.LookAt (position);
+			float curY = currentlySelectedCharacter.transform.rotation.eulerAngles.y;
+			currentlySelectedCharacter.transform.rotation = Quaternion.Euler(0,curY,0);
+			//----
             currentlySelectedCharacter.GetComponent<Character>().Move_NoHit(position);
         }
     }
@@ -298,24 +319,32 @@ public class GameController : MonoBehaviour {
 		Debug.Log (Out);
 	}
 
-    public void lineOfSight() {
+
+    public void lineOfSight()
+    {
         GameObject whatDidIHit = null;
-        if (turn == "P1") {
+        if (turn == "P1")
+        {
             //Make sure that the current player's team is active 
-            foreach (GameObject friendly in p1Chars) {
+            foreach (GameObject friendly in p1Chars)
+            {
                 friendly.GetComponent<Character>().turnOnGameObject();
             }
-            
-            //Each frame reset the enemy can be seen boolean to false
-            foreach (GameObject enemy in p2Chars) {
-                 enemy.GetComponent<Character>().CanBeSeen = false;
-            }
 
+            //Each frame reset the enemy can be seen boolean to false
+            foreach (GameObject enemy in p2Chars)
+            {
+                enemy.GetComponent<Character>().CanBeSeen = false;
+            }
+            Debug.Log("P1 LoS check");
             //Check to see if the enemy can be seen
-            foreach (GameObject friendly in p1Chars) {
-                foreach(GameObject enemy in p2Chars) {
+            foreach (GameObject friendly in p1Chars)
+            {
+                foreach (GameObject enemy in p2Chars)
+                {
                     whatDidIHit = friendly.GetComponent<Character>().characterLineOfSight(enemy.transform.position);
                     //Debug.Log(whatDidIHit.name);
+                    //Debug.Log(enemy.name);
                     if (whatDidIHit != null)
                     {
                         if (enemy.name == whatDidIHit.name)
@@ -323,6 +352,16 @@ public class GameController : MonoBehaviour {
                             if (!enemy.GetComponent<Character>().CanBeSeen)
                             {
                                 enemy.GetComponent<Character>().CanBeSeen = true;
+                                List<Character> tempList = friendly.GetComponent<Character>().EnemySeen;
+                                tempList.Add(enemy.GetComponent<Character>());
+                                friendly.GetComponent<Character>().EnemySeen = tempList;
+                            }
+                            //Update EnemySeen list if the target is already visable to the player
+                            else
+                            {
+                                List<Character> tempList = friendly.GetComponent<Character>().EnemySeen;
+                                tempList.Add(enemy.GetComponent<Character>());
+                                friendly.GetComponent<Character>().EnemySeen = tempList;
                             }
                         }
                     }
@@ -330,34 +369,44 @@ public class GameController : MonoBehaviour {
                     {
                         enemy.GetComponent<Character>().turnOnGameObject();
                         enemy.GetComponent<Character>().CanBeSeen = true;
+                        List<Character> tempList = friendly.GetComponent<Character>().EnemySeen;
+                        tempList.Add(enemy.GetComponent<Character>());
+                        friendly.GetComponent<Character>().EnemySeen = tempList;
                     }
                 }
             }
 
             //Turn on/off characters if they can be seen
-            foreach (GameObject enemy in p2Chars) {
-                if (enemy.GetComponent<Character>().CanBeSeen || whatDidIHit == null) {
+            foreach (GameObject enemy in p2Chars)
+            {
+                if (enemy.GetComponent<Character>().CanBeSeen || whatDidIHit == null)
+                {
                     enemy.GetComponent<Character>().turnOnGameObject();
                 }
-                else {
+                else
+                {
                     enemy.GetComponent<Character>().turnOffGameObject();
                 }
             }
         }
-        else {
+        else
+        {
             //Make sure that the current player's team is active 
-            foreach (GameObject friendly in p2Chars) {
+            foreach (GameObject friendly in p2Chars)
+            {
                 friendly.GetComponent<Character>().turnOnGameObject();
             }
 
             //Each frame reset the enemy can be seen boolean to false
-            foreach (GameObject enemy in p1Chars) {
+            foreach (GameObject enemy in p1Chars)
+            {
                 enemy.GetComponent<Character>().CanBeSeen = false;
             }
-
             //Check to see if the enemy can be seen
-            foreach (GameObject friendly in p2Chars) {
-                foreach (GameObject enemy in p1Chars) {
+            foreach (GameObject friendly in p2Chars)
+            {
+                foreach (GameObject enemy in p1Chars)
+                {
                     whatDidIHit = friendly.GetComponent<Character>().characterLineOfSight(enemy.transform.position);
                     if (whatDidIHit != null)
                     {
@@ -366,6 +415,16 @@ public class GameController : MonoBehaviour {
                             if (!enemy.GetComponent<Character>().CanBeSeen)
                             {
                                 enemy.GetComponent<Character>().CanBeSeen = true;
+                                List<Character> tempList = friendly.GetComponent<Character>().EnemySeen;
+                                tempList.Add(enemy.GetComponent<Character>());
+                                friendly.GetComponent<Character>().EnemySeen = tempList;
+                            }
+                            //Update EnemySeen list if the target is already visable to the player
+                            else
+                            {
+                                List<Character> tempList = friendly.GetComponent<Character>().EnemySeen;
+                                tempList.Add(enemy.GetComponent<Character>());
+                                friendly.GetComponent<Character>().EnemySeen = tempList;
                             }
                         }
                     }
@@ -373,16 +432,22 @@ public class GameController : MonoBehaviour {
                     {
                         enemy.GetComponent<Character>().turnOnGameObject();
                         enemy.GetComponent<Character>().CanBeSeen = true;
+                        List<Character> tempList = friendly.GetComponent<Character>().EnemySeen;
+                        tempList.Add(enemy.GetComponent<Character>());
+                        friendly.GetComponent<Character>().EnemySeen = tempList;
                     }
                 }
             }
 
             //Turn on/off characters if they can be seen
-            foreach (GameObject enemy in p1Chars) {
-                if (enemy.GetComponent<Character>().CanBeSeen || whatDidIHit == null) {
+            foreach (GameObject enemy in p1Chars)
+            {
+                if (enemy.GetComponent<Character>().CanBeSeen || whatDidIHit == null)
+                {
                     enemy.GetComponent<Character>().turnOnGameObject();
                 }
-                else {
+                else
+                {
                     enemy.GetComponent<Character>().turnOffGameObject();
                 }
             }
@@ -396,18 +461,20 @@ public class GameController : MonoBehaviour {
         {
             if (p1Chars.Count == 0)
             {
-                Debug.Log("Player 2 Wins!");
+                Constants.WinScreen.C_WinText = "Player 2 Wins!!";
                 gameOver = true;
+                SceneManager.LoadScene("Win Scene");
             }
             else if (p2Chars.Count == 0)
             {
-                Debug.Log("Player 1 Wins!");
+                Constants.WinScreen.C_WinText = "Player 1 Wins!!";
                 gameOver = true;
+                SceneManager.LoadScene("Win Scene");
             }
         }
     }
 
-	public void toggleAttackMode(){
+    public void toggleAttackMode(){
 		attackMode = !attackMode;
 		currentlySelectedCharacter.GetComponent<Character>().toggleAttackMode ();
 	}
@@ -417,7 +484,8 @@ public class GameController : MonoBehaviour {
     #region Unity Overrides
     // Use this for initialization
     void Start() {
-		StartP1Turn ();
+        lineOfSight();
+        StartP1Turn ();
     }
 
     private void Awake() {
@@ -429,8 +497,8 @@ public class GameController : MonoBehaviour {
     // Update is called once per frame
     void Update()
     {
-        lineOfSight();
-        winGame();
+        //lineOfSight();
+        //winGame();
         if (currentlySelectedCharacter && Input.GetMouseButtonDown(1)) {
             UnselectCharacter();
         }

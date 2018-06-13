@@ -26,9 +26,11 @@ public class Weapon : Equippable {
 	 public override void use(Character chara){
 		//Debug.Log ("Getting to use?");
 		if (!reloading) {
+			GameController.Instance.currentlySelectedCharacter.GetComponent<Character> ().anim.SetTrigger ("a_isShooting");
 			fire (chara);
 		} else {
 			Debug.Log ("Reloading");
+			GameController.Instance.currentlySelectedCharacter.GetComponent<Character> ().reload ();
 			reload ();
 		}
 	}

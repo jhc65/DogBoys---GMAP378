@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 public class Camera_mouse : MonoBehaviour {
 	[SerializeField]
@@ -16,6 +17,7 @@ public class Camera_mouse : MonoBehaviour {
 	private GameObject nully;
 	private GameController gc;	//game controller
 
+
 	void Start() {
 		highlighted = false;
 		gc = GameController.Instance;
@@ -30,7 +32,8 @@ public class Camera_mouse : MonoBehaviour {
 			// Draw a line in the game that follows the ray
 			Debug.DrawLine (tempRay.origin, hit.point, Color.cyan);
 			//if you hit a tile
-			if (hit.transform.gameObject.tag == "Tile" || hit.transform.gameObject.tag == "CoverTile") {
+			//if (hit.transform.gameObject.tag == "Tile" || hit.transform.gameObject.tag == "FullCover" || hit.transform.gameObject.tag == "NoHitCover") {
+			if(hit.transform.gameObject.tag != "DeadTile"){
 				currentTile = hit.transform.gameObject.transform;
 				//current tile not highlighted
 				if (highlighted == false) {
@@ -51,12 +54,13 @@ public class Camera_mouse : MonoBehaviour {
 							nully.SetActive(false);
 						}
 					}
-					currentHighlight.transform.position = currentTile.position;
-					nully.transform.position = currentTile.position;
+					//currentHighlight.transform.position = currentTile.position;
+				currentHighlight.transform.position = new Vector3(currentTile.position.x, 0, currentTile.position.z);
+				nully.transform.position = currentHighlight.transform.position;
 				}
 				//-------------------------------------------------------------
 				//input bs
-				if (Input.GetMouseButtonDown(0)) {					//as of now, all this does is move, but other functionality should be easy to implement
+				if (Input.GetMouseButtonDown(0) && !EventSystem.current.IsPointerOverGameObject()) {					//as of now, all this does is move, but other functionality should be easy to implement
                     if (hit.transform.gameObject.tag == "CoverTile") {
                         gc.MoveSelectedCharacter(currentTile.position, true, hit.transform.gameObject.GetComponent<CoverTile>().GetDirection());
                     }

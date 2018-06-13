@@ -18,11 +18,22 @@ public class Character : MonoBehaviour {
     [SerializeField]
     private int yPosInGrid = 0;
 
-	private int movesLeft = 2;
+	[SerializeField]
+	private ParticleSystem hitParticles;
+	[SerializeField]
+	private ParticleSystem shootParticles;
+	[SerializeField]
+	private ParticleSystem selectParticles;
+
+    private bool isOnOverwatch = true;
+    private List<Character> enemySeen;
+    private int movesLeft = 2;
 	private bool isMoving = false;
 	private bool isSelected = false;
 	private bool canBeSeen = false;
 	private int xPos, yPos;
+
+	private Character target;
 	[SerializeField]
 	private bool isInCover = false;
     [SerializeField] private Constants.Global.C_CoverTypeAndDirection[] coverDir;
@@ -31,6 +42,9 @@ public class Character : MonoBehaviour {
 	private Vector3 newPos;
 
 	private GameController gc;
+	private GunEffects sfx = GunEffects.Instance();
+
+	public Animator anim;
 
 	#region Getters and Setters
 	public Weapon getWeapon(){
@@ -49,9 +63,50 @@ public class Character : MonoBehaviour {
 		health -= dmg;
 		if (health <= 0)
 			Die ();
-
 		characterHUD.GetComponent<UI_Controller> ().updateCurrentHealthBar (health, 100);
 		return health;
+	}
+	public void Hit() {
+		sfx.Hit ();
+		hurtP ();
+	}
+	public void ShootRevolver() {
+		sfx.ShootRevolver ();
+		target.anim.SetTrigger ("a_isHit");
+		shootP ();
+	}
+
+	public void ReloadRevolver(){
+		sfx.ReloadRevolver ();
+	}
+
+	public void ShootRifle(){
+		sfx.ShootRifle ();
+		target.anim.SetTrigger ("a_isHit");
+		shootP ();
+	}
+	public void ReloadRifle() {
+		sfx.ReloadRifle();
+	}
+
+	public void ShootShotgun(){
+		sfx.ShootShotgun();
+		target.anim.SetTrigger ("a_isHit");
+		shootP ();
+	}
+
+	public void ReloadShotgun(){
+		sfx.ReloadShotgun();
+	}
+
+	public void StartSelectParticles(){
+		selectParticles.Play ();
+	}
+
+	public void StopSelectParticles(){
+		if(selectParticles.isPlaying){
+			selectParticles.Stop();
+		}
 	}
 
     public bool CanBeSeen
@@ -74,12 +129,38 @@ public class Character : MonoBehaviour {
     public bool IsInNoHitCover {
         get { return isNoHitCover; }
     }
+
+    public List<Character> EnemySeen
+    {
+        get
+        {
+            return enemySeen;
+        }
+
+        set
+        {
+            enemySeen = value;
+        }
+    }
+
+    public bool IsOnOverwatch
+    {
+        get
+        {
+            return isOnOverwatch;
+        }
+
+        set
+        {
+            isOnOverwatch = value;
+        }
+    }
     #endregion
     #endregion
 
     #region Character Functions
 
-	public void toggleAttackMode() {
+    public void toggleAttackMode() {
 		Debug.Log ("Setting attack mode visual to " + gc.attackMode.ToString ());
 		characterHUD.GetComponent<UI_Controller> ().setAttackMode (gc.attackMode);
 	}
@@ -92,20 +173,28 @@ public class Character : MonoBehaviour {
 		setMovesLeft (0);
 		UnselectCharacter ();
 	}
+
+	public void reload() {
+		anim.SetTrigger ("a_isReloading");
+	}
 			
 	void Die()
 	{
 		if (gc.p1Chars.Contains (gameObject))
+			anim.SetBool ("a_isAlive", false);
+			anim.SetBool ("a_isDead", true);
 			gc.p1Chars.Remove (gameObject);
 		if (gc.p2Chars.Contains (gameObject))
 			gc.p2Chars.Remove (gameObject);
 		gc.setSpace (Mathf.RoundToInt (gameObject.transform.position.x), Mathf.RoundToInt (gameObject.transform.position.z), 0);
 		Destroy(gameObject);
-	}
+        gc.winGame();
+    }
 
 	public void Move(Vector3 position)
 	{
-		isInCover = false;
+        enemySeen.Clear();
+        isInCover = false;
 		isNoHitCover = false;
 		newPos = new Vector3(position.x, gameObject.transform.position.y, position.z);
 		gc.setSpace (Mathf.RoundToInt(gameObject.transform.position.x), Mathf.RoundToInt(gameObject.transform.position.z), 0);
@@ -119,10 +208,28 @@ public class Character : MonoBehaviour {
 		gc.setSpace (Mathf.RoundToInt(position.x), Mathf.RoundToInt(position.z), 1);
 		gc.printBoard ();
 
-		useMove ();
+        //While moving, update LoS info
+        gc.lineOfSight();
+
+        useMove ();
 		UnselectCharacter ();
         CenterOnSpace();
-	}
+
+        //Overwatch attack
+        if (enemySeen.Count > 0)
+        {
+            Debug.Log("Enemy sees me");
+            foreach (Character enemy in enemySeen)
+            {
+                if (enemy.IsOnOverwatch)
+                {
+                    //Debug.Log("Enemy shoot me");
+                    overwatchAttack(enemy);
+                }
+            }
+        }
+        enemySeen.Clear();
+    }
 
     public void Move(Vector3 position, bool inCover)
     {
@@ -221,18 +328,35 @@ public class Character : MonoBehaviour {
 	private void SelectCharacter() {
 		SetIsSelected(true);
 		characterHUD.SetActive(true);
+		StartSelectParticles ();
 		gc.SetSelectedCharacter(gameObject);
 	}
 
 	public void UnselectCharacter() {
 		SetIsSelected(false);
 		characterHUD.SetActive(false);
+		StopSelectParticles ();
 		gc.SetSelectedCharacter (null);
 		gc.updateTurns ();
 	}
 
 	public void Shoot(Character enemy){
+		//rotate to face target
+		target = enemy;
+		this.transform.LookAt (enemy.gameObject.transform);
+		float curY = this.transform.rotation.eulerAngles.y;
+		this.transform.rotation = Quaternion.Euler(0,curY,0);
+		//----
 		weapon.use (enemy);
+	}
+		
+
+	public void shootP() {
+		shootParticles.Play ();
+	}
+
+	public void hurtP() {
+		hitParticles.Play();
 	}
 
     public void Shoot(Character enemy, float dmgReduction) {
@@ -287,7 +411,6 @@ public class Character : MonoBehaviour {
 	public bool isInRange(GameObject char1, GameObject char2, int range){
 		return isInRange (char1.transform.position, char2.transform.position, range);
 	}
-	#endregion
 
 	public GameObject characterLineOfSight(Vector3 enemiesLocation)
 	{
@@ -297,17 +420,23 @@ public class Character : MonoBehaviour {
 		raycastFromHere.y += 0.5f;
 		if (Physics.Linecast(raycastFromHere, enemiesLocation, out hitMyTarget))
 		{
-			Debug.DrawLine(raycastFromHere, enemiesLocation, Color.yellow);
+			//Debug.DrawLine(raycastFromHere, enemiesLocation, Color.yellow);
 			return hitMyTarget.collider.gameObject;
 		}
 		else
 		{
-			Debug.DrawLine(raycastFromHere, enemiesLocation, Color.red);
+			//Debug.DrawLine(raycastFromHere, enemiesLocation, Color.red);
 			return null;
 		}
 	}
 
-	public void turnOffGameObject() {
+    public void overwatchAttack(Character enemy)
+    {
+        enemy.Shoot(this);
+        //enemy.IsOnOverwatch = false;
+    }
+
+    public void turnOffGameObject() {
 		gameObject.SetActive(false);
 	}
 
@@ -315,12 +444,18 @@ public class Character : MonoBehaviour {
 		gameObject.SetActive(true);
 	}
 
-	#region Unity Overrides
-	// Use this for initialization
-	void Start () {
+    #endregion
+
+    #region Unity Overrides
+    // Use this for initialization
+    void Start () {
 		gc = GameController.Instance;
 		movesLeft = 2;
 		health = 100;
+		anim = gameObject.GetComponent<Animator> ();
+		anim.SetBool ("a_isAlive", true);
+		anim.SetBool ("a_isDead", false);
+		anim.SetBool ("a_isCovered", false);
 		//		status = "";
 
 		CenterOnSpace();
