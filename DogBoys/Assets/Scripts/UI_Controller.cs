@@ -93,6 +93,7 @@ public class UI_Controller : MonoBehaviour
     }
 
     public void onClickSkipTurn() {
+		gc.currentlySelectedCharacter.GetComponent<Character> ().skipTurn ();
         Debug.Log("I'm going for a treat break... See you in five.");
     }
 }
