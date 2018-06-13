@@ -34,6 +34,7 @@ public class World_Camera : MonoBehaviour
     private float mouseScrollWheelInput_;
     private float playerMouseMoveX_;
     private float playerMouseMoveY_;
+    private float playetKeyRotation_;
     private Vector2 totalCameraMovement;
 
 
@@ -131,12 +132,30 @@ public class World_Camera : MonoBehaviour
         mouseScrollWheelInput_ = Input.GetAxisRaw("Mouse ScrollWheel");
         verticalInput_ = Input.GetAxisRaw("Vertical");
         horizontalInput_ = Input.GetAxisRaw("Horizontal");
+
+        //Key Rotation
+        playetKeyRotation_ = Input.GetAxisRaw("Camera Rotation");
+
+        //Free Rotation Camera
+        /*
         playerMouseMoveX_ = Input.GetAxisRaw("Mouse X");
         playerMouseMoveY_ = Input.GetAxisRaw("Mouse Y");
+        */
     }
 
     private void rotateCamera()
     {
+        //Key Rotation
+        Vector2 userInput = new Vector2(playetKeyRotation_, 0.0f);
+        userInput = Vector2.Scale(userInput, new Vector2(cameraRotationSpeed_ * cameraRoatationSmoother_, cameraRotationSpeed_ * cameraRoatationSmoother_));
+        Vector2 smoothingVector = new Vector2();
+        smoothingVector.y = Mathf.Lerp(smoothingVector.y, userInput.x, 1.0f / cameraRoatationSmoother_);
+        totalCameraMovement += smoothingVector;
+        Vector3 newRotation = new Vector3(35.0f, totalCameraMovement.y, transform.eulerAngles.z);
+        transform.eulerAngles = newRotation;
+
+        //Free Rotation Camera
+        /*
         Vector2 userInput = new Vector2(playerMouseMoveX_, playerMouseMoveY_);
         userInput = Vector2.Scale(userInput, new Vector2(cameraRotationSpeed_ * cameraRoatationSmoother_, cameraRotationSpeed_ * cameraRoatationSmoother_));
         Vector2 smoothingVector = new Vector2();
@@ -146,5 +165,7 @@ public class World_Camera : MonoBehaviour
         Vector3 temp = new Vector3(-1 * totalCameraMovement.y, totalCameraMovement.x, transform.eulerAngles.z);
         temp.x = Mathf.Clamp(temp.x, cameraRotationRangeXMin_, cameraRotationRangeXMax_);
         transform.eulerAngles = temp;
+        */
     }
-}
+        }
+ 

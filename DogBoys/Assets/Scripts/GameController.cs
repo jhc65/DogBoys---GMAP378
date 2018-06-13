@@ -194,7 +194,6 @@ public class GameController : MonoBehaviour {
 		return false;
 	}
 
-
 	public void updateTurns(){
 		if (turn == "P1" && !p1CanMove ()) {
 			StartP2Turn ();
@@ -255,7 +254,7 @@ public class GameController : MonoBehaviour {
             {
                 enemy.GetComponent<Character>().CanBeSeen = false;
             }
-            Debug.Log("P1 LoS check");
+            //Debug.Log("!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!");
             //Check to see if the enemy can be seen
             foreach (GameObject friendly in p1Chars)
             {
@@ -391,12 +390,21 @@ public class GameController : MonoBehaviour {
                 SceneManager.LoadScene("Win Scene");
             }
         }
+        gameOver = false;
     }
 
     public void toggleAttackMode(){
 		attackMode = !attackMode;
 		currentlySelectedCharacter.GetComponent<Character>().toggleAttackMode ();
 	}
+
+    public void setGuardDog()
+    {
+        currentlySelectedCharacter.GetComponent<Character>().IsOnOverwatch = true;
+        currentlySelectedCharacter.GetComponent<Character>().useMove();
+        currentlySelectedCharacter.GetComponent<Character>().useMove();
+        currentlySelectedCharacter.GetComponent<Character>().UnselectCharacter();
+    }
 
     #endregion
 

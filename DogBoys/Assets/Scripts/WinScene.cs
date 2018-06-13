@@ -9,6 +9,11 @@ public class WinScene : MonoBehaviour {
     [SerializeField]
     private Text winnerTest_;
 
+    public void Update()
+    {
+        updateWinText();
+    }
+
     public void updateWinText()
     {
         winnerTest_.text = Constants.WinScreen.C_WinText;
