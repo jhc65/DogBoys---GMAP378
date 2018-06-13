@@ -17,6 +17,7 @@ public class menu_control : MonoBehaviour {
 			//teams too big
 			Debug.Log("teams too big - must have at most 5 dogs");
 		}else{
+			//gc.GetComponent<Constants_Values>().
 			SceneManager.LoadScene ("Level01");
 		}
 	}

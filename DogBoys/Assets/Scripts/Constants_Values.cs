@@ -25,26 +25,10 @@ public class Constants_Values : MonoBehaviour {
 	public void moveChar(string n, List<string> from, List<string> to){
 		if(from.Contains(n))
 			from.Remove(n);
-		Debug.Log ("removed");
-
+		//Debug.Log ("removed");
 		to.Add (n);
-		Debug.Log ("added");
+		//Debug.Log ("added");
 	}
-
-	void Start(){
-		//test cases
-		//Debug.Log (_availableDogs + "-" + _blueDogs + "-" + _redDogs);
-		_availableDogs.Add("rv");
-		_availableDogs.Add("rv");
-		_availableDogs.Add("rv");
-		_availableDogs.Add("rv");
-		_availableDogs.Add("rv");
-		_availableDogs.Add("rv");
-		_availableDogs.Add("rf");
-		_availableDogs.Add("rf");
-		_availableDogs.Add("sg");
-		_availableDogs.Add("sg");
-
-	}
+		
 	#endregion
 }
