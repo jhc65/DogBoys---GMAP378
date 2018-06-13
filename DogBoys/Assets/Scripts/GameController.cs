@@ -171,10 +171,10 @@ public class GameController : MonoBehaviour {
 
         return Constants.Global.C_CoverType.NONE;
 
-        //if (turn == "P2" && charIn.z <= enemyIn.z) {
+        //if (turn == "Red Rovers" && charIn.z <= enemyIn.z) {
         //    return false;
         //}
-        //else if (turn == "P1" && charIn.z >= enemyIn.z) {
+        //else if (turn == "Blue Bandits" && charIn.z >= enemyIn.z) {
         //    return false;
         //}
         //else {
@@ -277,9 +277,9 @@ public class GameController : MonoBehaviour {
 
 
 	public void updateTurns(){
-		if (turn == "P1" && !p1CanMove ()) {
+		if (turn == "Blue Bandits" && !p1CanMove ()) {
 			StartP2Turn ();
-		} else if (turn == "P2" && !p2CanMove ()) {
+		} else if (turn == "Red Rovers" && !p2CanMove ()) {
 			StartP1Turn ();
 		}
 	}
@@ -293,7 +293,7 @@ public class GameController : MonoBehaviour {
 			chara.GetComponent<Character> ().setMovesLeft (2);
 		}
 
-		turn = "P1";
+		turn = "Blue Bandits";
 	}
 
 	private void StartP2Turn() {
@@ -305,7 +305,7 @@ public class GameController : MonoBehaviour {
 			chara.GetComponent<Character> ().setMovesLeft (2);
 		}
 
-		turn = "P2";
+		turn = "Red Rovers";
 	}
 
 	public void printBoard() {
@@ -323,7 +323,7 @@ public class GameController : MonoBehaviour {
     public void lineOfSight()
     {
         GameObject whatDidIHit = null;
-        if (turn == "P1")
+        if (turn == "Blue Bandits")
         {
             //Make sure that the current player's team is active 
             foreach (GameObject friendly in p1Chars)
@@ -461,13 +461,13 @@ public class GameController : MonoBehaviour {
         {
             if (p1Chars.Count == 0)
             {
-                Constants.WinScreen.C_WinText = "Player 2 Wins!!";
+                Constants.WinScreen.C_WinText = "Red Rovers Win!!";
                 gameOver = true;
                 SceneManager.LoadScene("Win Scene");
             }
             else if (p2Chars.Count == 0)
             {
-                Constants.WinScreen.C_WinText = "Player 1 Wins!!";
+                Constants.WinScreen.C_WinText = "Blue Bandits Win!!";
                 gameOver = true;
                 SceneManager.LoadScene("Win Scene");
             }
