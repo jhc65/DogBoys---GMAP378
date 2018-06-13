@@ -4,10 +4,16 @@ using UnityEngine;
 using UnityEngine.UI; //Need for UI components
 using UnityEngine.SceneManagement;
 
-public class WinScene : MonoBehaviour {
+public class WinScene : MonoBehaviour
+{
 
     [SerializeField]
     private Text winnerTest_;
+
+    public void Update()
+    {
+        updateWinText();
+    }
 
     public void updateWinText()
     {
