@@ -479,6 +479,14 @@ public class GameController : MonoBehaviour {
 		currentlySelectedCharacter.GetComponent<Character>().toggleAttackMode ();
 	}
 
+    public void setGuardDog()
+    {
+        currentlySelectedCharacter.GetComponent<Character>().IsOnOverwatch = true;
+        currentlySelectedCharacter.GetComponent<Character>().useMove();
+        currentlySelectedCharacter.GetComponent<Character>().useMove();
+        currentlySelectedCharacter.GetComponent<Character>().UnselectCharacter();
+    }
+
     #endregion
 
     #region Unity Overrides
