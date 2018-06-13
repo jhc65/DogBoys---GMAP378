@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.961433, g: 0.7588709, b: 0.6245357, a: 1}
+  m_IndirectSpecularColor: {r: 0.96167773, g: 0.7588866, b: 0.62443846, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -657,7 +657,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1efea45a43798cb41a3ca9a526eb0944, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dirCoveringPlayer: 0
+  dirCoveringPlayer: 
 --- !u!1 &17289745
 GameObject:
   m_ObjectHideFlags: 0
@@ -862,7 +862,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1efea45a43798cb41a3ca9a526eb0944, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dirCoveringPlayer: 0
+  dirCoveringPlayer: 
 --- !u!1001 &26204563
 Prefab:
   m_ObjectHideFlags: 0
@@ -1125,7 +1125,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1efea45a43798cb41a3ca9a526eb0944, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dirCoveringPlayer: 3
+  dirCoveringPlayer: 
 --- !u!1 &41108348
 GameObject:
   m_ObjectHideFlags: 0
@@ -1140,7 +1140,7 @@ GameObject:
   - component: {fileID: 41108350}
   m_Layer: 0
   m_Name: Tile (12)
-  m_TagString: HalfCover
+  m_TagString: CoverTile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1166,9 +1166,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 41108348}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ad4c16bbf0a6074498b8ba74fc6bbb5b, type: 3}
+  m_Script: {fileID: 11500000, guid: 1efea45a43798cb41a3ca9a526eb0944, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  dirCoveringPlayer: 06000000
 --- !u!23 &41108351
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -1330,7 +1331,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1efea45a43798cb41a3ca9a526eb0944, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dirCoveringPlayer: 3
+  dirCoveringPlayer: 
 --- !u!1 &43400436
 GameObject:
   m_ObjectHideFlags: 0
@@ -1441,7 +1442,7 @@ GameObject:
   - component: {fileID: 49391603}
   m_Layer: 0
   m_Name: Tile
-  m_TagString: HalfCover
+  m_TagString: CoverTile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1467,9 +1468,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 49391601}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ad4c16bbf0a6074498b8ba74fc6bbb5b, type: 3}
+  m_Script: {fileID: 11500000, guid: 1efea45a43798cb41a3ca9a526eb0944, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  dirCoveringPlayer: 06000000
 --- !u!23 &49391604
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -1919,7 +1921,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1efea45a43798cb41a3ca9a526eb0944, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dirCoveringPlayer: 2
+  dirCoveringPlayer: 
 --- !u!1 &64776294
 GameObject:
   m_ObjectHideFlags: 0
@@ -2220,7 +2222,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1efea45a43798cb41a3ca9a526eb0944, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dirCoveringPlayer: 3
+  dirCoveringPlayer: 
 --- !u!1 &77893578
 GameObject:
   m_ObjectHideFlags: 0
@@ -2485,7 +2487,7 @@ GameObject:
   - component: {fileID: 84898745}
   m_Layer: 0
   m_Name: Tile (9)
-  m_TagString: HalfCover
+  m_TagString: Tile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2581,7 +2583,7 @@ GameObject:
   - component: {fileID: 86717134}
   m_Layer: 0
   m_Name: Tile (1)
-  m_TagString: HalfCover
+  m_TagString: CoverTile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2607,9 +2609,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 86717132}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ad4c16bbf0a6074498b8ba74fc6bbb5b, type: 3}
+  m_Script: {fileID: 11500000, guid: 1efea45a43798cb41a3ca9a526eb0944, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  dirCoveringPlayer: 05000000
 --- !u!23 &86717135
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -2675,10 +2678,9 @@ GameObject:
   - component: {fileID: 88564316}
   - component: {fileID: 88564315}
   - component: {fileID: 88564314}
-  - component: {fileID: 88564318}
   m_Layer: 0
   m_Name: 
-  m_TagString: HalfCover
+  m_TagString: CoverTile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2704,9 +2706,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 88564312}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ad4c16bbf0a6074498b8ba74fc6bbb5b, type: 3}
+  m_Script: {fileID: 11500000, guid: 1efea45a43798cb41a3ca9a526eb0944, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  dirCoveringPlayer: 04000000
 --- !u!23 &88564315
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -2760,18 +2763,6 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 88564312}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!114 &88564318
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 88564312}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1efea45a43798cb41a3ca9a526eb0944, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  dirCoveringPlayer: 2
 --- !u!1 &88829030
 GameObject:
   m_ObjectHideFlags: 0
@@ -3030,7 +3021,7 @@ GameObject:
   - component: {fileID: 102987990}
   m_Layer: 0
   m_Name: Tile (21)
-  m_TagString: HalfCover
+  m_TagString: CoverTile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3056,9 +3047,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 102987988}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ad4c16bbf0a6074498b8ba74fc6bbb5b, type: 3}
+  m_Script: {fileID: 11500000, guid: 1efea45a43798cb41a3ca9a526eb0944, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  dirCoveringPlayer: 06000000
 --- !u!23 &102987991
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -3316,7 +3308,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1efea45a43798cb41a3ca9a526eb0944, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dirCoveringPlayer: 1
+  dirCoveringPlayer: 
 --- !u!1 &110261089
 GameObject:
   m_ObjectHideFlags: 0
@@ -3424,10 +3416,9 @@ GameObject:
   - component: {fileID: 113804522}
   - component: {fileID: 113804521}
   - component: {fileID: 113804520}
-  - component: {fileID: 113804519}
   m_Layer: 0
   m_Name: Tile (14)
-  m_TagString: HalfCover
+  m_TagString: Tile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3445,17 +3436,6 @@ Transform:
   m_Father: {fileID: 250653739}
   m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &113804519
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 113804517}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ad4c16bbf0a6074498b8ba74fc6bbb5b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!23 &113804520
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -4069,7 +4049,7 @@ GameObject:
   - component: {fileID: 131113975}
   m_Layer: 0
   m_Name: Tile (10)
-  m_TagString: HalfCover
+  m_TagString: CoverTile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4095,9 +4075,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 131113973}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ad4c16bbf0a6074498b8ba74fc6bbb5b, type: 3}
+  m_Script: {fileID: 11500000, guid: 1efea45a43798cb41a3ca9a526eb0944, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  dirCoveringPlayer: 06000000
 --- !u!23 &131113976
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -4166,7 +4147,7 @@ GameObject:
   - component: {fileID: 134454166}
   m_Layer: 0
   m_Name: Tile (7)
-  m_TagString: FullCover
+  m_TagString: CoverTile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4192,9 +4173,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 134454160}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ad4c16bbf0a6074498b8ba74fc6bbb5b, type: 3}
+  m_Script: {fileID: 11500000, guid: 1efea45a43798cb41a3ca9a526eb0944, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  dirCoveringPlayer: 03000000
 --- !u!23 &134454163
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -4259,7 +4241,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1efea45a43798cb41a3ca9a526eb0944, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dirCoveringPlayer: 0
+  dirCoveringPlayer: 
 --- !u!1 &137410415
 GameObject:
   m_ObjectHideFlags: 0
@@ -4562,7 +4544,7 @@ GameObject:
   - component: {fileID: 139540529}
   m_Layer: 0
   m_Name: Tile (9)
-  m_TagString: HalfCover
+  m_TagString: CoverTile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4588,9 +4570,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 139540527}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ad4c16bbf0a6074498b8ba74fc6bbb5b, type: 3}
+  m_Script: {fileID: 11500000, guid: 1efea45a43798cb41a3ca9a526eb0944, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  dirCoveringPlayer: 06000000
 --- !u!23 &139540530
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -4752,7 +4735,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1efea45a43798cb41a3ca9a526eb0944, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dirCoveringPlayer: 1
+  dirCoveringPlayer: 
 --- !u!1 &146728697
 GameObject:
   m_ObjectHideFlags: 0
@@ -4863,7 +4846,7 @@ GameObject:
   - component: {fileID: 149628366}
   m_Layer: 0
   m_Name: Tile (9)
-  m_TagString: HalfCover
+  m_TagString: CoverTile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4889,9 +4872,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 149628364}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ad4c16bbf0a6074498b8ba74fc6bbb5b, type: 3}
+  m_Script: {fileID: 11500000, guid: 1efea45a43798cb41a3ca9a526eb0944, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  dirCoveringPlayer: 04000000
 --- !u!23 &149628367
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -4959,7 +4943,7 @@ GameObject:
   - component: {fileID: 151914389}
   m_Layer: 0
   m_Name: Tile (4)
-  m_TagString: FullCover
+  m_TagString: CoverTile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4985,9 +4969,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 151914387}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ad4c16bbf0a6074498b8ba74fc6bbb5b, type: 3}
+  m_Script: {fileID: 11500000, guid: 1efea45a43798cb41a3ca9a526eb0944, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  dirCoveringPlayer: 00000000
 --- !u!23 &151914390
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -5055,7 +5040,7 @@ GameObject:
   - component: {fileID: 153587194}
   m_Layer: 0
   m_Name: Tile (17)
-  m_TagString: FullCover
+  m_TagString: CoverTile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5081,9 +5066,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 153587192}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ad4c16bbf0a6074498b8ba74fc6bbb5b, type: 3}
+  m_Script: {fileID: 11500000, guid: 1efea45a43798cb41a3ca9a526eb0944, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  dirCoveringPlayer: 02000000
 --- !u!23 &153587195
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -5683,7 +5669,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1efea45a43798cb41a3ca9a526eb0944, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dirCoveringPlayer: 0
+  dirCoveringPlayer: 
 --- !u!1 &174368484
 GameObject:
   m_ObjectHideFlags: 0
@@ -6135,7 +6121,7 @@ GameObject:
   - component: {fileID: 178809154}
   m_Layer: 0
   m_Name: Tile (20)
-  m_TagString: FullCover
+  m_TagString: CoverTile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6161,9 +6147,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 178809148}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ad4c16bbf0a6074498b8ba74fc6bbb5b, type: 3}
+  m_Script: {fileID: 11500000, guid: 1efea45a43798cb41a3ca9a526eb0944, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  dirCoveringPlayer: 03000000
 --- !u!23 &178809151
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -6228,7 +6215,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1efea45a43798cb41a3ca9a526eb0944, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dirCoveringPlayer: 1
+  dirCoveringPlayer: 
 --- !u!1 &183291419
 GameObject:
   m_ObjectHideFlags: 0
@@ -6339,7 +6326,7 @@ GameObject:
   - component: {fileID: 183547447}
   m_Layer: 0
   m_Name: Tile (7)
-  m_TagString: FullCover
+  m_TagString: CoverTile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6365,9 +6352,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 183547445}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ad4c16bbf0a6074498b8ba74fc6bbb5b, type: 3}
+  m_Script: {fileID: 11500000, guid: 1efea45a43798cb41a3ca9a526eb0944, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  dirCoveringPlayer: 03000000
 --- !u!23 &183547448
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -6627,7 +6615,7 @@ GameObject:
   - component: {fileID: 201206152}
   m_Layer: 0
   m_Name: Tile (23)
-  m_TagString: HalfCover
+  m_TagString: CoverTile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6653,9 +6641,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 201206150}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ad4c16bbf0a6074498b8ba74fc6bbb5b, type: 3}
+  m_Script: {fileID: 11500000, guid: 1efea45a43798cb41a3ca9a526eb0944, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  dirCoveringPlayer: 05000000
 --- !u!23 &201206153
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -6869,7 +6858,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1efea45a43798cb41a3ca9a526eb0944, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dirCoveringPlayer: 0
+  dirCoveringPlayer: 
 --- !u!1 &206961692
 GameObject:
   m_ObjectHideFlags: 0
@@ -7170,7 +7159,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1efea45a43798cb41a3ca9a526eb0944, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dirCoveringPlayer: 2
+  dirCoveringPlayer: 
 --- !u!1 &214064992
 GameObject:
   m_ObjectHideFlags: 0
@@ -7281,7 +7270,7 @@ GameObject:
   - component: {fileID: 218802082}
   m_Layer: 0
   m_Name: Tile (5)
-  m_TagString: FullCover
+  m_TagString: CoverTile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7307,9 +7296,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 218802080}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ad4c16bbf0a6074498b8ba74fc6bbb5b, type: 3}
+  m_Script: {fileID: 11500000, guid: 1efea45a43798cb41a3ca9a526eb0944, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  dirCoveringPlayer: 00000000
 --- !u!23 &218802083
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -7821,7 +7811,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1efea45a43798cb41a3ca9a526eb0944, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dirCoveringPlayer: 3
+  dirCoveringPlayer: 
 --- !u!1 &236051628
 GameObject:
   m_ObjectHideFlags: 0
@@ -7932,7 +7922,7 @@ GameObject:
   - component: {fileID: 237060347}
   m_Layer: 0
   m_Name: Tile (1)
-  m_TagString: FullCover
+  m_TagString: CoverTile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7958,9 +7948,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 237060345}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ad4c16bbf0a6074498b8ba74fc6bbb5b, type: 3}
+  m_Script: {fileID: 11500000, guid: 1efea45a43798cb41a3ca9a526eb0944, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  dirCoveringPlayer: 02000000
 --- !u!23 &237060348
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -8028,7 +8019,7 @@ GameObject:
   - component: {fileID: 238656538}
   m_Layer: 0
   m_Name: Tile (13)
-  m_TagString: HalfCover
+  m_TagString: CoverTile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8054,9 +8045,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 238656536}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ad4c16bbf0a6074498b8ba74fc6bbb5b, type: 3}
+  m_Script: {fileID: 11500000, guid: 1efea45a43798cb41a3ca9a526eb0944, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  dirCoveringPlayer: 04000000
 --- !u!23 &238656539
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -8860,7 +8852,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1efea45a43798cb41a3ca9a526eb0944, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dirCoveringPlayer: 1
+  dirCoveringPlayer: 
 --- !u!1 &250653738
 GameObject:
   m_ObjectHideFlags: 0
@@ -9023,7 +9015,7 @@ GameObject:
   - component: {fileID: 260293855}
   m_Layer: 0
   m_Name: Tile (12)
-  m_TagString: HalfCover
+  m_TagString: CoverTile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9049,9 +9041,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 260293853}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ad4c16bbf0a6074498b8ba74fc6bbb5b, type: 3}
+  m_Script: {fileID: 11500000, guid: 1efea45a43798cb41a3ca9a526eb0944, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  dirCoveringPlayer: 07000000
 --- !u!23 &260293856
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -9309,7 +9302,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1efea45a43798cb41a3ca9a526eb0944, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dirCoveringPlayer: 0
+  dirCoveringPlayer: 
 --- !u!1 &270027141
 GameObject:
   m_ObjectHideFlags: 0
@@ -9612,7 +9605,7 @@ GameObject:
   - component: {fileID: 273056526}
   m_Layer: 0
   m_Name: Tile (12)
-  m_TagString: HalfCover
+  m_TagString: CoverTile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9638,9 +9631,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 273056524}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ad4c16bbf0a6074498b8ba74fc6bbb5b, type: 3}
+  m_Script: {fileID: 11500000, guid: 1efea45a43798cb41a3ca9a526eb0944, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  dirCoveringPlayer: 07000000
 --- !u!23 &273056527
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -9801,10 +9795,9 @@ GameObject:
   - component: {fileID: 284464071}
   - component: {fileID: 284464070}
   - component: {fileID: 284464069}
-  - component: {fileID: 284464068}
   m_Layer: 0
   m_Name: Tile (6)
-  m_TagString: HalfCover
+  m_TagString: Tile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9822,17 +9815,6 @@ Transform:
   m_Father: {fileID: 2121509388}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &284464068
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 284464066}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ad4c16bbf0a6074498b8ba74fc6bbb5b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!23 &284464069
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -10378,7 +10360,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1efea45a43798cb41a3ca9a526eb0944, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dirCoveringPlayer: 1
+  dirCoveringPlayer: 
 --- !u!1 &294433264
 GameObject:
   m_ObjectHideFlags: 0
@@ -10487,7 +10469,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1efea45a43798cb41a3ca9a526eb0944, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dirCoveringPlayer: 0
+  dirCoveringPlayer: 
 --- !u!1 &296779136
 GameObject:
   m_ObjectHideFlags: 0
@@ -10599,7 +10581,7 @@ GameObject:
   - component: {fileID: 297443594}
   m_Layer: 0
   m_Name: 
-  m_TagString: FullCover
+  m_TagString: CoverTile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -10625,9 +10607,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 297443588}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ad4c16bbf0a6074498b8ba74fc6bbb5b, type: 3}
+  m_Script: {fileID: 11500000, guid: 1efea45a43798cb41a3ca9a526eb0944, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  dirCoveringPlayer: 02000000
 --- !u!23 &297443591
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -10692,7 +10675,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1efea45a43798cb41a3ca9a526eb0944, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dirCoveringPlayer: 2
+  dirCoveringPlayer: 
 --- !u!1 &298033753
 GameObject:
   m_ObjectHideFlags: 0
@@ -10801,7 +10784,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1efea45a43798cb41a3ca9a526eb0944, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dirCoveringPlayer: 3
+  dirCoveringPlayer: 
 --- !u!1 &299744612
 GameObject:
   m_ObjectHideFlags: 0
@@ -10816,7 +10799,7 @@ GameObject:
   - component: {fileID: 299744614}
   m_Layer: 0
   m_Name: Tile (21)
-  m_TagString: HalfCover
+  m_TagString: CoverTile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -10842,9 +10825,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 299744612}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ad4c16bbf0a6074498b8ba74fc6bbb5b, type: 3}
+  m_Script: {fileID: 11500000, guid: 1efea45a43798cb41a3ca9a526eb0944, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  dirCoveringPlayer: 06000000
 --- !u!23 &299744615
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -10912,7 +10896,7 @@ GameObject:
   - component: {fileID: 301601080}
   m_Layer: 0
   m_Name: Tile (17)
-  m_TagString: FullCover
+  m_TagString: CoverTile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -10938,9 +10922,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 301601078}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ad4c16bbf0a6074498b8ba74fc6bbb5b, type: 3}
+  m_Script: {fileID: 11500000, guid: 1efea45a43798cb41a3ca9a526eb0944, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  dirCoveringPlayer: 06000000
 --- !u!23 &301601081
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -11102,7 +11087,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1efea45a43798cb41a3ca9a526eb0944, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dirCoveringPlayer: 3
+  dirCoveringPlayer: 
 --- !u!1 &309420282
 GameObject:
   m_ObjectHideFlags: 0
@@ -11937,7 +11922,7 @@ GameObject:
   - component: {fileID: 323680619}
   m_Layer: 0
   m_Name: Tile (19)
-  m_TagString: FullCover
+  m_TagString: CoverTile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -11963,9 +11948,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 323680617}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ad4c16bbf0a6074498b8ba74fc6bbb5b, type: 3}
+  m_Script: {fileID: 11500000, guid: 1efea45a43798cb41a3ca9a526eb0944, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  dirCoveringPlayer: 01000000
 --- !u!23 &323680620
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -12126,10 +12112,9 @@ GameObject:
   - component: {fileID: 324742259}
   - component: {fileID: 324742258}
   - component: {fileID: 324742257}
-  - component: {fileID: 324742256}
   m_Layer: 0
   m_Name: Tile (14)
-  m_TagString: HalfCover
+  m_TagString: Tile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -12147,17 +12132,6 @@ Transform:
   m_Father: {fileID: 1258403363}
   m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &324742256
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 324742254}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ad4c16bbf0a6074498b8ba74fc6bbb5b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!23 &324742257
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -12511,7 +12485,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1efea45a43798cb41a3ca9a526eb0944, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dirCoveringPlayer: 2
+  dirCoveringPlayer: 
 --- !u!1 &338866680
 GameObject:
   m_ObjectHideFlags: 0
@@ -12620,7 +12594,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1efea45a43798cb41a3ca9a526eb0944, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dirCoveringPlayer: 0
+  dirCoveringPlayer: 
 --- !u!1 &341289501
 GameObject:
   m_ObjectHideFlags: 0
@@ -13361,7 +13335,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1efea45a43798cb41a3ca9a526eb0944, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dirCoveringPlayer: 0
+  dirCoveringPlayer: 
 --- !u!1 &360474024
 GameObject:
   m_ObjectHideFlags: 0
@@ -13630,7 +13604,7 @@ GameObject:
   - component: {fileID: 362828017}
   m_Layer: 0
   m_Name: Tile
-  m_TagString: HalfCover
+  m_TagString: CoverTile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -13656,9 +13630,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 362828015}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ad4c16bbf0a6074498b8ba74fc6bbb5b, type: 3}
+  m_Script: {fileID: 11500000, guid: 1efea45a43798cb41a3ca9a526eb0944, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  dirCoveringPlayer: 05000000
 --- !u!23 &362828018
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -14012,7 +13987,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1efea45a43798cb41a3ca9a526eb0944, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dirCoveringPlayer: 1
+  dirCoveringPlayer: 
 --- !u!1 &376143282
 GameObject:
   m_ObjectHideFlags: 0
@@ -14121,7 +14096,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1efea45a43798cb41a3ca9a526eb0944, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dirCoveringPlayer: 1
+  dirCoveringPlayer: 
 --- !u!1 &376743719
 GameObject:
   m_ObjectHideFlags: 0
@@ -14230,7 +14205,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1efea45a43798cb41a3ca9a526eb0944, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dirCoveringPlayer: 2
+  dirCoveringPlayer: 
 --- !u!1 &377214032
 GameObject:
   m_ObjectHideFlags: 0
@@ -14437,7 +14412,7 @@ GameObject:
   - component: {fileID: 378021789}
   m_Layer: 0
   m_Name: Tile (16)
-  m_TagString: FullCover
+  m_TagString: CoverTile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -14463,9 +14438,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 378021787}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ad4c16bbf0a6074498b8ba74fc6bbb5b, type: 3}
+  m_Script: {fileID: 11500000, guid: 1efea45a43798cb41a3ca9a526eb0944, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  dirCoveringPlayer: 01000000
 --- !u!23 &378021790
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -14629,7 +14605,7 @@ GameObject:
   - component: {fileID: 381491338}
   m_Layer: 0
   m_Name: Tile
-  m_TagString: FullCover
+  m_TagString: CoverTile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -14655,9 +14631,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 381491336}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ad4c16bbf0a6074498b8ba74fc6bbb5b, type: 3}
+  m_Script: {fileID: 11500000, guid: 1efea45a43798cb41a3ca9a526eb0944, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  dirCoveringPlayer: 01000000
 --- !u!23 &381491339
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -14821,7 +14798,7 @@ GameObject:
   - component: {fileID: 393179763}
   m_Layer: 0
   m_Name: Tile (19)
-  m_TagString: FullCover
+  m_TagString: CoverTile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -14847,9 +14824,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 393179761}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ad4c16bbf0a6074498b8ba74fc6bbb5b, type: 3}
+  m_Script: {fileID: 11500000, guid: 1efea45a43798cb41a3ca9a526eb0944, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  dirCoveringPlayer: 04000000
 --- !u!23 &393179764
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -14917,7 +14895,7 @@ GameObject:
   - component: {fileID: 394012345}
   m_Layer: 0
   m_Name: Tile (21)
-  m_TagString: FullCover
+  m_TagString: CoverTile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -14943,9 +14921,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 394012343}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ad4c16bbf0a6074498b8ba74fc6bbb5b, type: 3}
+  m_Script: {fileID: 11500000, guid: 1efea45a43798cb41a3ca9a526eb0944, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  dirCoveringPlayer: 03000000
 --- !u!23 &394012346
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -15205,7 +15184,7 @@ GameObject:
   - component: {fileID: 398873801}
   m_Layer: 0
   m_Name: Tile (14)
-  m_TagString: HalfCover
+  m_TagString: CoverTile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -15231,9 +15210,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 398873799}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ad4c16bbf0a6074498b8ba74fc6bbb5b, type: 3}
+  m_Script: {fileID: 11500000, guid: 1efea45a43798cb41a3ca9a526eb0944, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  dirCoveringPlayer: 06000000
 --- !u!23 &398873802
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -15397,7 +15377,7 @@ GameObject:
   - component: {fileID: 401837076}
   m_Layer: 0
   m_Name: Tile
-  m_TagString: HalfCover
+  m_TagString: CoverTile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -15423,9 +15403,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 401837074}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ad4c16bbf0a6074498b8ba74fc6bbb5b, type: 3}
+  m_Script: {fileID: 11500000, guid: 1efea45a43798cb41a3ca9a526eb0944, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  dirCoveringPlayer: 06000000
 --- !u!23 &401837077
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -15587,7 +15568,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1efea45a43798cb41a3ca9a526eb0944, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dirCoveringPlayer: 2
+  dirCoveringPlayer: 
 --- !u!1 &403651873
 GameObject:
   m_ObjectHideFlags: 0
@@ -15599,7 +15580,6 @@ GameObject:
   - component: {fileID: 403651878}
   - component: {fileID: 403651877}
   - component: {fileID: 403651876}
-  - component: {fileID: 403651875}
   m_Layer: 0
   m_Name: Tile (16)
   m_TagString: Tile
@@ -15620,17 +15600,6 @@ Transform:
   m_Father: {fileID: 1988906085}
   m_RootOrder: 16
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &403651875
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 403651873}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ad4c16bbf0a6074498b8ba74fc6bbb5b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!23 &403651876
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -15891,7 +15860,7 @@ GameObject:
   - component: {fileID: 410272920}
   m_Layer: 0
   m_Name: Tile (22)
-  m_TagString: FullCover
+  m_TagString: CoverTile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -15917,9 +15886,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 410272914}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ad4c16bbf0a6074498b8ba74fc6bbb5b, type: 3}
+  m_Script: {fileID: 11500000, guid: 1efea45a43798cb41a3ca9a526eb0944, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  dirCoveringPlayer: 04000000
 --- !u!23 &410272917
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -15984,7 +15954,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1efea45a43798cb41a3ca9a526eb0944, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dirCoveringPlayer: 3
+  dirCoveringPlayer: 
 --- !u!4 &413669062 stripped
 Transform:
   m_PrefabParentObject: {fileID: 400000, guid: 7bd2960b2ee3a7649bbf9c6545b875dd, type: 3}
@@ -16293,7 +16263,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1efea45a43798cb41a3ca9a526eb0944, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dirCoveringPlayer: 0
+  dirCoveringPlayer: 
 --- !u!1 &426384000
 GameObject:
   m_ObjectHideFlags: 0
@@ -16404,7 +16374,7 @@ GameObject:
   - component: {fileID: 431195726}
   m_Layer: 0
   m_Name: Tile (22)
-  m_TagString: FullCover
+  m_TagString: CoverTile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -16430,9 +16400,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 431195724}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ad4c16bbf0a6074498b8ba74fc6bbb5b, type: 3}
+  m_Script: {fileID: 11500000, guid: 1efea45a43798cb41a3ca9a526eb0944, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  dirCoveringPlayer: 03000000
 --- !u!23 &431195727
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -16594,7 +16565,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1efea45a43798cb41a3ca9a526eb0944, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dirCoveringPlayer: 1
+  dirCoveringPlayer: 
 --- !u!1 &441351030
 GameObject:
   m_ObjectHideFlags: 0
@@ -16705,7 +16676,7 @@ GameObject:
   - component: {fileID: 442848404}
   m_Layer: 0
   m_Name: Tile (1)
-  m_TagString: FullCover
+  m_TagString: CoverTile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -16731,9 +16702,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 442848402}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ad4c16bbf0a6074498b8ba74fc6bbb5b, type: 3}
+  m_Script: {fileID: 11500000, guid: 1efea45a43798cb41a3ca9a526eb0944, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  dirCoveringPlayer: 03000000
 --- !u!23 &442848405
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -17471,7 +17443,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1efea45a43798cb41a3ca9a526eb0944, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dirCoveringPlayer: 0
+  dirCoveringPlayer: 
 --- !u!1 &470181113
 GameObject:
   m_ObjectHideFlags: 0
@@ -17926,7 +17898,7 @@ GameObject:
   - component: {fileID: 481067044}
   m_Layer: 0
   m_Name: Tile (11)
-  m_TagString: HalfCover
+  m_TagString: CoverTile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -17952,9 +17924,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 481067042}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ad4c16bbf0a6074498b8ba74fc6bbb5b, type: 3}
+  m_Script: {fileID: 11500000, guid: 1efea45a43798cb41a3ca9a526eb0944, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  dirCoveringPlayer: 05000000
 --- !u!23 &481067045
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -18122,7 +18095,7 @@ GameObject:
   - component: {fileID: 489927008}
   m_Layer: 0
   m_Name: Tile (12)
-  m_TagString: HalfCover
+  m_TagString: CoverTile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -18148,9 +18121,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 489927006}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ad4c16bbf0a6074498b8ba74fc6bbb5b, type: 3}
+  m_Script: {fileID: 11500000, guid: 1efea45a43798cb41a3ca9a526eb0944, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  dirCoveringPlayer: 06000000
 --- !u!23 &489927009
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -18312,7 +18286,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1efea45a43798cb41a3ca9a526eb0944, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dirCoveringPlayer: 0
+  dirCoveringPlayer: 
 --- !u!1 &490836455
 GameObject:
   m_ObjectHideFlags: 0
@@ -18519,7 +18493,7 @@ GameObject:
   - component: {fileID: 496046442}
   m_Layer: 0
   m_Name: Tile (17)
-  m_TagString: FullCover
+  m_TagString: CoverTile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -18545,9 +18519,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 496046440}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ad4c16bbf0a6074498b8ba74fc6bbb5b, type: 3}
+  m_Script: {fileID: 11500000, guid: 1efea45a43798cb41a3ca9a526eb0944, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  dirCoveringPlayer: 02000000
 --- !u!23 &496046443
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -18612,10 +18587,9 @@ GameObject:
   - component: {fileID: 502440443}
   - component: {fileID: 502440442}
   - component: {fileID: 502440441}
-  - component: {fileID: 502440440}
   m_Layer: 0
   m_Name: Tile (12)
-  m_TagString: HalfCover
+  m_TagString: Tile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -18633,17 +18607,6 @@ Transform:
   m_Father: {fileID: 2107620018}
   m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &502440440
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 502440438}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ad4c16bbf0a6074498b8ba74fc6bbb5b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!23 &502440441
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -18997,7 +18960,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1efea45a43798cb41a3ca9a526eb0944, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dirCoveringPlayer: 1
+  dirCoveringPlayer: 
 --- !u!1 &511618225
 GameObject:
   m_ObjectHideFlags: 0
@@ -19542,7 +19505,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1efea45a43798cb41a3ca9a526eb0944, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dirCoveringPlayer: 1
+  dirCoveringPlayer: 
 --- !u!1 &523506355
 GameObject:
   m_ObjectHideFlags: 0
@@ -20233,7 +20196,7 @@ GameObject:
   - component: {fileID: 546188550}
   m_Layer: 0
   m_Name: Tile (7)
-  m_TagString: FullCover
+  m_TagString: CoverTile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -20259,9 +20222,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 546188548}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ad4c16bbf0a6074498b8ba74fc6bbb5b, type: 3}
+  m_Script: {fileID: 11500000, guid: 1efea45a43798cb41a3ca9a526eb0944, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  dirCoveringPlayer: 03000000
 --- !u!23 &546188551
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -20329,7 +20293,7 @@ GameObject:
   - component: {fileID: 548356516}
   m_Layer: 0
   m_Name: Tile (11)
-  m_TagString: HalfCover
+  m_TagString: CoverTile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -20355,9 +20319,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 548356514}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ad4c16bbf0a6074498b8ba74fc6bbb5b, type: 3}
+  m_Script: {fileID: 11500000, guid: 1efea45a43798cb41a3ca9a526eb0944, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  dirCoveringPlayer: 05000000
 --- !u!23 &548356517
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -20811,7 +20776,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1efea45a43798cb41a3ca9a526eb0944, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dirCoveringPlayer: 1
+  dirCoveringPlayer: 
 --- !u!1 &561577004
 GameObject:
   m_ObjectHideFlags: 0
@@ -20823,10 +20788,9 @@ GameObject:
   - component: {fileID: 561577009}
   - component: {fileID: 561577008}
   - component: {fileID: 561577007}
-  - component: {fileID: 561577006}
   m_Layer: 0
   m_Name: Tile (12)
-  m_TagString: HalfCover
+  m_TagString: Tile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -20844,17 +20808,6 @@ Transform:
   m_Father: {fileID: 318292300}
   m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &561577006
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 561577004}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ad4c16bbf0a6074498b8ba74fc6bbb5b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!23 &561577007
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -20919,10 +20872,9 @@ GameObject:
   - component: {fileID: 563301765}
   - component: {fileID: 563301764}
   - component: {fileID: 563301763}
-  - component: {fileID: 563301762}
   m_Layer: 0
   m_Name: Tile (14)
-  m_TagString: HalfCover
+  m_TagString: Tile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -20940,17 +20892,6 @@ Transform:
   m_Father: {fileID: 597335743}
   m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &563301762
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 563301760}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ad4c16bbf0a6074498b8ba74fc6bbb5b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!23 &563301763
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -21256,7 +21197,7 @@ GameObject:
   - component: {fileID: 567348084}
   m_Layer: 0
   m_Name: Tile (1)
-  m_TagString: FullCover
+  m_TagString: CoverTile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -21282,9 +21223,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 567348078}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ad4c16bbf0a6074498b8ba74fc6bbb5b, type: 3}
+  m_Script: {fileID: 11500000, guid: 1efea45a43798cb41a3ca9a526eb0944, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  dirCoveringPlayer: 01000000
 --- !u!23 &567348081
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -21349,7 +21291,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1efea45a43798cb41a3ca9a526eb0944, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dirCoveringPlayer: 2
+  dirCoveringPlayer: 
 --- !u!1 &567991247
 GameObject:
   m_ObjectHideFlags: 0
@@ -21458,7 +21400,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1efea45a43798cb41a3ca9a526eb0944, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dirCoveringPlayer: 1
+  dirCoveringPlayer: 
 --- !u!1 &572898796
 GameObject:
   m_ObjectHideFlags: 0
@@ -21761,7 +21703,7 @@ GameObject:
   - component: {fileID: 574286424}
   m_Layer: 0
   m_Name: Tile (17)
-  m_TagString: FullCover
+  m_TagString: CoverTile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -21787,9 +21729,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 574286422}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ad4c16bbf0a6074498b8ba74fc6bbb5b, type: 3}
+  m_Script: {fileID: 11500000, guid: 1efea45a43798cb41a3ca9a526eb0944, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  dirCoveringPlayer: 01000000
 --- !u!23 &574286425
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -21857,7 +21800,7 @@ GameObject:
   - component: {fileID: 575104079}
   m_Layer: 0
   m_Name: Tile (10)
-  m_TagString: HalfCover
+  m_TagString: CoverTile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -21883,9 +21826,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 575104077}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ad4c16bbf0a6074498b8ba74fc6bbb5b, type: 3}
+  m_Script: {fileID: 11500000, guid: 1efea45a43798cb41a3ca9a526eb0944, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  dirCoveringPlayer: 05000000
 --- !u!23 &575104080
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -22191,7 +22135,7 @@ GameObject:
   - component: {fileID: 578031160}
   m_Layer: 0
   m_Name: Tile (5)
-  m_TagString: FullCover
+  m_TagString: CoverTile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -22217,9 +22161,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 578031158}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ad4c16bbf0a6074498b8ba74fc6bbb5b, type: 3}
+  m_Script: {fileID: 11500000, guid: 1efea45a43798cb41a3ca9a526eb0944, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  dirCoveringPlayer: 00000000
 --- !u!23 &578031161
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -22381,7 +22326,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1efea45a43798cb41a3ca9a526eb0944, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dirCoveringPlayer: 0
+  dirCoveringPlayer: 
 --- !u!1 &580011855
 GameObject:
   m_ObjectHideFlags: 0
@@ -22396,7 +22341,7 @@ GameObject:
   - component: {fileID: 580011857}
   m_Layer: 0
   m_Name: Tile (11)
-  m_TagString: HalfCover
+  m_TagString: CoverTile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -22422,9 +22367,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 580011855}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ad4c16bbf0a6074498b8ba74fc6bbb5b, type: 3}
+  m_Script: {fileID: 11500000, guid: 1efea45a43798cb41a3ca9a526eb0944, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  dirCoveringPlayer: 04000000
 --- !u!23 &580011858
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -22778,7 +22724,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1efea45a43798cb41a3ca9a526eb0944, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dirCoveringPlayer: 2
+  dirCoveringPlayer: 
 --- !u!1 &593235994
 GameObject:
   m_ObjectHideFlags: 0
@@ -22955,7 +22901,7 @@ GameObject:
   - component: {fileID: 597312018}
   m_Layer: 0
   m_Name: Tile (7)
-  m_TagString: FullCover
+  m_TagString: CoverTile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -22981,9 +22927,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 597312016}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ad4c16bbf0a6074498b8ba74fc6bbb5b, type: 3}
+  m_Script: {fileID: 11500000, guid: 1efea45a43798cb41a3ca9a526eb0944, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  dirCoveringPlayer: 00000000
 --- !u!23 &597312019
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -23103,7 +23050,7 @@ GameObject:
   - component: {fileID: 598492575}
   m_Layer: 0
   m_Name: Tile (2)
-  m_TagString: FullCover
+  m_TagString: CoverTile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -23129,9 +23076,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 598492573}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ad4c16bbf0a6074498b8ba74fc6bbb5b, type: 3}
+  m_Script: {fileID: 11500000, guid: 1efea45a43798cb41a3ca9a526eb0944, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  dirCoveringPlayer: 01000000
 --- !u!23 &598492576
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -23581,7 +23529,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1efea45a43798cb41a3ca9a526eb0944, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dirCoveringPlayer: 2
+  dirCoveringPlayer: 
 --- !u!1 &627632307
 GameObject:
   m_ObjectHideFlags: 0
@@ -23980,7 +23928,7 @@ GameObject:
   - component: {fileID: 633021703}
   m_Layer: 0
   m_Name: Tile (7)
-  m_TagString: FullCover
+  m_TagString: CoverTile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -24006,9 +23954,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 633021701}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ad4c16bbf0a6074498b8ba74fc6bbb5b, type: 3}
+  m_Script: {fileID: 11500000, guid: 1efea45a43798cb41a3ca9a526eb0944, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  dirCoveringPlayer: 03000000
 --- !u!23 &633021704
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -24366,7 +24315,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1efea45a43798cb41a3ca9a526eb0944, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dirCoveringPlayer: 1
+  dirCoveringPlayer: 
 --- !u!1 &645948655
 GameObject:
   m_ObjectHideFlags: 0
@@ -24477,7 +24426,7 @@ GameObject:
   - component: {fileID: 649133422}
   m_Layer: 0
   m_Name: Tile (10)
-  m_TagString: HalfCover
+  m_TagString: CoverTile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -24503,9 +24452,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 649133420}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ad4c16bbf0a6074498b8ba74fc6bbb5b, type: 3}
+  m_Script: {fileID: 11500000, guid: 1efea45a43798cb41a3ca9a526eb0944, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  dirCoveringPlayer: 04000000
 --- !u!23 &649133423
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -24725,7 +24675,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1efea45a43798cb41a3ca9a526eb0944, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dirCoveringPlayer: 0
+  dirCoveringPlayer: 
 --- !u!1 &660337900
 GameObject:
   m_ObjectHideFlags: 0
@@ -25026,7 +24976,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1efea45a43798cb41a3ca9a526eb0944, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dirCoveringPlayer: 3
+  dirCoveringPlayer: 
 --- !u!1 &665884811
 GameObject:
   m_ObjectHideFlags: 0
@@ -25230,10 +25180,9 @@ GameObject:
   - component: {fileID: 674013025}
   - component: {fileID: 674013024}
   - component: {fileID: 674013023}
-  - component: {fileID: 674013022}
   m_Layer: 0
   m_Name: Tile (10)
-  m_TagString: HalfCover
+  m_TagString: Tile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -25251,17 +25200,6 @@ Transform:
   m_Father: {fileID: 2107620018}
   m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &674013022
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 674013020}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ad4c16bbf0a6074498b8ba74fc6bbb5b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!23 &674013023
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -25807,7 +25745,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1efea45a43798cb41a3ca9a526eb0944, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dirCoveringPlayer: 0
+  dirCoveringPlayer: 
 --- !u!1001 &685229796
 Prefab:
   m_ObjectHideFlags: 0
@@ -26160,7 +26098,7 @@ GameObject:
   - component: {fileID: 692184518}
   m_Layer: 0
   m_Name: Tile (21)
-  m_TagString: HalfCover
+  m_TagString: CoverTile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -26186,9 +26124,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 692184516}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ad4c16bbf0a6074498b8ba74fc6bbb5b, type: 3}
+  m_Script: {fileID: 11500000, guid: 1efea45a43798cb41a3ca9a526eb0944, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  dirCoveringPlayer: 03000000
 --- !u!23 &692184519
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -26559,10 +26498,9 @@ GameObject:
   - component: {fileID: 703483121}
   - component: {fileID: 703483120}
   - component: {fileID: 703483119}
-  - component: {fileID: 703483118}
   m_Layer: 0
   m_Name: Tile (9)
-  m_TagString: HalfCover
+  m_TagString: Tile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -26580,17 +26518,6 @@ Transform:
   m_Father: {fileID: 698509074}
   m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &703483118
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 703483116}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ad4c16bbf0a6074498b8ba74fc6bbb5b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!23 &703483119
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -26944,7 +26871,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1efea45a43798cb41a3ca9a526eb0944, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dirCoveringPlayer: 3
+  dirCoveringPlayer: 
 --- !u!1 &723274189
 GameObject:
   m_ObjectHideFlags: 0
@@ -27053,7 +26980,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1efea45a43798cb41a3ca9a526eb0944, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dirCoveringPlayer: 3
+  dirCoveringPlayer: 
 --- !u!1001 &724606413
 Prefab:
   m_ObjectHideFlags: 0
@@ -27272,7 +27199,7 @@ GameObject:
   - component: {fileID: 732491510}
   m_Layer: 0
   m_Name: Tile (15)
-  m_TagString: HalfCover
+  m_TagString: CoverTile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -27298,9 +27225,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 732491508}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ad4c16bbf0a6074498b8ba74fc6bbb5b, type: 3}
+  m_Script: {fileID: 11500000, guid: 1efea45a43798cb41a3ca9a526eb0944, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  dirCoveringPlayer: 04000000
 --- !u!23 &732491511
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -27906,7 +27834,7 @@ GameObject:
   - component: {fileID: 752789810}
   m_Layer: 0
   m_Name: Tile (12)
-  m_TagString: HalfCover
+  m_TagString: CoverTile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -27932,9 +27860,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 752789808}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ad4c16bbf0a6074498b8ba74fc6bbb5b, type: 3}
+  m_Script: {fileID: 11500000, guid: 1efea45a43798cb41a3ca9a526eb0944, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  dirCoveringPlayer: 07000000
 --- !u!23 &752789811
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -28002,7 +27931,7 @@ GameObject:
   - component: {fileID: 755360988}
   m_Layer: 0
   m_Name: Tile (18)
-  m_TagString: FullCover
+  m_TagString: CoverTile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -28028,9 +27957,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 755360986}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ad4c16bbf0a6074498b8ba74fc6bbb5b, type: 3}
+  m_Script: {fileID: 11500000, guid: 1efea45a43798cb41a3ca9a526eb0944, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  dirCoveringPlayer: 04000000
 --- !u!23 &755360989
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -28288,7 +28218,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1efea45a43798cb41a3ca9a526eb0944, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dirCoveringPlayer: 3
+  dirCoveringPlayer: 
 --- !u!1 &768762862
 GameObject:
   m_ObjectHideFlags: 0
@@ -28733,7 +28663,7 @@ GameObject:
   - component: {fileID: 773145012}
   m_Layer: 0
   m_Name: Tile (5)
-  m_TagString: FullCover
+  m_TagString: CoverTile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -28759,9 +28689,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 773145010}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ad4c16bbf0a6074498b8ba74fc6bbb5b, type: 3}
+  m_Script: {fileID: 11500000, guid: 1efea45a43798cb41a3ca9a526eb0944, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  dirCoveringPlayer: 01000000
 --- !u!23 &773145013
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -29317,7 +29248,7 @@ GameObject:
   - component: {fileID: 790046234}
   m_Layer: 0
   m_Name: Tile (4)
-  m_TagString: FullCover
+  m_TagString: CoverTile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -29343,9 +29274,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 790046232}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ad4c16bbf0a6074498b8ba74fc6bbb5b, type: 3}
+  m_Script: {fileID: 11500000, guid: 1efea45a43798cb41a3ca9a526eb0944, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  dirCoveringPlayer: 01000000
 --- !u!23 &790046235
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -29509,7 +29441,7 @@ GameObject:
   - component: {fileID: 792604619}
   m_Layer: 0
   m_Name: Tile (7)
-  m_TagString: FullCover
+  m_TagString: CoverTile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -29535,9 +29467,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 792604617}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ad4c16bbf0a6074498b8ba74fc6bbb5b, type: 3}
+  m_Script: {fileID: 11500000, guid: 1efea45a43798cb41a3ca9a526eb0944, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  dirCoveringPlayer: 03000000
 --- !u!23 &792604620
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -29745,7 +29678,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1efea45a43798cb41a3ca9a526eb0944, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dirCoveringPlayer: 3
+  dirCoveringPlayer: 
 --- !u!1 &796882785
 GameObject:
   m_ObjectHideFlags: 0
@@ -29949,10 +29882,9 @@ GameObject:
   - component: {fileID: 801387305}
   - component: {fileID: 801387304}
   - component: {fileID: 801387303}
-  - component: {fileID: 801387302}
   m_Layer: 0
   m_Name: Tile (9)
-  m_TagString: HalfCover
+  m_TagString: Tile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -29970,17 +29902,6 @@ Transform:
   m_Father: {fileID: 1463003253}
   m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &801387302
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 801387300}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ad4c16bbf0a6074498b8ba74fc6bbb5b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!23 &801387303
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -30144,7 +30065,7 @@ GameObject:
   - component: {fileID: 803266831}
   m_Layer: 0
   m_Name: Tile (14)
-  m_TagString: HalfCover
+  m_TagString: CoverTile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -30170,9 +30091,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 803266829}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ad4c16bbf0a6074498b8ba74fc6bbb5b, type: 3}
+  m_Script: {fileID: 11500000, guid: 1efea45a43798cb41a3ca9a526eb0944, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  dirCoveringPlayer: 06000000
 --- !u!23 &803266832
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -30591,7 +30513,7 @@ GameObject:
   - component: {fileID: 816351228}
   m_Layer: 0
   m_Name: Tile (2)
-  m_TagString: FullCover
+  m_TagString: CoverTile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -30617,9 +30539,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 816351222}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ad4c16bbf0a6074498b8ba74fc6bbb5b, type: 3}
+  m_Script: {fileID: 11500000, guid: 1efea45a43798cb41a3ca9a526eb0944, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  dirCoveringPlayer: 00000000
 --- !u!23 &816351225
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -30684,7 +30607,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1efea45a43798cb41a3ca9a526eb0944, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dirCoveringPlayer: 0
+  dirCoveringPlayer: 
 --- !u!1001 &817404589
 Prefab:
   m_ObjectHideFlags: 0
@@ -30757,7 +30680,7 @@ GameObject:
   - component: {fileID: 818879325}
   m_Layer: 0
   m_Name: Tile (6)
-  m_TagString: FullCover
+  m_TagString: CoverTile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -30783,9 +30706,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 818879323}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ad4c16bbf0a6074498b8ba74fc6bbb5b, type: 3}
+  m_Script: {fileID: 11500000, guid: 1efea45a43798cb41a3ca9a526eb0944, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  dirCoveringPlayer: 00000000
 --- !u!23 &818879326
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -31043,7 +30967,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1efea45a43798cb41a3ca9a526eb0944, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dirCoveringPlayer: 0
+  dirCoveringPlayer: 
 --- !u!1 &824531877
 GameObject:
   m_ObjectHideFlags: 0
@@ -31442,7 +31366,7 @@ GameObject:
   - component: {fileID: 837994231}
   m_Layer: 0
   m_Name: Tile (18)
-  m_TagString: FullCover
+  m_TagString: CoverTile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -31468,9 +31392,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 837994229}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ad4c16bbf0a6074498b8ba74fc6bbb5b, type: 3}
+  m_Script: {fileID: 11500000, guid: 1efea45a43798cb41a3ca9a526eb0944, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  dirCoveringPlayer: 00000000
 --- !u!23 &837994232
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -32085,10 +32010,9 @@ GameObject:
   - component: {fileID: 854349404}
   - component: {fileID: 854349403}
   - component: {fileID: 854349402}
-  - component: {fileID: 854349401}
   m_Layer: 0
   m_Name: Tile (12)
-  m_TagString: HalfCover
+  m_TagString: Tile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -32106,17 +32030,6 @@ Transform:
   m_Father: {fileID: 204165831}
   m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &854349401
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 854349399}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ad4c16bbf0a6074498b8ba74fc6bbb5b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!23 &854349402
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -32467,7 +32380,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1efea45a43798cb41a3ca9a526eb0944, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dirCoveringPlayer: 1
+  dirCoveringPlayer: 
 --- !u!1 &868680385
 GameObject:
   m_ObjectHideFlags: 0
@@ -32576,7 +32489,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1efea45a43798cb41a3ca9a526eb0944, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dirCoveringPlayer: 1
+  dirCoveringPlayer: 
 --- !u!4 &869163083 stripped
 Transform:
   m_PrefabParentObject: {fileID: 400000, guid: 7bd2960b2ee3a7649bbf9c6545b875dd, type: 3}
@@ -33795,7 +33708,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1efea45a43798cb41a3ca9a526eb0944, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dirCoveringPlayer: 1
+  dirCoveringPlayer: 
 --- !u!1 &923205033
 GameObject:
   m_ObjectHideFlags: 0
@@ -33906,7 +33819,7 @@ GameObject:
   - component: {fileID: 924341977}
   m_Layer: 0
   m_Name: Tile (15)
-  m_TagString: FullCover
+  m_TagString: CoverTile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -33932,9 +33845,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 924341975}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ad4c16bbf0a6074498b8ba74fc6bbb5b, type: 3}
+  m_Script: {fileID: 11500000, guid: 1efea45a43798cb41a3ca9a526eb0944, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  dirCoveringPlayer: 06000000
 --- !u!23 &924341978
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -34096,7 +34010,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1efea45a43798cb41a3ca9a526eb0944, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dirCoveringPlayer: 0
+  dirCoveringPlayer: 
 --- !u!1 &928277840
 GameObject:
   m_ObjectHideFlags: 0
@@ -34497,7 +34411,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1efea45a43798cb41a3ca9a526eb0944, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dirCoveringPlayer: 1
+  dirCoveringPlayer: 
 --- !u!1 &935807482
 GameObject:
   m_ObjectHideFlags: 0
@@ -34606,7 +34520,7 @@ GameObject:
   - component: {fileID: 944458269}
   m_Layer: 0
   m_Name: Tile (7)
-  m_TagString: FullCover
+  m_TagString: CoverTile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -34632,9 +34546,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 944458267}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ad4c16bbf0a6074498b8ba74fc6bbb5b, type: 3}
+  m_Script: {fileID: 11500000, guid: 1efea45a43798cb41a3ca9a526eb0944, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  dirCoveringPlayer: 03000000
 --- !u!23 &944458270
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -34798,7 +34713,7 @@ GameObject:
   - component: {fileID: 951272546}
   m_Layer: 0
   m_Name: Tile (19)
-  m_TagString: FullCover
+  m_TagString: CoverTile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -34824,9 +34739,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 951272544}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ad4c16bbf0a6074498b8ba74fc6bbb5b, type: 3}
+  m_Script: {fileID: 11500000, guid: 1efea45a43798cb41a3ca9a526eb0944, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  dirCoveringPlayer: 00000000
 --- !u!23 &951272547
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -35180,7 +35096,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1efea45a43798cb41a3ca9a526eb0944, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dirCoveringPlayer: 1
+  dirCoveringPlayer: 
 --- !u!1 &958695589
 GameObject:
   m_ObjectHideFlags: 0
@@ -35291,7 +35207,7 @@ GameObject:
   - component: {fileID: 964068558}
   m_Layer: 0
   m_Name: Tile (14)
-  m_TagString: HalfCover
+  m_TagString: CoverTile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -35317,9 +35233,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 964068556}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ad4c16bbf0a6074498b8ba74fc6bbb5b, type: 3}
+  m_Script: {fileID: 11500000, guid: 1efea45a43798cb41a3ca9a526eb0944, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  dirCoveringPlayer: 07000000
 --- !u!23 &964068559
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -35481,7 +35398,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1efea45a43798cb41a3ca9a526eb0944, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dirCoveringPlayer: 3
+  dirCoveringPlayer: 
 --- !u!1 &972488810
 GameObject:
   m_ObjectHideFlags: 0
@@ -35589,10 +35506,9 @@ GameObject:
   - component: {fileID: 974555793}
   - component: {fileID: 974555792}
   - component: {fileID: 974555791}
-  - component: {fileID: 974555790}
   m_Layer: 0
   m_Name: Tile (10)
-  m_TagString: HalfCover
+  m_TagString: Tile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -35610,17 +35526,6 @@ Transform:
   m_Father: {fileID: 698509074}
   m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &974555790
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 974555788}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ad4c16bbf0a6074498b8ba74fc6bbb5b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!23 &974555791
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -35750,7 +35655,7 @@ GameObject:
   - component: {fileID: 976344080}
   m_Layer: 0
   m_Name: Tile (21)
-  m_TagString: FullCover
+  m_TagString: CoverTile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -35776,9 +35681,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 976344078}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ad4c16bbf0a6074498b8ba74fc6bbb5b, type: 3}
+  m_Script: {fileID: 11500000, guid: 1efea45a43798cb41a3ca9a526eb0944, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  dirCoveringPlayer: 00000000
 --- !u!23 &976344081
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -36754,7 +36660,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1efea45a43798cb41a3ca9a526eb0944, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dirCoveringPlayer: 2
+  dirCoveringPlayer: 
 --- !u!1 &989802873
 GameObject:
   m_ObjectHideFlags: 0
@@ -37150,10 +37056,9 @@ GameObject:
   - component: {fileID: 994348746}
   - component: {fileID: 994348745}
   - component: {fileID: 994348744}
-  - component: {fileID: 994348743}
   m_Layer: 0
   m_Name: Tile (14)
-  m_TagString: HalfCover
+  m_TagString: Tile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -37171,17 +37076,6 @@ Transform:
   m_Father: {fileID: 1013088063}
   m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &994348743
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 994348741}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ad4c16bbf0a6074498b8ba74fc6bbb5b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!23 &994348744
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -37249,7 +37143,7 @@ GameObject:
   - component: {fileID: 1006656732}
   m_Layer: 0
   m_Name: Tile (1)
-  m_TagString: FullCover
+  m_TagString: CoverTile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -37275,9 +37169,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1006656730}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ad4c16bbf0a6074498b8ba74fc6bbb5b, type: 3}
+  m_Script: {fileID: 11500000, guid: 1efea45a43798cb41a3ca9a526eb0944, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  dirCoveringPlayer: 02000000
 --- !u!23 &1006656733
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -37539,7 +37434,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1efea45a43798cb41a3ca9a526eb0944, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dirCoveringPlayer: 3
+  dirCoveringPlayer: 
 --- !u!1 &1013088062
 GameObject:
   m_ObjectHideFlags: 0
@@ -37700,7 +37595,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1efea45a43798cb41a3ca9a526eb0944, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dirCoveringPlayer: 0
+  dirCoveringPlayer: 
 --- !u!1 &1025486497
 GameObject:
   m_ObjectHideFlags: 0
@@ -37809,7 +37704,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1efea45a43798cb41a3ca9a526eb0944, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dirCoveringPlayer: 3
+  dirCoveringPlayer: 
 --- !u!1 &1026214194
 GameObject:
   m_ObjectHideFlags: 0
@@ -38116,7 +38011,7 @@ GameObject:
   - component: {fileID: 1035714891}
   m_Layer: 0
   m_Name: Tile (15)
-  m_TagString: FullCover
+  m_TagString: CoverTile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -38142,9 +38037,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1035714889}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ad4c16bbf0a6074498b8ba74fc6bbb5b, type: 3}
+  m_Script: {fileID: 11500000, guid: 1efea45a43798cb41a3ca9a526eb0944, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  dirCoveringPlayer: 06000000
 --- !u!23 &1035714892
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -38212,7 +38108,7 @@ GameObject:
   - component: {fileID: 1038855513}
   m_Layer: 0
   m_Name: Tile (20)
-  m_TagString: FullCover
+  m_TagString: CoverTile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -38238,9 +38134,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1038855511}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ad4c16bbf0a6074498b8ba74fc6bbb5b, type: 3}
+  m_Script: {fileID: 11500000, guid: 1efea45a43798cb41a3ca9a526eb0944, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  dirCoveringPlayer: 03000000
 --- !u!23 &1038855514
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -38404,7 +38301,7 @@ GameObject:
   - component: {fileID: 1041631285}
   m_Layer: 0
   m_Name: Tile (14)
-  m_TagString: HalfCover
+  m_TagString: CoverTile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -38430,9 +38327,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1041631283}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ad4c16bbf0a6074498b8ba74fc6bbb5b, type: 3}
+  m_Script: {fileID: 11500000, guid: 1efea45a43798cb41a3ca9a526eb0944, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  dirCoveringPlayer: 06000000
 --- !u!23 &1041631286
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -38500,7 +38398,7 @@ GameObject:
   - component: {fileID: 1043769679}
   m_Layer: 0
   m_Name: Tile (4)
-  m_TagString: FullCover
+  m_TagString: CoverTile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -38526,9 +38424,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1043769677}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ad4c16bbf0a6074498b8ba74fc6bbb5b, type: 3}
+  m_Script: {fileID: 11500000, guid: 1efea45a43798cb41a3ca9a526eb0944, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  dirCoveringPlayer: 01000000
 --- !u!23 &1043769680
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -38593,10 +38492,9 @@ GameObject:
   - component: {fileID: 1044925335}
   - component: {fileID: 1044925334}
   - component: {fileID: 1044925333}
-  - component: {fileID: 1044925332}
   m_Layer: 0
   m_Name: Tile (22)
-  m_TagString: HalfCover
+  m_TagString: Tile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -38614,17 +38512,6 @@ Transform:
   m_Father: {fileID: 597335743}
   m_RootOrder: 22
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1044925332
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1044925330}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ad4c16bbf0a6074498b8ba74fc6bbb5b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!23 &1044925333
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -39119,10 +39006,9 @@ GameObject:
   - component: {fileID: 1052733340}
   - component: {fileID: 1052733339}
   - component: {fileID: 1052733338}
-  - component: {fileID: 1052733337}
   m_Layer: 0
   m_Name: Tile (7)
-  m_TagString: HalfCover
+  m_TagString: Tile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -39140,17 +39026,6 @@ Transform:
   m_Father: {fileID: 1381970001}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1052733337
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1052733335}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ad4c16bbf0a6074498b8ba74fc6bbb5b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!23 &1052733338
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -39363,10 +39238,9 @@ GameObject:
   - component: {fileID: 1061314617}
   - component: {fileID: 1061314616}
   - component: {fileID: 1061314615}
-  - component: {fileID: 1061314614}
   m_Layer: 0
   m_Name: Tile (14)
-  m_TagString: HalfCover
+  m_TagString: Tile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -39384,17 +39258,6 @@ Transform:
   m_Father: {fileID: 1138293744}
   m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1061314614
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1061314612}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ad4c16bbf0a6074498b8ba74fc6bbb5b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!23 &1061314615
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -39462,7 +39325,7 @@ GameObject:
   - component: {fileID: 1061808610}
   m_Layer: 0
   m_Name: Tile (4)
-  m_TagString: FullCover
+  m_TagString: CoverTile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -39488,9 +39351,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1061808608}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ad4c16bbf0a6074498b8ba74fc6bbb5b, type: 3}
+  m_Script: {fileID: 11500000, guid: 1efea45a43798cb41a3ca9a526eb0944, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  dirCoveringPlayer: 00000000
 --- !u!23 &1061808611
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -40000,7 +39864,7 @@ GameObject:
   - component: {fileID: 1073689621}
   m_Layer: 0
   m_Name: Tile (20)
-  m_TagString: FullCover
+  m_TagString: CoverTile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -40026,9 +39890,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1073689619}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ad4c16bbf0a6074498b8ba74fc6bbb5b, type: 3}
+  m_Script: {fileID: 11500000, guid: 1efea45a43798cb41a3ca9a526eb0944, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  dirCoveringPlayer: 00000000
 --- !u!23 &1073689622
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -40255,7 +40120,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1efea45a43798cb41a3ca9a526eb0944, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dirCoveringPlayer: 1
+  dirCoveringPlayer: 
 --- !u!1 &1075740586
 GameObject:
   m_ObjectHideFlags: 0
@@ -40460,7 +40325,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1efea45a43798cb41a3ca9a526eb0944, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dirCoveringPlayer: 0
+  dirCoveringPlayer: 
 --- !u!1 &1082982980
 GameObject:
   m_ObjectHideFlags: 0
@@ -40568,7 +40433,6 @@ GameObject:
   - component: {fileID: 1085740696}
   - component: {fileID: 1085740695}
   - component: {fileID: 1085740694}
-  - component: {fileID: 1085740693}
   m_Layer: 0
   m_Name: Tile (19)
   m_TagString: Tile
@@ -40589,17 +40453,6 @@ Transform:
   m_Father: {fileID: 1988906085}
   m_RootOrder: 19
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1085740693
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1085740691}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ad4c16bbf0a6074498b8ba74fc6bbb5b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!23 &1085740694
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -41151,7 +41004,7 @@ GameObject:
   - component: {fileID: 1099713741}
   m_Layer: 0
   m_Name: Tile (22)
-  m_TagString: HalfCover
+  m_TagString: CoverTile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -41177,9 +41030,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1099713739}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ad4c16bbf0a6074498b8ba74fc6bbb5b, type: 3}
+  m_Script: {fileID: 11500000, guid: 1efea45a43798cb41a3ca9a526eb0944, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  dirCoveringPlayer: 05000000
 --- !u!23 &1099713742
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -42279,7 +42133,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1efea45a43798cb41a3ca9a526eb0944, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dirCoveringPlayer: 2
+  dirCoveringPlayer: 
 --- !u!1 &1138897943
 GameObject:
   m_ObjectHideFlags: 0
@@ -42295,7 +42149,7 @@ GameObject:
   - component: {fileID: 1138897949}
   m_Layer: 0
   m_Name: Tile (7)
-  m_TagString: FullCover
+  m_TagString: CoverTile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -42321,9 +42175,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1138897943}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ad4c16bbf0a6074498b8ba74fc6bbb5b, type: 3}
+  m_Script: {fileID: 11500000, guid: 1efea45a43798cb41a3ca9a526eb0944, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  dirCoveringPlayer: 03000000
 --- !u!23 &1138897946
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -42388,7 +42243,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1efea45a43798cb41a3ca9a526eb0944, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dirCoveringPlayer: 1
+  dirCoveringPlayer: 
 --- !u!1 &1144474367
 GameObject:
   m_ObjectHideFlags: 0
@@ -42741,7 +42596,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1efea45a43798cb41a3ca9a526eb0944, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dirCoveringPlayer: 3
+  dirCoveringPlayer: 
 --- !u!1 &1161936244
 GameObject:
   m_ObjectHideFlags: 0
@@ -42850,7 +42705,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1efea45a43798cb41a3ca9a526eb0944, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dirCoveringPlayer: 2
+  dirCoveringPlayer: 
 --- !u!1 &1162869157
 GameObject:
   m_ObjectHideFlags: 0
@@ -43843,7 +43698,7 @@ GameObject:
   - component: {fileID: 1183969326}
   m_Layer: 0
   m_Name: Tile (1)
-  m_TagString: HalfCover
+  m_TagString: CoverTile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -43869,9 +43724,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1183969324}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ad4c16bbf0a6074498b8ba74fc6bbb5b, type: 3}
+  m_Script: {fileID: 11500000, guid: 1efea45a43798cb41a3ca9a526eb0944, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  dirCoveringPlayer: 07000000
 --- !u!23 &1183969327
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -44400,10 +44256,9 @@ GameObject:
   - component: {fileID: 1197753688}
   - component: {fileID: 1197753687}
   - component: {fileID: 1197753686}
-  - component: {fileID: 1197753685}
   m_Layer: 0
   m_Name: Tile (12)
-  m_TagString: HalfCover
+  m_TagString: Tile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -44421,17 +44276,6 @@ Transform:
   m_Father: {fileID: 250653739}
   m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1197753685
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1197753683}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ad4c16bbf0a6074498b8ba74fc6bbb5b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!23 &1197753686
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -44503,7 +44347,7 @@ GameObject:
   - component: {fileID: 1199571456}
   m_Layer: 0
   m_Name: Tile (11)
-  m_TagString: HalfCover
+  m_TagString: CoverTile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -44529,9 +44373,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1199571454}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ad4c16bbf0a6074498b8ba74fc6bbb5b, type: 3}
+  m_Script: {fileID: 11500000, guid: 1efea45a43798cb41a3ca9a526eb0944, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  dirCoveringPlayer: 04000000
 --- !u!23 &1199571457
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -44981,7 +44826,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1efea45a43798cb41a3ca9a526eb0944, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dirCoveringPlayer: 3
+  dirCoveringPlayer: 
 --- !u!1 &1206443049
 GameObject:
   m_ObjectHideFlags: 0
@@ -45089,10 +44934,9 @@ GameObject:
   - component: {fileID: 1206997395}
   - component: {fileID: 1206997394}
   - component: {fileID: 1206997393}
-  - component: {fileID: 1206997392}
   m_Layer: 0
   m_Name: Tile (1)
-  m_TagString: HalfCover
+  m_TagString: Tile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -45110,17 +44954,6 @@ Transform:
   m_Father: {fileID: 1162869158}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1206997392
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1206997390}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ad4c16bbf0a6074498b8ba74fc6bbb5b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!23 &1206997393
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -45188,7 +45021,7 @@ GameObject:
   - component: {fileID: 1208907178}
   m_Layer: 0
   m_Name: Tile (2)
-  m_TagString: FullCover
+  m_TagString: CoverTile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -45214,9 +45047,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1208907176}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ad4c16bbf0a6074498b8ba74fc6bbb5b, type: 3}
+  m_Script: {fileID: 11500000, guid: 1efea45a43798cb41a3ca9a526eb0944, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  dirCoveringPlayer: 00000000
 --- !u!23 &1208907179
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -45370,7 +45204,7 @@ GameObject:
   - component: {fileID: 1217660484}
   m_Layer: 0
   m_Name: Tile (3)
-  m_TagString: FullCover
+  m_TagString: CoverTile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -45396,9 +45230,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1217660482}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ad4c16bbf0a6074498b8ba74fc6bbb5b, type: 3}
+  m_Script: {fileID: 11500000, guid: 1efea45a43798cb41a3ca9a526eb0944, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  dirCoveringPlayer: 01000000
 --- !u!23 &1217660485
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -45467,7 +45302,7 @@ GameObject:
   - component: {fileID: 1223183889}
   m_Layer: 0
   m_Name: Tile (15)
-  m_TagString: FullCover
+  m_TagString: CoverTile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -45493,9 +45328,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1223183883}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ad4c16bbf0a6074498b8ba74fc6bbb5b, type: 3}
+  m_Script: {fileID: 11500000, guid: 1efea45a43798cb41a3ca9a526eb0944, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  dirCoveringPlayer: 02000000
 --- !u!23 &1223183886
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -45560,7 +45396,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1efea45a43798cb41a3ca9a526eb0944, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dirCoveringPlayer: 1
+  dirCoveringPlayer: 
 --- !u!1 &1232061087
 GameObject:
   m_ObjectHideFlags: 0
@@ -45765,7 +45601,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1efea45a43798cb41a3ca9a526eb0944, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dirCoveringPlayer: 1
+  dirCoveringPlayer: 
 --- !u!1 &1239118319
 GameObject:
   m_ObjectHideFlags: 0
@@ -45777,11 +45613,10 @@ GameObject:
   - component: {fileID: 1239118324}
   - component: {fileID: 1239118323}
   - component: {fileID: 1239118322}
-  - component: {fileID: 1239118321}
   - component: {fileID: 1239118325}
   m_Layer: 0
   m_Name: Tile (14)
-  m_TagString: HalfCover
+  m_TagString: Tile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -45799,17 +45634,6 @@ Transform:
   m_Father: {fileID: 318292300}
   m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1239118321
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1239118319}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ad4c16bbf0a6074498b8ba74fc6bbb5b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!23 &1239118322
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -45874,7 +45698,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1efea45a43798cb41a3ca9a526eb0944, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dirCoveringPlayer: 2
+  dirCoveringPlayer: 
 --- !u!1 &1239593531
 GameObject:
   m_ObjectHideFlags: 0
@@ -45886,11 +45710,9 @@ GameObject:
   - component: {fileID: 1239593536}
   - component: {fileID: 1239593535}
   - component: {fileID: 1239593534}
-  - component: {fileID: 1239593533}
-  - component: {fileID: 1239593537}
   m_Layer: 0
   m_Name: 
-  m_TagString: HalfCover
+  m_TagString: Tile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -45908,17 +45730,6 @@ Transform:
   m_Father: {fileID: 597335743}
   m_RootOrder: 17
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1239593533
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1239593531}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ad4c16bbf0a6074498b8ba74fc6bbb5b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!23 &1239593534
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -45972,18 +45783,6 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1239593531}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!114 &1239593537
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1239593531}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1efea45a43798cb41a3ca9a526eb0944, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  dirCoveringPlayer: 0
 --- !u!1 &1241103409
 GameObject:
   m_ObjectHideFlags: 0
@@ -45995,11 +45794,9 @@ GameObject:
   - component: {fileID: 1241103414}
   - component: {fileID: 1241103413}
   - component: {fileID: 1241103412}
-  - component: {fileID: 1241103411}
-  - component: {fileID: 1241103415}
   m_Layer: 0
   m_Name: Tile (9)
-  m_TagString: HalfCover
+  m_TagString: Tile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -46017,17 +45814,6 @@ Transform:
   m_Father: {fileID: 1060610300}
   m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1241103411
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1241103409}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ad4c16bbf0a6074498b8ba74fc6bbb5b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!23 &1241103412
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -46081,18 +45867,6 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1241103409}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!114 &1241103415
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1241103409}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1efea45a43798cb41a3ca9a526eb0944, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  dirCoveringPlayer: 3
 --- !u!1 &1242053849
 GameObject:
   m_ObjectHideFlags: 0
@@ -46584,10 +46358,9 @@ GameObject:
   - component: {fileID: 1250547494}
   - component: {fileID: 1250547493}
   - component: {fileID: 1250547492}
-  - component: {fileID: 1250547491}
   m_Layer: 0
   m_Name: Tile (1)
-  m_TagString: HalfCover
+  m_TagString: Tile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -46605,17 +46378,6 @@ Transform:
   m_Father: {fileID: 479895772}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1250547491
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1250547489}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ad4c16bbf0a6074498b8ba74fc6bbb5b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!23 &1250547492
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -46779,7 +46541,7 @@ GameObject:
   - component: {fileID: 1252105410}
   m_Layer: 0
   m_Name: Tile (17)
-  m_TagString: FullCover
+  m_TagString: CoverTile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -46805,9 +46567,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1252105408}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ad4c16bbf0a6074498b8ba74fc6bbb5b, type: 3}
+  m_Script: {fileID: 11500000, guid: 1efea45a43798cb41a3ca9a526eb0944, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  dirCoveringPlayer: 02000000
 --- !u!23 &1252105411
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -46969,7 +46732,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1efea45a43798cb41a3ca9a526eb0944, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dirCoveringPlayer: 2
+  dirCoveringPlayer: 
 --- !u!1 &1258403362
 GameObject:
   m_ObjectHideFlags: 0
@@ -47130,7 +46893,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1efea45a43798cb41a3ca9a526eb0944, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dirCoveringPlayer: 0
+  dirCoveringPlayer: 
 --- !u!1 &1265634300
 GameObject:
   m_ObjectHideFlags: 0
@@ -47145,7 +46908,7 @@ GameObject:
   - component: {fileID: 1265634302}
   m_Layer: 0
   m_Name: Tile (15)
-  m_TagString: FullCover
+  m_TagString: CoverTile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -47171,9 +46934,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1265634300}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ad4c16bbf0a6074498b8ba74fc6bbb5b, type: 3}
+  m_Script: {fileID: 11500000, guid: 1efea45a43798cb41a3ca9a526eb0944, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  dirCoveringPlayer: 02000000
 --- !u!23 &1265634303
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -47431,7 +47195,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1efea45a43798cb41a3ca9a526eb0944, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dirCoveringPlayer: 1
+  dirCoveringPlayer: 
 --- !u!1 &1286610573
 GameObject:
   m_ObjectHideFlags: 0
@@ -47831,10 +47595,9 @@ GameObject:
   - component: {fileID: 1302051012}
   - component: {fileID: 1302051011}
   - component: {fileID: 1302051010}
-  - component: {fileID: 1302051009}
   m_Layer: 0
   m_Name: Tile (10)
-  m_TagString: HalfCover
+  m_TagString: Tile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -47852,17 +47615,6 @@ Transform:
   m_Father: {fileID: 597335743}
   m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1302051009
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1302051007}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ad4c16bbf0a6074498b8ba74fc6bbb5b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!23 &1302051010
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -47927,10 +47679,9 @@ GameObject:
   - component: {fileID: 1305033016}
   - component: {fileID: 1305033015}
   - component: {fileID: 1305033014}
-  - component: {fileID: 1305033013}
   m_Layer: 0
   m_Name: Tile (8)
-  m_TagString: HalfCover
+  m_TagString: Tile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -47948,17 +47699,6 @@ Transform:
   m_Father: {fileID: 1138293744}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1305033013
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1305033011}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ad4c16bbf0a6074498b8ba74fc6bbb5b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!23 &1305033014
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -48312,7 +48052,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1efea45a43798cb41a3ca9a526eb0944, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dirCoveringPlayer: 3
+  dirCoveringPlayer: 
 --- !u!1 &1311212563
 GameObject:
   m_ObjectHideFlags: 0
@@ -48773,7 +48513,7 @@ GameObject:
   - component: {fileID: 1319681997}
   m_Layer: 0
   m_Name: Tile (6)
-  m_TagString: FullCover
+  m_TagString: CoverTile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -48799,9 +48539,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1319681995}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ad4c16bbf0a6074498b8ba74fc6bbb5b, type: 3}
+  m_Script: {fileID: 11500000, guid: 1efea45a43798cb41a3ca9a526eb0944, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  dirCoveringPlayer: 01000000
 --- !u!23 &1319681998
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -48869,7 +48610,7 @@ GameObject:
   - component: {fileID: 1320287443}
   m_Layer: 0
   m_Name: Tile (18)
-  m_TagString: FullCover
+  m_TagString: CoverTile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -48895,9 +48636,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1320287441}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ad4c16bbf0a6074498b8ba74fc6bbb5b, type: 3}
+  m_Script: {fileID: 11500000, guid: 1efea45a43798cb41a3ca9a526eb0944, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  dirCoveringPlayer: 01000000
 --- !u!23 &1320287444
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -49062,7 +48804,7 @@ GameObject:
   - component: {fileID: 1332635767}
   m_Layer: 0
   m_Name: Tile (14)
-  m_TagString: HalfCover
+  m_TagString: CoverTile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -49088,9 +48830,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1332635761}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ad4c16bbf0a6074498b8ba74fc6bbb5b, type: 3}
+  m_Script: {fileID: 11500000, guid: 1efea45a43798cb41a3ca9a526eb0944, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  dirCoveringPlayer: 07000000
 --- !u!23 &1332635764
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -49155,7 +48898,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1efea45a43798cb41a3ca9a526eb0944, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dirCoveringPlayer: 2
+  dirCoveringPlayer: 
 --- !u!1 &1335242779
 GameObject:
   m_ObjectHideFlags: 0
@@ -49266,7 +49009,7 @@ GameObject:
   - component: {fileID: 1335552787}
   m_Layer: 0
   m_Name: Tile (8)
-  m_TagString: HalfCover
+  m_TagString: CoverTile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -49292,9 +49035,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1335552785}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ad4c16bbf0a6074498b8ba74fc6bbb5b, type: 3}
+  m_Script: {fileID: 11500000, guid: 1efea45a43798cb41a3ca9a526eb0944, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  dirCoveringPlayer: 06000000
 --- !u!23 &1335552788
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -49516,7 +49260,7 @@ GameObject:
   - component: {fileID: 1339786149}
   m_Layer: 0
   m_Name: Tile (10)
-  m_TagString: HalfCover
+  m_TagString: CoverTile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -49542,9 +49286,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1339786147}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ad4c16bbf0a6074498b8ba74fc6bbb5b, type: 3}
+  m_Script: {fileID: 11500000, guid: 1efea45a43798cb41a3ca9a526eb0944, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  dirCoveringPlayer: 05000000
 --- !u!23 &1339786150
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -50459,7 +50204,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1efea45a43798cb41a3ca9a526eb0944, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dirCoveringPlayer: 2
+  dirCoveringPlayer: 
 --- !u!1 &1367135106
 GameObject:
   m_ObjectHideFlags: 0
@@ -51150,7 +50895,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1efea45a43798cb41a3ca9a526eb0944, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dirCoveringPlayer: 2
+  dirCoveringPlayer: 
 --- !u!1 &1388126769
 GameObject:
   m_ObjectHideFlags: 0
@@ -51261,7 +51006,7 @@ GameObject:
   - component: {fileID: 1389168020}
   m_Layer: 0
   m_Name: Tile (15)
-  m_TagString: HalfCover
+  m_TagString: CoverTile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -51287,9 +51032,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1389168018}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ad4c16bbf0a6074498b8ba74fc6bbb5b, type: 3}
+  m_Script: {fileID: 11500000, guid: 1efea45a43798cb41a3ca9a526eb0944, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  dirCoveringPlayer: 05000000
 --- !u!23 &1389168021
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -52141,7 +51887,7 @@ GameObject:
   - component: {fileID: 1414048059}
   m_Layer: 0
   m_Name: Tile (12)
-  m_TagString: HalfCover
+  m_TagString: Tile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -53417,7 +53163,7 @@ GameObject:
   - component: {fileID: 1450055082}
   m_Layer: 0
   m_Name: Tile (3)
-  m_TagString: FullCover
+  m_TagString: CoverTile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -53443,9 +53189,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1450055080}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ad4c16bbf0a6074498b8ba74fc6bbb5b, type: 3}
+  m_Script: {fileID: 11500000, guid: 1efea45a43798cb41a3ca9a526eb0944, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  dirCoveringPlayer: 00000000
 --- !u!23 &1450055083
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -53606,10 +53353,9 @@ GameObject:
   - component: {fileID: 1451052757}
   - component: {fileID: 1451052756}
   - component: {fileID: 1451052755}
-  - component: {fileID: 1451052754}
   m_Layer: 0
   m_Name: Tile (12)
-  m_TagString: HalfCover
+  m_TagString: Tile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -53627,17 +53373,6 @@ Transform:
   m_Father: {fileID: 479895772}
   m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1451052754
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1451052752}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ad4c16bbf0a6074498b8ba74fc6bbb5b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!23 &1451052755
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -53799,7 +53534,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1efea45a43798cb41a3ca9a526eb0944, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dirCoveringPlayer: 2
+  dirCoveringPlayer: 
 --- !u!1 &1455512113
 GameObject:
   m_ObjectHideFlags: 0
@@ -53907,7 +53642,6 @@ GameObject:
   - component: {fileID: 1457472337}
   - component: {fileID: 1457472336}
   - component: {fileID: 1457472335}
-  - component: {fileID: 1457472334}
   m_Layer: 0
   m_Name: Tile (17)
   m_TagString: Tile
@@ -53928,17 +53662,6 @@ Transform:
   m_Father: {fileID: 1988906085}
   m_RootOrder: 17
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1457472334
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1457472332}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ad4c16bbf0a6074498b8ba74fc6bbb5b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!23 &1457472335
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -54248,7 +53971,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1efea45a43798cb41a3ca9a526eb0944, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dirCoveringPlayer: 1
+  dirCoveringPlayer: 
 --- !u!1 &1465411683
 GameObject:
   m_ObjectHideFlags: 0
@@ -54264,7 +53987,7 @@ GameObject:
   - component: {fileID: 1465411689}
   m_Layer: 0
   m_Name: Tile (3)
-  m_TagString: FullCover
+  m_TagString: CoverTile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -54290,9 +54013,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1465411683}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ad4c16bbf0a6074498b8ba74fc6bbb5b, type: 3}
+  m_Script: {fileID: 11500000, guid: 1efea45a43798cb41a3ca9a526eb0944, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  dirCoveringPlayer: 01000000
 --- !u!23 &1465411686
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -54357,7 +54081,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1efea45a43798cb41a3ca9a526eb0944, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dirCoveringPlayer: 3
+  dirCoveringPlayer: 
 --- !u!1 &1465830297
 GameObject:
   m_ObjectHideFlags: 0
@@ -54466,7 +54190,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1efea45a43798cb41a3ca9a526eb0944, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dirCoveringPlayer: 0
+  dirCoveringPlayer: 
 --- !u!1 &1466366243
 GameObject:
   m_ObjectHideFlags: 0
@@ -54725,7 +54449,7 @@ GameObject:
   - component: {fileID: 1471163231}
   m_Layer: 0
   m_Name: Tile (23)
-  m_TagString: HalfCover
+  m_TagString: CoverTile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -54751,9 +54475,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1471163229}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ad4c16bbf0a6074498b8ba74fc6bbb5b, type: 3}
+  m_Script: {fileID: 11500000, guid: 1efea45a43798cb41a3ca9a526eb0944, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  dirCoveringPlayer: 04000000
 --- !u!23 &1471163232
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -55587,7 +55312,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1efea45a43798cb41a3ca9a526eb0944, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dirCoveringPlayer: 3
+  dirCoveringPlayer: 
 --- !u!1 &1491080340
 GameObject:
   m_ObjectHideFlags: 0
@@ -55602,7 +55327,7 @@ GameObject:
   - component: {fileID: 1491080342}
   m_Layer: 0
   m_Name: Tile (6)
-  m_TagString: FullCover
+  m_TagString: CoverTile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -55628,9 +55353,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1491080340}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ad4c16bbf0a6074498b8ba74fc6bbb5b, type: 3}
+  m_Script: {fileID: 11500000, guid: 1efea45a43798cb41a3ca9a526eb0944, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  dirCoveringPlayer: 01000000
 --- !u!23 &1491080343
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -55868,7 +55594,7 @@ GameObject:
   - component: {fileID: 1496677864}
   m_Layer: 0
   m_Name: Tile (22)
-  m_TagString: FullCover
+  m_TagString: CoverTile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -55894,9 +55620,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1496677862}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ad4c16bbf0a6074498b8ba74fc6bbb5b, type: 3}
+  m_Script: {fileID: 11500000, guid: 1efea45a43798cb41a3ca9a526eb0944, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  dirCoveringPlayer: 03000000
 --- !u!23 &1496677865
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -56352,7 +56079,7 @@ GameObject:
   - component: {fileID: 1519666295}
   m_Layer: 0
   m_Name: Tile (7)
-  m_TagString: FullCover
+  m_TagString: CoverTile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -56378,9 +56105,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1519666293}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ad4c16bbf0a6074498b8ba74fc6bbb5b, type: 3}
+  m_Script: {fileID: 11500000, guid: 1efea45a43798cb41a3ca9a526eb0944, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  dirCoveringPlayer: 01000000
 --- !u!23 &1519666296
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -56638,7 +56366,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1efea45a43798cb41a3ca9a526eb0944, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dirCoveringPlayer: 1
+  dirCoveringPlayer: 
 --- !u!1 &1521860134
 GameObject:
   m_ObjectHideFlags: 0
@@ -57138,7 +56866,6 @@ GameObject:
   - component: {fileID: 1535491711}
   - component: {fileID: 1535491710}
   - component: {fileID: 1535491709}
-  - component: {fileID: 1535491708}
   m_Layer: 0
   m_Name: Tile (18)
   m_TagString: Tile
@@ -57159,17 +56886,6 @@ Transform:
   m_Father: {fileID: 1988906085}
   m_RootOrder: 18
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1535491708
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1535491706}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ad4c16bbf0a6074498b8ba74fc6bbb5b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!23 &1535491709
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -57237,7 +56953,7 @@ GameObject:
   - component: {fileID: 1536321959}
   m_Layer: 0
   m_Name: Tile (7)
-  m_TagString: FullCover
+  m_TagString: CoverTile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -57263,9 +56979,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1536321957}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ad4c16bbf0a6074498b8ba74fc6bbb5b, type: 3}
+  m_Script: {fileID: 11500000, guid: 1efea45a43798cb41a3ca9a526eb0944, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  dirCoveringPlayer: 03000000
 --- !u!23 &1536321960
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -57429,7 +57146,7 @@ GameObject:
   - component: {fileID: 1539893545}
   m_Layer: 0
   m_Name: Tile (14)
-  m_TagString: HalfCover
+  m_TagString: CoverTile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -57455,9 +57172,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1539893543}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ad4c16bbf0a6074498b8ba74fc6bbb5b, type: 3}
+  m_Script: {fileID: 11500000, guid: 1efea45a43798cb41a3ca9a526eb0944, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  dirCoveringPlayer: 06000000
 --- !u!23 &1539893546
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -57909,7 +57627,7 @@ GameObject:
   - component: {fileID: 1545096395}
   m_Layer: 0
   m_Name: Tile (6)
-  m_TagString: FullCover
+  m_TagString: CoverTile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -57935,9 +57653,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1545096393}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ad4c16bbf0a6074498b8ba74fc6bbb5b, type: 3}
+  m_Script: {fileID: 11500000, guid: 1efea45a43798cb41a3ca9a526eb0944, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  dirCoveringPlayer: 00000000
 --- !u!23 &1545096396
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -58291,7 +58010,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1efea45a43798cb41a3ca9a526eb0944, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dirCoveringPlayer: 1
+  dirCoveringPlayer: 
 --- !u!1 &1548947931
 GameObject:
   m_ObjectHideFlags: 0
@@ -58400,7 +58119,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1efea45a43798cb41a3ca9a526eb0944, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dirCoveringPlayer: 0
+  dirCoveringPlayer: 
 --- !u!1 &1549286315
 GameObject:
   m_ObjectHideFlags: 0
@@ -58607,7 +58326,7 @@ GameObject:
   - component: {fileID: 1552274342}
   m_Layer: 0
   m_Name: Tile (2)
-  m_TagString: FullCover
+  m_TagString: CoverTile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -58633,9 +58352,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1552274340}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ad4c16bbf0a6074498b8ba74fc6bbb5b, type: 3}
+  m_Script: {fileID: 11500000, guid: 1efea45a43798cb41a3ca9a526eb0944, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  dirCoveringPlayer: 01000000
 --- !u!23 &1552274343
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -58897,7 +58617,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1efea45a43798cb41a3ca9a526eb0944, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dirCoveringPlayer: 0
+  dirCoveringPlayer: 
 --- !u!1 &1555930869
 GameObject:
   m_ObjectHideFlags: 0
@@ -59006,7 +58726,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1efea45a43798cb41a3ca9a526eb0944, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dirCoveringPlayer: 0
+  dirCoveringPlayer: 
 --- !u!1 &1558198336
 GameObject:
   m_ObjectHideFlags: 0
@@ -59021,7 +58741,7 @@ GameObject:
   - component: {fileID: 1558198338}
   m_Layer: 0
   m_Name: Tile (15)
-  m_TagString: FullCover
+  m_TagString: CoverTile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -59047,9 +58767,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1558198336}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ad4c16bbf0a6074498b8ba74fc6bbb5b, type: 3}
+  m_Script: {fileID: 11500000, guid: 1efea45a43798cb41a3ca9a526eb0944, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  dirCoveringPlayer: 06000000
 --- !u!23 &1558198339
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -59455,7 +59176,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1efea45a43798cb41a3ca9a526eb0944, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dirCoveringPlayer: 0
+  dirCoveringPlayer: 
 --- !u!1 &1564176906
 GameObject:
   m_ObjectHideFlags: 0
@@ -59660,7 +59381,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1efea45a43798cb41a3ca9a526eb0944, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dirCoveringPlayer: 1
+  dirCoveringPlayer: 
 --- !u!1 &1569699114
 GameObject:
   m_ObjectHideFlags: 0
@@ -59675,7 +59396,7 @@ GameObject:
   - component: {fileID: 1569699116}
   m_Layer: 0
   m_Name: Tile (17)
-  m_TagString: FullCover
+  m_TagString: CoverTile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -59701,9 +59422,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1569699114}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ad4c16bbf0a6074498b8ba74fc6bbb5b, type: 3}
+  m_Script: {fileID: 11500000, guid: 1efea45a43798cb41a3ca9a526eb0944, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  dirCoveringPlayer: 06000000
 --- !u!23 &1569699117
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -60057,7 +59779,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1efea45a43798cb41a3ca9a526eb0944, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dirCoveringPlayer: 0
+  dirCoveringPlayer: 
 --- !u!1 &1575013014
 GameObject:
   m_ObjectHideFlags: 0
@@ -60358,7 +60080,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1efea45a43798cb41a3ca9a526eb0944, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dirCoveringPlayer: 1
+  dirCoveringPlayer: 
 --- !u!1001 &1582695158
 Prefab:
   m_ObjectHideFlags: 0
@@ -60817,7 +60539,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1efea45a43798cb41a3ca9a526eb0944, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dirCoveringPlayer: 3
+  dirCoveringPlayer: 
 --- !u!1 &1597488354
 GameObject:
   m_ObjectHideFlags: 0
@@ -61372,7 +61094,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1efea45a43798cb41a3ca9a526eb0944, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dirCoveringPlayer: 1
+  dirCoveringPlayer: 
 --- !u!1 &1606983900
 GameObject:
   m_ObjectHideFlags: 0
@@ -61483,7 +61205,7 @@ GameObject:
   - component: {fileID: 1607176487}
   m_Layer: 0
   m_Name: Tile (1)
-  m_TagString: FullCover
+  m_TagString: CoverTile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -61509,9 +61231,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1607176485}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ad4c16bbf0a6074498b8ba74fc6bbb5b, type: 3}
+  m_Script: {fileID: 11500000, guid: 1efea45a43798cb41a3ca9a526eb0944, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  dirCoveringPlayer: 03000000
 --- !u!23 &1607176488
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -62205,7 +61928,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1efea45a43798cb41a3ca9a526eb0944, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dirCoveringPlayer: 2
+  dirCoveringPlayer: 
 --- !u!1 &1618256701
 GameObject:
   m_ObjectHideFlags: 0
@@ -62217,7 +61940,6 @@ GameObject:
   - component: {fileID: 1618256706}
   - component: {fileID: 1618256705}
   - component: {fileID: 1618256704}
-  - component: {fileID: 1618256703}
   m_Layer: 0
   m_Name: Tile (15)
   m_TagString: Tile
@@ -62238,17 +61960,6 @@ Transform:
   m_Father: {fileID: 1988906085}
   m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1618256703
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1618256701}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ad4c16bbf0a6074498b8ba74fc6bbb5b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!23 &1618256704
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -63664,7 +63375,7 @@ GameObject:
   - component: {fileID: 1665934048}
   m_Layer: 0
   m_Name: Tile (14)
-  m_TagString: HalfCover
+  m_TagString: CoverTile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -63690,9 +63401,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1665934046}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ad4c16bbf0a6074498b8ba74fc6bbb5b, type: 3}
+  m_Script: {fileID: 11500000, guid: 1efea45a43798cb41a3ca9a526eb0944, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  dirCoveringPlayer: 06000000
 --- !u!23 &1665934049
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -63757,10 +63469,9 @@ GameObject:
   - component: {fileID: 1665991578}
   - component: {fileID: 1665991577}
   - component: {fileID: 1665991576}
-  - component: {fileID: 1665991575}
   m_Layer: 0
   m_Name: Tile (12)
-  m_TagString: HalfCover
+  m_TagString: Tile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -63778,17 +63489,6 @@ Transform:
   m_Father: {fileID: 597335743}
   m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1665991575
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1665991573}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ad4c16bbf0a6074498b8ba74fc6bbb5b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!23 &1665991576
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -64028,7 +63728,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1efea45a43798cb41a3ca9a526eb0944, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dirCoveringPlayer: 2
+  dirCoveringPlayer: 
 --- !u!1 &1671364115
 GameObject:
   m_ObjectHideFlags: 0
@@ -64392,7 +64092,7 @@ GameObject:
   - component: {fileID: 1684973149}
   m_Layer: 0
   m_Name: Tile (1)
-  m_TagString: FullCover
+  m_TagString: CoverTile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -64418,9 +64118,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1684973143}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ad4c16bbf0a6074498b8ba74fc6bbb5b, type: 3}
+  m_Script: {fileID: 11500000, guid: 1efea45a43798cb41a3ca9a526eb0944, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  dirCoveringPlayer: 02000000
 --- !u!23 &1684973146
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -64485,7 +64186,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1efea45a43798cb41a3ca9a526eb0944, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dirCoveringPlayer: 2
+  dirCoveringPlayer: 
 --- !u!1 &1687913018
 GameObject:
   m_ObjectHideFlags: 0
@@ -64500,7 +64201,7 @@ GameObject:
   - component: {fileID: 1687913020}
   m_Layer: 0
   m_Name: Tile
-  m_TagString: HalfCover
+  m_TagString: CoverTile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -64526,9 +64227,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1687913018}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ad4c16bbf0a6074498b8ba74fc6bbb5b, type: 3}
+  m_Script: {fileID: 11500000, guid: 1efea45a43798cb41a3ca9a526eb0944, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  dirCoveringPlayer: 04000000
 --- !u!23 &1687913021
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -65438,7 +65140,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1efea45a43798cb41a3ca9a526eb0944, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dirCoveringPlayer: 0
+  dirCoveringPlayer: 
 --- !u!1 &1715866633
 GameObject:
   m_ObjectHideFlags: 0
@@ -65546,10 +65248,9 @@ GameObject:
   - component: {fileID: 1716459261}
   - component: {fileID: 1716459260}
   - component: {fileID: 1716459259}
-  - component: {fileID: 1716459258}
   m_Layer: 0
   m_Name: Tile (17)
-  m_TagString: HalfCover
+  m_TagString: Tile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -65567,17 +65268,6 @@ Transform:
   m_Father: {fileID: 174368485}
   m_RootOrder: 17
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1716459258
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1716459256}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ad4c16bbf0a6074498b8ba74fc6bbb5b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!23 &1716459259
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -66125,7 +65815,7 @@ GameObject:
   - component: {fileID: 1732326530}
   m_Layer: 0
   m_Name: Tile
-  m_TagString: HalfCover
+  m_TagString: CoverTile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -66151,9 +65841,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1732326528}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ad4c16bbf0a6074498b8ba74fc6bbb5b, type: 3}
+  m_Script: {fileID: 11500000, guid: 1efea45a43798cb41a3ca9a526eb0944, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  dirCoveringPlayer: 06000000
 --- !u!23 &1732326531
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -66413,7 +66104,7 @@ GameObject:
   - component: {fileID: 1744007435}
   m_Layer: 0
   m_Name: Tile (22)
-  m_TagString: FullCover
+  m_TagString: CoverTile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -66439,9 +66130,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1744007433}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ad4c16bbf0a6074498b8ba74fc6bbb5b, type: 3}
+  m_Script: {fileID: 11500000, guid: 1efea45a43798cb41a3ca9a526eb0944, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  dirCoveringPlayer: 03000000
 --- !u!23 &1744007436
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -66605,7 +66297,7 @@ GameObject:
   - component: {fileID: 1747331468}
   m_Layer: 0
   m_Name: Tile (20)
-  m_TagString: FullCover
+  m_TagString: CoverTile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -66631,9 +66323,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1747331466}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ad4c16bbf0a6074498b8ba74fc6bbb5b, type: 3}
+  m_Script: {fileID: 11500000, guid: 1efea45a43798cb41a3ca9a526eb0944, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  dirCoveringPlayer: 04000000
 --- !u!23 &1747331469
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -67082,11 +66775,9 @@ GameObject:
   - component: {fileID: 1757876713}
   - component: {fileID: 1757876712}
   - component: {fileID: 1757876711}
-  - component: {fileID: 1757876710}
-  - component: {fileID: 1757876714}
   m_Layer: 0
   m_Name: Tile (1)
-  m_TagString: HalfCover
+  m_TagString: Tile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -67104,17 +66795,6 @@ Transform:
   m_Father: {fileID: 1138293744}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1757876710
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1757876708}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ad4c16bbf0a6074498b8ba74fc6bbb5b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!23 &1757876711
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -67168,18 +66848,6 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1757876708}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!114 &1757876714
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1757876708}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1efea45a43798cb41a3ca9a526eb0944, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  dirCoveringPlayer: 0
 --- !u!1 &1760744364
 GameObject:
   m_ObjectHideFlags: 0
@@ -67290,7 +66958,7 @@ GameObject:
   - component: {fileID: 1765530626}
   m_Layer: 0
   m_Name: Tile (4)
-  m_TagString: FullCover
+  m_TagString: CoverTile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -67316,9 +66984,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1765530624}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ad4c16bbf0a6074498b8ba74fc6bbb5b, type: 3}
+  m_Script: {fileID: 11500000, guid: 1efea45a43798cb41a3ca9a526eb0944, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  dirCoveringPlayer: 01000000
 --- !u!23 &1765530627
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -68210,7 +67879,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1efea45a43798cb41a3ca9a526eb0944, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dirCoveringPlayer: 0
+  dirCoveringPlayer: 
 --- !u!1 &1810990223
 GameObject:
   m_ObjectHideFlags: 0
@@ -68514,7 +68183,7 @@ GameObject:
   - component: {fileID: 1816181892}
   m_Layer: 0
   m_Name: Tile (9)
-  m_TagString: HalfCover
+  m_TagString: CoverTile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -68540,9 +68209,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1816181886}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ad4c16bbf0a6074498b8ba74fc6bbb5b, type: 3}
+  m_Script: {fileID: 11500000, guid: 1efea45a43798cb41a3ca9a526eb0944, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  dirCoveringPlayer: 06000000
 --- !u!23 &1816181889
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -68607,7 +68277,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1efea45a43798cb41a3ca9a526eb0944, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dirCoveringPlayer: 3
+  dirCoveringPlayer: 
 --- !u!1 &1818617167
 GameObject:
   m_ObjectHideFlags: 0
@@ -69149,10 +68819,9 @@ GameObject:
   - component: {fileID: 1838781960}
   - component: {fileID: 1838781959}
   - component: {fileID: 1838781958}
-  - component: {fileID: 1838781957}
   m_Layer: 0
   m_Name: Tile (11)
-  m_TagString: HalfCover
+  m_TagString: Tile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -69170,17 +68839,6 @@ Transform:
   m_Father: {fileID: 516666358}
   m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1838781957
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1838781955}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ad4c16bbf0a6074498b8ba74fc6bbb5b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!23 &1838781958
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -69394,7 +69052,7 @@ GameObject:
   - component: {fileID: 1839617706}
   m_Layer: 0
   m_Name: Tile (7)
-  m_TagString: FullCover
+  m_TagString: CoverTile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -69420,9 +69078,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1839617704}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ad4c16bbf0a6074498b8ba74fc6bbb5b, type: 3}
+  m_Script: {fileID: 11500000, guid: 1efea45a43798cb41a3ca9a526eb0944, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  dirCoveringPlayer: 03000000
 --- !u!23 &1839617707
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -69487,10 +69146,9 @@ GameObject:
   - component: {fileID: 1840686232}
   - component: {fileID: 1840686231}
   - component: {fileID: 1840686230}
-  - component: {fileID: 1840686229}
   m_Layer: 0
   m_Name: Tile (8)
-  m_TagString: HalfCover
+  m_TagString: Tile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -69508,17 +69166,6 @@ Transform:
   m_Father: {fileID: 1162869158}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1840686229
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1840686227}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ad4c16bbf0a6074498b8ba74fc6bbb5b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!23 &1840686230
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -69830,7 +69477,7 @@ GameObject:
   - component: {fileID: 1853905511}
   m_Layer: 0
   m_Name: Tile (20)
-  m_TagString: FullCover
+  m_TagString: CoverTile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -69856,9 +69503,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1853905509}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ad4c16bbf0a6074498b8ba74fc6bbb5b, type: 3}
+  m_Script: {fileID: 11500000, guid: 1efea45a43798cb41a3ca9a526eb0944, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  dirCoveringPlayer: 03000000
 --- !u!23 &1853905512
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -70276,7 +69924,7 @@ GameObject:
   - component: {fileID: 1869744273}
   m_Layer: 0
   m_Name: Tile (23)
-  m_TagString: FullCover
+  m_TagString: CoverTile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -70302,9 +69950,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1869744271}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ad4c16bbf0a6074498b8ba74fc6bbb5b, type: 3}
+  m_Script: {fileID: 11500000, guid: 1efea45a43798cb41a3ca9a526eb0944, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  dirCoveringPlayer: 04000000
 --- !u!23 &1869744274
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -70561,10 +70210,9 @@ GameObject:
   - component: {fileID: 1874439800}
   - component: {fileID: 1874439799}
   - component: {fileID: 1874439798}
-  - component: {fileID: 1874439797}
   m_Layer: 0
   m_Name: Tile (10)
-  m_TagString: HalfCover
+  m_TagString: Tile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -70582,17 +70230,6 @@ Transform:
   m_Father: {fileID: 7532974}
   m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1874439797
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1874439795}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ad4c16bbf0a6074498b8ba74fc6bbb5b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!23 &1874439798
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -70661,7 +70298,7 @@ GameObject:
   - component: {fileID: 1879155543}
   m_Layer: 0
   m_Name: Tile (21)
-  m_TagString: FullCover
+  m_TagString: CoverTile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -70687,9 +70324,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1879155537}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ad4c16bbf0a6074498b8ba74fc6bbb5b, type: 3}
+  m_Script: {fileID: 11500000, guid: 1efea45a43798cb41a3ca9a526eb0944, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  dirCoveringPlayer: 03000000
 --- !u!23 &1879155540
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -70754,7 +70392,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1efea45a43798cb41a3ca9a526eb0944, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dirCoveringPlayer: 0
+  dirCoveringPlayer: 
 --- !u!1 &1885687629
 GameObject:
   m_ObjectHideFlags: 0
@@ -71105,7 +70743,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1efea45a43798cb41a3ca9a526eb0944, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dirCoveringPlayer: 1
+  dirCoveringPlayer: 
 --- !u!1 &1896081365
 GameObject:
   m_ObjectHideFlags: 0
@@ -71117,10 +70755,9 @@ GameObject:
   - component: {fileID: 1896081370}
   - component: {fileID: 1896081369}
   - component: {fileID: 1896081368}
-  - component: {fileID: 1896081367}
   m_Layer: 0
   m_Name: Tile (11)
-  m_TagString: HalfCover
+  m_TagString: Tile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -71138,17 +70775,6 @@ Transform:
   m_Father: {fileID: 1138293744}
   m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1896081367
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1896081365}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ad4c16bbf0a6074498b8ba74fc6bbb5b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!23 &1896081368
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -71310,7 +70936,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1efea45a43798cb41a3ca9a526eb0944, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dirCoveringPlayer: 1
+  dirCoveringPlayer: 
 --- !u!1 &1901373320
 GameObject:
   m_ObjectHideFlags: 0
@@ -71613,7 +71239,7 @@ GameObject:
   - component: {fileID: 1902725628}
   m_Layer: 0
   m_Name: Tile (17)
-  m_TagString: FullCover
+  m_TagString: CoverTile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -71639,9 +71265,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1902725626}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ad4c16bbf0a6074498b8ba74fc6bbb5b, type: 3}
+  m_Script: {fileID: 11500000, guid: 1efea45a43798cb41a3ca9a526eb0944, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  dirCoveringPlayer: 06000000
 --- !u!23 &1902725629
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -71997,7 +71624,7 @@ GameObject:
   - component: {fileID: 1917241273}
   m_Layer: 0
   m_Name: Tile (13)
-  m_TagString: HalfCover
+  m_TagString: CoverTile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -72023,9 +71650,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1917241271}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ad4c16bbf0a6074498b8ba74fc6bbb5b, type: 3}
+  m_Script: {fileID: 11500000, guid: 1efea45a43798cb41a3ca9a526eb0944, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  dirCoveringPlayer: 04000000
 --- !u!23 &1917241274
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -72475,7 +72103,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1efea45a43798cb41a3ca9a526eb0944, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dirCoveringPlayer: 3
+  dirCoveringPlayer: 
 --- !u!1 &1925230682
 GameObject:
   m_ObjectHideFlags: 0
@@ -72584,7 +72212,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1efea45a43798cb41a3ca9a526eb0944, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dirCoveringPlayer: 2
+  dirCoveringPlayer: 
 --- !u!1 &1928670464
 GameObject:
   m_ObjectHideFlags: 0
@@ -72599,7 +72227,7 @@ GameObject:
   - component: {fileID: 1928670466}
   m_Layer: 0
   m_Name: Tile (22)
-  m_TagString: HalfCover
+  m_TagString: CoverTile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -72625,9 +72253,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1928670464}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ad4c16bbf0a6074498b8ba74fc6bbb5b, type: 3}
+  m_Script: {fileID: 11500000, guid: 1efea45a43798cb41a3ca9a526eb0944, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  dirCoveringPlayer: 04000000
 --- !u!23 &1928670467
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -72791,7 +72420,7 @@ GameObject:
   - component: {fileID: 1932608418}
   m_Layer: 0
   m_Name: Tile (10)
-  m_TagString: HalfCover
+  m_TagString: CoverTile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -72817,9 +72446,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1932608416}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ad4c16bbf0a6074498b8ba74fc6bbb5b, type: 3}
+  m_Script: {fileID: 11500000, guid: 1efea45a43798cb41a3ca9a526eb0944, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  dirCoveringPlayer: 04000000
 --- !u!23 &1932608419
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -72888,7 +72518,7 @@ GameObject:
   - component: {fileID: 1933113307}
   m_Layer: 0
   m_Name: Tile (20)
-  m_TagString: FullCover
+  m_TagString: CoverTile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -72914,9 +72544,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1933113301}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ad4c16bbf0a6074498b8ba74fc6bbb5b, type: 3}
+  m_Script: {fileID: 11500000, guid: 1efea45a43798cb41a3ca9a526eb0944, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  dirCoveringPlayer: 01000000
 --- !u!23 &1933113304
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -72981,7 +72612,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1efea45a43798cb41a3ca9a526eb0944, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dirCoveringPlayer: 2
+  dirCoveringPlayer: 
 --- !u!1 &1934798253
 GameObject:
   m_ObjectHideFlags: 0
@@ -73282,7 +72913,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1efea45a43798cb41a3ca9a526eb0944, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dirCoveringPlayer: 1
+  dirCoveringPlayer: 
 --- !u!1 &1948619660
 GameObject:
   m_ObjectHideFlags: 0
@@ -74887,7 +74518,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1efea45a43798cb41a3ca9a526eb0944, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dirCoveringPlayer: 2
+  dirCoveringPlayer: 
 --- !u!1 &2003405061
 GameObject:
   m_ObjectHideFlags: 0
@@ -75286,7 +74917,7 @@ GameObject:
   - component: {fileID: 2011010638}
   m_Layer: 0
   m_Name: Tile (5)
-  m_TagString: FullCover
+  m_TagString: CoverTile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -75312,9 +74943,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 2011010636}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ad4c16bbf0a6074498b8ba74fc6bbb5b, type: 3}
+  m_Script: {fileID: 11500000, guid: 1efea45a43798cb41a3ca9a526eb0944, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  dirCoveringPlayer: 01000000
 --- !u!23 &2011010639
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -75382,7 +75014,7 @@ GameObject:
   - component: {fileID: 2011779634}
   m_Layer: 0
   m_Name: Tile (9)
-  m_TagString: HalfCover
+  m_TagString: CoverTile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -75408,9 +75040,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 2011779632}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ad4c16bbf0a6074498b8ba74fc6bbb5b, type: 3}
+  m_Script: {fileID: 11500000, guid: 1efea45a43798cb41a3ca9a526eb0944, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  dirCoveringPlayer: 05000000
 --- !u!23 &2011779635
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -75667,10 +75300,9 @@ GameObject:
   - component: {fileID: 2017741339}
   - component: {fileID: 2017741338}
   - component: {fileID: 2017741337}
-  - component: {fileID: 2017741336}
   m_Layer: 0
   m_Name: Tile (15)
-  m_TagString: HalfCover
+  m_TagString: Tile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -75688,17 +75320,6 @@ Transform:
   m_Father: {fileID: 1951017813}
   m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2017741336
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 2017741334}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ad4c16bbf0a6074498b8ba74fc6bbb5b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!23 &2017741337
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -75862,7 +75483,7 @@ GameObject:
   - component: {fileID: 2019861572}
   m_Layer: 0
   m_Name: Tile (5)
-  m_TagString: HalfCover
+  m_TagString: CoverTile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -75888,9 +75509,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 2019861570}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ad4c16bbf0a6074498b8ba74fc6bbb5b, type: 3}
+  m_Script: {fileID: 11500000, guid: 1efea45a43798cb41a3ca9a526eb0944, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  dirCoveringPlayer: 05000000
 --- !u!23 &2019861573
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -75958,7 +75580,7 @@ GameObject:
   - component: {fileID: 2020953698}
   m_Layer: 0
   m_Name: Tile (3)
-  m_TagString: FullCover
+  m_TagString: CoverTile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -75984,9 +75606,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 2020953696}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ad4c16bbf0a6074498b8ba74fc6bbb5b, type: 3}
+  m_Script: {fileID: 11500000, guid: 1efea45a43798cb41a3ca9a526eb0944, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  dirCoveringPlayer: 00000000
 --- !u!23 &2020953699
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -76148,7 +75771,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1efea45a43798cb41a3ca9a526eb0944, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dirCoveringPlayer: 3
+  dirCoveringPlayer: 
 --- !u!1 &2026779664
 GameObject:
   m_ObjectHideFlags: 0
@@ -76695,7 +76318,7 @@ GameObject:
   - component: {fileID: 2041988838}
   m_Layer: 0
   m_Name: Tile (21)
-  m_TagString: FullCover
+  m_TagString: CoverTile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -76721,9 +76344,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 2041988836}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ad4c16bbf0a6074498b8ba74fc6bbb5b, type: 3}
+  m_Script: {fileID: 11500000, guid: 1efea45a43798cb41a3ca9a526eb0944, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  dirCoveringPlayer: 04000000
 --- !u!23 &2041988839
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -77757,7 +77381,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1efea45a43798cb41a3ca9a526eb0944, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dirCoveringPlayer: 0
+  dirCoveringPlayer: 
 --- !u!1 &2075175627
 GameObject:
   m_ObjectHideFlags: 0
@@ -77772,7 +77396,7 @@ GameObject:
   - component: {fileID: 2075175629}
   m_Layer: 0
   m_Name: Tile (3)
-  m_TagString: FullCover
+  m_TagString: CoverTile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -77798,9 +77422,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 2075175627}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ad4c16bbf0a6074498b8ba74fc6bbb5b, type: 3}
+  m_Script: {fileID: 11500000, guid: 1efea45a43798cb41a3ca9a526eb0944, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  dirCoveringPlayer: 01000000
 --- !u!23 &2075175630
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -77962,7 +77587,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1efea45a43798cb41a3ca9a526eb0944, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dirCoveringPlayer: 0
+  dirCoveringPlayer: 
 --- !u!1 &2077261841
 GameObject:
   m_ObjectHideFlags: 0
@@ -78557,7 +78182,7 @@ GameObject:
   - component: {fileID: 2085287443}
   m_Layer: 0
   m_Name: Tile (2)
-  m_TagString: FullCover
+  m_TagString: CoverTile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -78583,9 +78208,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 2085287441}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ad4c16bbf0a6074498b8ba74fc6bbb5b, type: 3}
+  m_Script: {fileID: 11500000, guid: 1efea45a43798cb41a3ca9a526eb0944, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  dirCoveringPlayer: 01000000
 --- !u!23 &2085287444
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -79467,7 +79093,7 @@ GameObject:
   - component: {fileID: 2101100773}
   m_Layer: 0
   m_Name: Tile (13)
-  m_TagString: HalfCover
+  m_TagString: CoverTile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -79493,9 +79119,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 2101100771}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ad4c16bbf0a6074498b8ba74fc6bbb5b, type: 3}
+  m_Script: {fileID: 11500000, guid: 1efea45a43798cb41a3ca9a526eb0944, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  dirCoveringPlayer: 05000000
 --- !u!23 &2101100774
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -79560,10 +79187,9 @@ GameObject:
   - component: {fileID: 2103612825}
   - component: {fileID: 2103612824}
   - component: {fileID: 2103612823}
-  - component: {fileID: 2103612822}
   m_Layer: 0
   m_Name: Tile (7)
-  m_TagString: HalfCover
+  m_TagString: Tile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -79581,17 +79207,6 @@ Transform:
   m_Father: {fileID: 479895772}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2103612822
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 2103612820}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ad4c16bbf0a6074498b8ba74fc6bbb5b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!23 &2103612823
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -80499,7 +80114,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1efea45a43798cb41a3ca9a526eb0944, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dirCoveringPlayer: 1
+  dirCoveringPlayer: 
 --- !u!1 &2129896600
 GameObject:
   m_ObjectHideFlags: 0
@@ -80514,7 +80129,7 @@ GameObject:
   - component: {fileID: 2129896602}
   m_Layer: 0
   m_Name: Tile (13)
-  m_TagString: HalfCover
+  m_TagString: CoverTile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -80540,9 +80155,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 2129896600}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ad4c16bbf0a6074498b8ba74fc6bbb5b, type: 3}
+  m_Script: {fileID: 11500000, guid: 1efea45a43798cb41a3ca9a526eb0944, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  dirCoveringPlayer: 05000000
 --- !u!23 &2129896603
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -80706,7 +80322,7 @@ GameObject:
   - component: {fileID: 2139335595}
   m_Layer: 0
   m_Name: Tile (15)
-  m_TagString: FullCover
+  m_TagString: CoverTile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -80732,9 +80348,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 2139335593}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ad4c16bbf0a6074498b8ba74fc6bbb5b, type: 3}
+  m_Script: {fileID: 11500000, guid: 1efea45a43798cb41a3ca9a526eb0944, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  dirCoveringPlayer: 02000000
 --- !u!23 &2139335596
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -80896,7 +80513,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1efea45a43798cb41a3ca9a526eb0944, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dirCoveringPlayer: 1
+  dirCoveringPlayer: 
 --- !u!1 &2142255546
 GameObject:
   m_ObjectHideFlags: 0
@@ -80908,10 +80525,9 @@ GameObject:
   - component: {fileID: 2142255551}
   - component: {fileID: 2142255550}
   - component: {fileID: 2142255549}
-  - component: {fileID: 2142255548}
   m_Layer: 0
   m_Name: Tile (12)
-  m_TagString: HalfCover
+  m_TagString: Tile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -80929,17 +80545,6 @@ Transform:
   m_Father: {fileID: 1013088063}
   m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2142255548
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 2142255546}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ad4c16bbf0a6074498b8ba74fc6bbb5b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!23 &2142255549
 MeshRenderer:
   m_ObjectHideFlags: 0
