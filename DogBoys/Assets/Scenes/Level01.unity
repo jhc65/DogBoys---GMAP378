@@ -50337,10 +50337,10 @@ MonoBehaviour:
   cameraSpeed_: 20
   cameraZoomSpeed_: 200
   cameraSmooth_: 0
-  cameraMovementRangeXMin_: -20
-  cameraMovementRangeXMax_: 25
-  cameraMovementRangeZMin_: -20
-  cameraMovementRangeZMax_: 30
+  cameraMovementRangeXMin_: -10
+  cameraMovementRangeXMax_: 30
+  cameraMovementRangeZMin_: -10
+  cameraMovementRangeZMax_: 40
   cameraRotationRangeXMin_: 10
   cameraRotationRangeXMax_: 60
   cameraZoomRangeYMin_: 2
